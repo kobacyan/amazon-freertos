@@ -63,6 +63,36 @@ I hope this solution will be helpful for embedded system developer in W/W.
 --------------------------------------------------------------------------
 Change Logs
 --------------------------------------------------------------------------
+v0.1.7:
+[MERGED] upstream Amazon FreeRTOS v1.4.7 master
+[TESTED] by Amazon FreeRTOS Qualification for
+         RX65N RSK CC-RX e2 studio with E2 Emulator Lite
+[TESTED] demos MQTT echo behavior for
+         RX65N RSK CC-RX e2 studio with E2 Emulator Lite
+         RX65N RSK GCC e2 studio with E2 Emulator Lite
+         RX65N RSK CC-RX CS+ with E2 Emulator Lite
+         RX65N RSK + Silex SX-ULPGN PMOD CC-RX e2 studio with E2 Emulator Lite
+         RX65N RSK + Silex SX-ULPGN PMOD GCC e2 studio with E2 Emulator Lite
+         RX65N RSK + Silex SX-ULPGN PMOD CC-RX CS+with E2 Emulator Lite
+         RX65N Target Board + Silex SX-ULPGN PMOD CC-RX e2 studio with E2 Emulator Lite (on board)
+         RX65N Target Board + Silex SX-ULPGN PMOD GCC e2 studio with E2 Emulator Lite (on board)
+         RX65N Target Board + Silex SX-ULPGN PMOD CC-RX CS+with E2 Emulator Lite (on board)
+         RX65N GR-ROSE CC-RX e2 studio with E2 Emulator Lite
+         RX65N GR-ROSE GCC e2 studio with E2 Emulator Lite
+         RX65N GR-ROSE GCC/C++ e2 studio with E2 Emulator Lite
+         RX65N GR-ROSE CC-RX CS+ with E2 Emulator Lite
+         RX65N GR-ROSE + Espressif ESP8266 CC-RX e2 studio with E2 Emulator Lite
+         RX65N GR-ROSE + Espressif ESP8266 GCC e2 studio with E2 Emulator Lite
+         RX65N Envision Kit CC-RX e2 studio with E2 Emulator Lite (on board)
+         RX65N Envision Kit GCC e2 studio with E2 Emulator Lite (on board)
+         RX65N Envision Kit CC-RX CS+ with E2 Emulator Lite (on board)
+         RX64M GR-KAEDE CC-RX e2 studio with E2 Emulator Lite
+         RX64M GR-KAEDE GCC e2 studio with E2 Emulator Lite
+         RX64M GR-KAEDE CC-RX CS+ with E2 Emulator Lite
+         RX63N GR-SAKURA II CC-RX e2 studio with E2 Emulator Lite
+         RX63N GR-SAKURA II GCC e2 studio with E2 Emulator Lite
+         RX63N GR-SAKURA II CC-RX CS+ with E2 Emulator Lite
+         
 v0.1.6:
 [TESTED] by Amazon FreeRTOS Qualification for
          RX65N RSK CC-RX e2 studio with E2 Emulator Lite
@@ -377,7 +407,7 @@ Compiler: CC-RX V3.00 (you need non-expired evaluation license or product licens
     [en] https://www.renesas.com/us/en/products/software-tools/tools/compiler-assembler/compiler-package-for-rx-family-e2studio.html
     [ja] https://www.renesas.com/jp/ja/products/software-tools/tools/compiler-assembler/compiler-package-for-rx-family-e2studio.html
 
-IDE: e2 studio V7.2.0
+IDE: e2 studio V7.3.0
     [en] https://www.renesas.com/us/en/products/software-tools/tools/ide/e2studio.html
     [ja] https://www.renesas.com/jp/ja/products/software-tools/tools/ide/e2studio.html
     
@@ -420,19 +450,19 @@ Board: RX65N Envision Kit
            RX65N Envision Kit has no parts related Ethernet.
            Please implements LAN8720A and RJ45 connector onto your RX65N Envision Kit.
 
-Board: RX65N GR-ROSE proto1
+Board: RX65N GR-ROSE proto2 (Board Circuit Document No.:X65A-M01-B , Document Rev.B8)
     [en] now preparing
     [ja] now preparing
          [event info] http://gadget.renesas.com/ja/event/2018/RenesasNight13.html
 
-         The log will be output from CN9 10pin=TxD12(PE1) connector as UART.
+         The log will be output from CN4 10pin=TxD2(P50) connector as UART.
          Please set baud-rate as 115200bps, 8bit-data, no-parity, 1 stop-bit,
          and "LF" only as return code for your console.
          PMOD UART/USB convertor can be used for this signal.
          https://store.digilentinc.com/pmod-usbuart-usb-to-uart-interface/
 
          Please contact as following.
-         PMOD UART/USB ----- RX65N GR-ROSE CN9
+         PMOD UART/USB ----- RX65N GR-ROSE CN4
          1             -----
          2(TxD)        ----- 10pin
          3             -----
@@ -441,20 +471,13 @@ Board: RX65N GR-ROSE proto1
          6(VCC)        ----- 6pin
 
          [How to connect E2 Emulator Lite]
-         GR-ROSE CN2-TH 4pins are connected to RX65N Debug Interface called FINE.
+         GR-ROSE CN3 4pins are connected to RX65N Debug Interface called FINE.
          You can connect E2 Emulator Lite to this pins as following.
-         GR-ROSE CN2-TH ----- Emulator 14pin connector
+         GR-ROSE CN3 ----- Emulator 14pin connector
          pin1(VCC)      ----- pin8
          pin2(GND)      ----- pin2, pin12, pin14
          pin3(MD)       ----- pin7
          pin4(#RES)     ----- pin13
-
-         Workaround for circuit bug:
-           You have to connect ESP-WROOM-02D pin4 to GND (CN1 pin1)
-           before connecting debugger from IDE operation (e2 studio has "BUG" icon for start debugging).
-           And, you have to release ESP-WROOM-02D pin4 from GND after connecting.
-           You can see pin1 on left-upper corner nearby "E" character on "ESPRESSIF" logo.
-           Pin4 is lower 4pins from pin1.
 
 Board: RX64M GR-KAEDE
     [en] http://gadget.renesas.com/en/product/kaede.html
@@ -499,35 +522,31 @@ Board: RX63N GR-SAKURA II
          Please confirm your GR-SAKURA is GR-SAKURA II that has 256KB-RAM RX63N (R5F563NYDDFP).
          Because Amazon FreeRTOS needs RAM size 128KB over.
          
-Board: RX65N Target Board
+Board: RX65N Target Board + Cloud Option Board (with Silex SX-ULPGN)	
     [en] https://www.renesas.com/us/en/products/software-tools/boards-and-kits/cpu-mpu-boards/rx-family-target-board.html
     [ja] https://www.renesas.com/jp/ja/products/software-tools/boards-and-kits/cpu-mpu-boards/rx-family-target-board.html
 
-         The log will be output from J2 16pin=TxD5(PA4) connector as UART.
+         The log will be output from Cloud Option Board CN18 connector as UART.
          Please set baud-rate as 115200bps, 8bit-data, no-parity, 1 stop-bit,
          and "LF" only as return code for your console.
-         PMOD UART/USB convertor is provided by Digilent.
-         https://store.digilentinc.com/pmod-usbuart-usb-to-uart-interface/
 
-         Please contact as following.
-         PMOD UART/USB ----- RX65N Target Board J2
-         1             -----
-         2(TxD)        ----- 16pin
-         3             -----
-         4             -----
-         5(GND)        ----- 12pin
-         6(VCC)        ----- 10pin
-
-         The communication will be output/input from/to J1 45pin=TxD(PC7) and 46pin=RxD(PC6) as UART.
+         The communication will be output/input from/to Cloud Option Board CN5(PMOD) as UART.
          Silex SX-ULPGN PMOD can be connected.
          Please contact as following.
-         PMOD UART     ----- RX65N Target Board J1
-         1             -----
-         2(TxD)        ----- 45pin
-         3(RxD)        ----- 46pin
-         4             -----
-         5(GND)        ----- 12pin
-         6(VCC)        ----- 14pin
+         SX-ULPGN PMOD                ----- RX65N Cloud Option Board (PMOD)
+         HSUART1-CTS(PMOD 1pin)       ----- PMOD 1pin
+         HSUART1-MOSI(PMOD 2pin)      ----- PMOD 2pin
+         HSUART1-MISO(PMOD 3pin)      ----- PMOD 3pin
+         HSUART1-RTS(PMOD 4pin)       ----- PMOD 4pin
+         GND(PMOD 5pin)               ----- PMOD 5pin
+         VCC(PMOD 6pin)               ----- PMOD 6pin
+         GPIO                         ----- PMOD 7pin
+         PWD_L(PMOD 8pin)             ----- PMOD 8pin
+         HSUART2-MOSI(SX-ULPGN 15pin) ----- PMOD 9pin(P26)
+         HSUART2-MISO(SX-ULPGN 16pin) ----- PMOD 10pin(P30)
+         GND(PMOD 11pin)              ----- PMOD 11pin
+         VCC(PMOD 12pin)              ----- PMOD 12pin
+         
          
 WIFI Module: Silex SX-ULPGN PMOD
     [en] https://www.renesas.com/us/en/products/synergy/gallery/partner-projects/silex-wifi-pmod.html
@@ -540,11 +559,11 @@ WIFI Module: Silex SX-ULPGN PMOD
            #define clientcredentialWIFI_SSID       "Paste Wi-Fi SSID here."
            #define clientcredentialWIFI_PASSWORD   "Paste Wi-Fi password here."
            
-IDE: CS+ v8.00.00
+IDE: CS+ v8.01.00
     [en] https://www.renesas.com/en-us/products/software-tools/tools/ide/csplus.html
     [ja] https://www.renesas.com/ja-jp/products/software-tools/tools/ide/csplus.html
 
-Smart Configurator v1.5.0 (Standalone for CS+): 
+Smart Configurator v2.0.0 (Standalone for CS+): 
     [en] https://www.renesas.com/en-us/products/software-tools/tools/solution-toolkit/smart-configurator.html
     [ja] https://www.renesas.com/ja-jp/products/software-tools/tools/solution-toolkit/smart-configurator.html
     
@@ -632,11 +651,12 @@ Development Environment (tested or no matrix)
 Borad number:
  (1)Renesas Starter Kit+ for RX65N-2MB
  (2)RX65N Envision Kit
- (3)RX65N GR-ROSE proto1
+ (3)RX65N GR-ROSE
  (4)RX64M GR-KAEDE
  (5)Renesas Starter Kit+ for RX65N-2MB + Silex SX-ULPGN PMOD
  (6)RX65N Target Board + Silex SX-ULPGN PMOD
  (7)RX63N GR-SAKURA II
+ (8)RX65N GR-ROSE (WIFI: ESP8266)
 
 Connection pattern number:
  (1)pattern1: wifi module has TCP/IP and SSL/TLS, Amazon recommends this pattern as RAM<16KB.
@@ -662,9 +682,10 @@ Board Connection / Compiler (1) (2) (3) (1) (2) (3) (1) (2) (3)
 (2)   (2)        /           x   x       x   -   -   -   -   * 
 (3)   (2)        /           x   x       x   -   -   -   -     
 (4)   (2)        /           x   x       x   -   -   -   -     
-(5)   (4)        /           *   *       *   -   -   -   -     
-(6)   (4)        /           *   *       *   -   -   -   -     
+(5)   (4)        /           x   x       x   -   -   -   -     
+(6)   (4)        /           x   x       x   -   -   -   -     
 (7)   (2)        /           x   x       x   -   -   -   -     
+(8)   (4)        /           x   x           -   -   -   -     
 
   X: tested (Amazon FreeRTOS Qualification)
   x: tested (MQTT echo demo)
@@ -731,6 +752,9 @@ RX65N Envision Kit、RX65N RSK(2MB版/暗号器あり品)をターゲットに�
 --------------------------------------------------------------------------
 ■課題まとめ★
 --------------------------------------------------------------------------
+　2019/03/02
+　　e2 studio/CC-RX環境全般において、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+
 　2018/12/15
 　　スマートコンフィグレータの出力先がプロジェクトファイルの階層以下で固定ということと、
 　　AmazonがMCUベンダ側に指定しているデバイスドライバ置き場がプロジェクトファイルの階層外であることを
@@ -808,6 +832,141 @@ RX65N Envision Kit、RX65N RSK(2MB版/暗号器あり品)をターゲットに�
 --------------------------------------------------------------------------
 ■ポーティング記録	★印が解決すべき課題
 --------------------------------------------------------------------------
+2019/03/02
+　Amazon FreeRTOS Qualification Program 合格し、認証が取れた。
+　https://www.renesas.com/jp/ja/about/press-center/news/2019/news20190108.html
+　
+　OTA対応やSDIO無線LAN対応、スマートコンフィグレータとの連携、FITのGCCI/IAR対応など
+　まだまだ整備が足りないところが多い。引き続きメンテしていく必要がある。
+　スマートコンフィグレータとの連携、FITのGCCI/IAR対応は正式に仕事としてスタートできた。
+　ところで本家のアップデートが溜まってきたようなので、最新版V147とマージを試みリリースビルドを作る。
+　それはそうと、対応ボードが増えて動作確認が大変かつ、MQTTエコーの動作確認しかできないので、
+　そろそろ自動テスト機構を作る必要がある。
+　アメリカの開発部隊がGitLabを利用したマイコン実機活用の自動テスト機構を作っていたので
+　これを参考に作ってみよう。ここら辺がゴールデンウィークのネタ。
+　・OTA対応
+　・SDIO無線LAN
+　・自動テスト機構
+　
+　ひとまずしばらくは手動で我慢してテストしていく。
+
+　以下プロジェクトの動作確認OK。
+　このフォルダはAmazon FreeRTOS Qualification Programを通した神様。
+　.cprojectや.projectの内容は後々他のプロジェクトに反映する必要がある。
+　\demos\renesas\rx65n-rsk\e2studio
+　
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-rsk\ccrx-e2studio
+　ただし、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+　そのうちプロジェクトを作り直す必要があるか。
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-rsk\gnurx-e2studio
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-rsk\ccrx-csplus
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-rsk\ccrx-e2studio
+　ただし、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+　そのうちプロジェクトを作り直す必要があるか。
+　ここまででコミット。
+　
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-rsk-uart-sx-ulpgn\ccrx-e2studio
+　ただし、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+　そのうちプロジェクトを作り直す必要があるか。
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-rsk-uart-sx-ulpgn\gnurx-e2studio
+　ここまででコミット。
+　
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-rsk-uart-sx-ulpgn\ccrx-csplus
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-cloud-kit-uart-sx-ulpgn\ccrx-e2studio
+　ただし、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+　そのうちプロジェクトを作り直す必要があるか。
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-cloud-kit-uart-sx-ulpgn\ccrx-csplus
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-gr-rose\ccrx-e2studio
+　ただし、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+　そのうちプロジェクトを作り直す必要があるか。
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-gr-rose\gnurx-e2studio
+　ただし、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+　そのうちプロジェクトを作り直す必要があるか。
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-gr-rose\gnurx-e2studio-cpp
+　ただし、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+　そのうちプロジェクトを作り直す必要があるか。
+　ここまででコミット。
+　
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-gr-rose\ccrx-csplus
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-gr-rose-uart-esp8266\ccrx-e2studio
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-gr-rose-uart-esp8266\gnurx-e2studio
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-envision-kit\ccrx-csplus
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-envision-kit\ccrx-e2studio
+　ただし、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+　そのうちプロジェクトを作り直す必要があるか。
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx65n-envision-kit\gnurx-e2studio
+　ただし、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+　そのうちプロジェクトを作り直す必要があるか。
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx64m-gr-kaede\ccrx-csplus
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx64m-gr-kaede\ccrx-e2studio
+　ただし、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+　そのうちプロジェクトを作り直す必要があるか。
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx64m-gr-kaede\gnurx-e2studio
+　ただし、ファイル更新が無いのにすべてのファイルのビルドがかかる病気がでている。
+　そのうちプロジェクトを作り直す必要があるか。
+　ここまででコミット。
+
+　以下プロジェクトの動作確認OK。スマートコンフィグレータも動かしなおしてみた。問題なし。
+　\demos\renesas\rx63n-gr-sakura2\ccrx-csplus
+　\demos\renesas\rx63n-gr-sakura2\ccrx-e2studio
+　\demos\renesas\rx63n-gr-sakura2\gnurx-e2studio
+　ここまででコミット。
+　
 2018/12/23
 　以下プロジェクトの動作確認OK。
 　\demos\renesas\rx65n-envision-kit\ccrx-e2studio
