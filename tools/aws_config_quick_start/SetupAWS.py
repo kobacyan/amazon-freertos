@@ -16,10 +16,21 @@ def check_aws_configuration():
         print("AWS not configured. Please run `aws configure`.")
         sys.exit(1)
 
+def validate_json_text(json_text):
+    #Check that WiFi Security contains a valid value.
+    wifi_security = json_text['wifi_security']
+    if wifi_security not in ['eWiFiSecurityOpen', 'eWiFiSecurityWEP', 'eWiFiSecurityWPA', 'eWiFiSecurityWPA2']:
+        print("{} is not a valid wifi_security value.".format(wifi_security))
+        print("wifi_security value must be one of ['eWiFiSecurityOpen', 'eWiFiSecurityWEP', 'eWiFiSecurityWPA', 'eWiFiSecurityWPA2'].")
+        print("Please correct wifi_security value in configure.json.")
+        sys.exit(1)
 
 def prereq():
     with open('configure.json') as file:
         json_text = json.load(file)
+
+    # Validate that the entries in the JSON are valid.
+    validate_json_text(json_text)
 
     # Create a Thing
     thing_name = json_text['thing_name']
@@ -122,11 +133,18 @@ def delete_prereq():
     cert_id =  cert_id_file.read()
     cert_obj = certs.Certificate(cert_id)
     cert_obj.delete()
+    cert_id_file.close()
+    cert_id_file_path = os.path.abspath(cert_id_filename)
+    os.chmod(cert_id_file_path, 0o666)
     os.remove(cert_id_filename)
 
     # Delete cert_pem file and private_key_pem file
     cert_pem_filename = thing_name + '_cert_pem_file'
     private_key_pem_filename = thing_name + '_private_key_pem_file'
+    cert_pem_file_path = os.path.abspath(cert_pem_filename)
+    private_key_pem_file_path = os.path.abspath(private_key_pem_filename)
+    os.chmod(cert_pem_file_path, 0o666)
+    os.chmod(private_key_pem_file_path, 0o666)
     os.remove(cert_pem_filename)
     os.remove(private_key_pem_filename)
 

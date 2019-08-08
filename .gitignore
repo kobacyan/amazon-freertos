@@ -1,3 +1,16 @@
 # Ignore uncrustify backups
 *.unc*
 doc/html/*
+/.metadata/
+.vscode/*
+*.o
+*.d 
+*.elf
+*.hex
+*.bin
+
+RemoteSystemsTempFiles/*
+
+# Ignore top-level build dir
+/build*/
+
