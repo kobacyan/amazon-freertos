@@ -30,7 +30,7 @@
     <package>
         <type>rtosmodule</type>
         <name>AmazonFreeRTOS_RX</name>
-        <version>2.0.00</version>
+        <version>201906.00_Major-rx-0.1.15</version>
         <dependency>
             <module>r_bsp</module>
             <version>5.20</version>
@@ -175,12 +175,6 @@
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_sci_rx/src</path>
         </incdir>
         <incdir>
-            <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_cmt_rx</path>
-        </incdir>
-        <incdir>
-            <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_cmt_rx/src</path>
-        </incdir>
-        <incdir>
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_s12ad_rx</path>
         </incdir>
         <incdir>
@@ -191,6 +185,7 @@
             <group>RX64M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_s12ad_rx/src/targets/rx64m</path>
         </incdir>
+        <incdir>
             <series>RX600</series>
             <group>RX65N</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_s12ad_rx/src/targets/rx65n</path>
@@ -640,11 +635,6 @@
             <file>vendors/renesas/FIT/v120/r_flash_rx/src/flash_type_1/r_flash_common.h</file>
             <file>vendors/renesas/FIT/v120/r_flash_rx/src/flash_type_1/r_flash_type1_if.h</file>
             <path>application_code/renesas_code/smc_gen/r_flash_rx/src/flash_type_1</path>
-        </impdir>
-        <impdir>
-            <file>vendors/renesas/FIT/v120/r_flash_rx/src/flash_type_2/r_flash_type2.c</file>
-            <file>vendors/renesas/FIT/v120/r_flash_rx/src/flash_type_2/r_flash_type2_if.h</file>
-            <path>application_code/renesas_code/smc_gen/r_flash_rx/src/flash_type_2</path>
         </impdir>
         <impdir>
             <file>vendors/renesas/FIT/v120/r_flash_rx/src/flash_type_3/r_flash_type3.c</file>
