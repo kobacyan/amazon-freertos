@@ -39,46 +39,76 @@
         <desc>A real-time operating system for RX MCUs</desc>
         <details>The real-time operating system augments FreeRTOS kernel with libraries for connectivity, security, and over-the-air updates</details>
         <function>RTOS</function>
+		
+		<standardlib>
+			<toolchain>RXC</toolchain>
+			<libname>ctype.h</libname>
+			<libname>math.h</libname>
+			<libname>mathf.h</libname>
+			<libname>stdarg.h</libname>
+			<libname>string.h</libname>
+			<libname>new.h</libname>
+			<libname>fenv.h</libname>
+			<libname>inttypes.h</libname>
+			<libname>ctype.h</libname>
+			<libname>wchar.h</libname>
+			<libname>wctype.h</libname>
+		</standardlib>
+		
+		<section>
+			<toolchain>RXC</toolchain>
+			<series>RX600</series>
+			<group>RX64M</group>
+			<group>RX65N</group>             
+			<name>RPFRAM2</name>
+			<name>C_PKCS11_STORAGE</name>
+			<address>0x00102000</address>		
+			<name>C_PKCS11_STORAGE_MIRROR</name>
+			<address>0x00104000</address>		
+			<name>B_ETHERNET_BUFFERS_1</name>
+			<address>0x00800000</address>
+			<name>B_RX_DESC_1</name>
+			<name>B_TX_DESC_1</name>
+		</section>
+		
+		<section>
+			<toolchain>RXC</toolchain>
+			<series>RX700</series>
+			<group>RX71M</group>           
+			<name>C_PKCS11_STORAGE</name>
+			<address>0x00102000</address>		
+			<name>C_PKCS11_STORAGE_MIRROR</name>
+			<address>0x00104000</address>		
+			<name>B_ETHERNET_BUFFERS_1</name>
+			<address>0x00800000</address>
+			<name>B_RX_DESC_1</name>
+			<name>B_TX_DESC_1</name>
+		</section>
+		
+		<romtoram>
+			<series>RX600</series>
+            <series>RX700</series>
+            <group>RX64M</group>
+            <group>RX65N</group>
+            <group>RX71M</group>
+			<copy>PFRAM=RPFRAM</copy>
+		</romtoram>
+
 
         <preinc>
             <toolchain>RXC</toolchain>
-            <file>vendors/renesas/amazon_freertos_common/compiler_support/ccrx/implicitlyinclude.h</file>
+            <file>"implicitlyinclude.h"</file>
         </preinc>
         <preinc>
             <toolchain>GNURX</toolchain>
-            <file>vendors/renesas/amazon_freertos_common/compiler_support/gnuc/implicitlyinclude.h</file>
+            <file>"implicitlyinclude.h"</file>
         </preinc>
     
         <incdir>
             <path>${AFR_HOME}/freertos_kernel/include</path>
         </incdir>
-        <incdir>
-            <toolchain>RXC</toolchain>
-            <series>RX600</series>
-            <series>RX700</series>
-            <group>RX64M</group>
-            <group>RX65N</group>
-            <group>RX71M</group>
-            <path>${AFR_HOME}/freertos_kernel/portable/Renesas/RX600v2</path>
-        </incdir>
-        <incdir>
-            <toolchain>GNURX</toolchain>
-            <series>RX600</series>
-            <series>RX700</series>
-            <group>RX64M</group>
-            <group>RX65N</group>
-            <group>RX71M</group>
-            <path>${AFR_HOME}/freertos_kernel/portable/GCC/RX600v2</path>
-        </incdir>
-        <incdir>
-            <path>${AFR_HOME}/libraries/3rdparty/jsmn</path>
-        </incdir>
-        <incdir>
-            <path>${AFR_HOME}/libraries/3rdparty/mbedtls/include</path>
-        </incdir>
-        <incdir>
-            <path>${AFR_HOME}/libraries/3rdparty/mbedtls/include/mbedtls</path>
-        </incdir>
+        
+        
         <incdir>
             <path>${AFR_HOME}/vendors/renesas/amazon_freertos_common</path>
         </incdir>
@@ -210,6 +240,24 @@
             <group>RX71M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_s12ad_rx/src/targets/rx71m</path>
         </incdir>
+		<incdir>
+            <toolchain>RXC</toolchain>
+            <series>RX600</series>
+            <series>RX700</series>
+            <group>RX64M</group>
+            <group>RX65N</group>
+            <group>RX71M</group>
+            <path>${AFR_HOME}/freertos_kernel/portable/Renesas/RX600v2</path>
+        </incdir>
+        <incdir>
+            <toolchain>GNURX</toolchain>
+            <series>RX600</series>
+            <series>RX700</series>
+            <group>RX64M</group>
+            <group>RX65N</group>
+            <group>RX71M</group>
+            <path>${AFR_HOME}/freertos_kernel/portable/GCC/RX600v2</path>
+        </incdir>
         <incdir>
             <path>${PROJECT_LOC}/config_files</path>
         </incdir>
@@ -254,11 +302,14 @@
         <incdir>
             <path>${AFR_HOME}/libraries/freertos_plus/standard/crypto/include</path>
         </incdir>
+		<incdir>
+            <path>${AFR_HOME}/libraries/freertos_plus/standard/pkcs11/include</path>
+        </incdir>
         <incdir>
             <path>${AFR_HOME}/libraries/abstractions/pkcs11/include</path>
         </incdir>
         <incdir>
-            <path>${PROJECT_LOC}/application_code/dev_mode_key_provisioning/include</path>
+            <path>${PROJECT_LOC}/application_code/demos/dev_mode_key_provisioning/include</path>
         </incdir>
         <incdir>
             <path>${AFR_HOME}/libraries/freertos_plus/standard/utils/include</path>
@@ -279,6 +330,12 @@
             <path>${AFR_HOME}/libraries/freertos_plus/aws/greengrass/include</path>
         </incdir>
         <incdir>
+            <path>${AFR_HOME}/libraries/3rdparty/mbedtls/include</path>
+        </incdir>
+        <incdir>
+            <path>${AFR_HOME}/libraries/3rdparty/mbedtls/include/mbedtls</path>
+        </incdir>
+        <incdir>
             <path>${AFR_HOME}/libraries/abstractions/pkcs11/mbedtls</path>
         </incdir>
         <incdir>
@@ -287,7 +344,9 @@
         <incdir>
             <path>${AFR_HOME}/libraries/3rdparty/tinycbor</path>
         </incdir>
-
+		<incdir>
+            <path>${AFR_HOME}/libraries/3rdparty/jsmn</path>
+        </incdir>
         <impdir>
             <series>RX600</series>
             <group>RX64M</group>
@@ -437,7 +496,7 @@
             <group>RX65N</group>
             <group>RX64M</group>
             <group>RX71M</group>
-            <file>vendors/renesas/FIT/v120/r_bsp/mcu/all/platform.h</file>
+            <file>vendors/renesas/FIT/v120/r_bsp/platform.h</file>
             <file>vendors/renesas/FIT/v120/r_bsp/mcu/all/readme.txt</file>
             <path>application_code/renesas_code/smc_gen/r_bsp</path>
         </impdir>
@@ -791,6 +850,10 @@
             <file>vendors/renesas/FIT/v120/r_sci_rx/ref/r_sci_rx_config_reference.h</file>
             <path>application_code/renesas_code/smc_gen/r_sci_rx/ref</path>
         </impdir>
+		<impdir>
+            <file>vendors/renesas/FIT/v120/r_sci_rx/r_sci_rx_if.h</file>
+            <path>application_code/renesas_code/smc_gen/r_sci_rx</path>
+        </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX64M</group>
@@ -874,10 +937,13 @@
             <group>RX64M</group>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.c</file>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.h</file>
+		  <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</file>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</file>
+			<file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.c</file>
+			<file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
             <path>application_code/renesas_code/smc_gen/r_pincfg</path>
         </impdir>
         <impdir>
@@ -887,8 +953,11 @@
             <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.h</file>
             <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</file>
+		<file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
             <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</file>
+			<file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.c</file>
+			<file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
             <path>application_code/renesas_code/smc_gen/r_pincfg</path>
         </impdir>
         <impdir>
@@ -898,8 +967,11 @@
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.h</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</file>
+		<file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</file>
+			<file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.c</file>
+			<file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
             <path>application_code/renesas_code/smc_gen/r_pincfg</path>
         </impdir>
 
@@ -1160,13 +1232,13 @@
             <path>libraries/abstractions/platform/include/types</path>
         </linkdir>
         <linkdir>
-            <file>libraries/abstractions/secure_sockets/freertos_plus_tcp/aws_secure_sockets.c</file>
+            <file>libraries/abstractions/secure_sockets/freertos_plus_tcp/iot_secure_sockets.c</file>
             <path>libraries/abstractions/secure_sockets/freertos_plus_tcp</path>
         </linkdir>
         <linkdir>
-            <file>libraries/abstractions/secure_sockets/include/aws_secure_sockets_config_defaults.h</file>
-            <file>libraries/abstractions/secure_sockets/include/aws_secure_sockets_wrapper_metrics.h</file>
-            <file>libraries/abstractions/secure_sockets/include/aws_secure_sockets.h</file>
+            <file>libraries/abstractions/secure_sockets/include/iot_secure_sockets_config_defaults.h</file>
+            <file>libraries/abstractions/secure_sockets/include/iot_secure_sockets_wrapper_metrics.h</file>
+            <file>libraries/abstractions/secure_sockets/include/iot_secure_sockets.h</file>
             <path>libraries/abstractions/secure_sockets/include</path>
         </linkdir>
         <linkdir>
@@ -1220,7 +1292,7 @@
             <path>libraries/c_sdk/standard/common/include</path>
         </linkdir>
         <linkdir>
-            <file>libraries/c_sdk/standard/common/logging/aws_logging_task_dynamic_buffers.c</file>
+            <file>libraries/c_sdk/standard/common/logging/iot_logging_task_dynamic_buffers.c</file>
             <file>libraries/c_sdk/standard/common/logging/iot_logging.c</file>
             <path>libraries/c_sdk/standard/common/logging</path>
         </linkdir>
@@ -1248,7 +1320,7 @@
             <path>libraries/c_sdk/standard/mqtt/include</path>
         </linkdir>
         <linkdir>
-            <file>libraries/c_sdk/standard/mqtt/src/aws_mqtt_agent.c</file>
+            <file>libraries/c_sdk/standard/mqtt/src/iot_mqtt_agent.c</file>
             <file>libraries/c_sdk/standard/mqtt/src/iot_mqtt_api.c</file>
             <file>libraries/c_sdk/standard/mqtt/src/iot_mqtt_network.c</file>
             <file>libraries/c_sdk/standard/mqtt/src/iot_mqtt_operation.c</file>
@@ -1269,8 +1341,8 @@
             <path>libraries/c_sdk/standard/serializer/src/cbor</path>
         </linkdir>
         <linkdir>
-            <file>libraries/c_sdk/standard/serializer/src/json/aws_iot_serializer_json_decoder.c</file>
-            <file>libraries/c_sdk/standard/serializer/src/json/aws_iot_serializer_json_encoder.c</file>
+            <file>libraries/c_sdk/standard/serializer/src/json/iot_serializer_json_decoder.c</file>
+            <file>libraries/c_sdk/standard/serializer/src/json/iot_serializer_json_encoder.c</file>
             <path>libraries/c_sdk/standard/serializer/src/json</path>
         </linkdir>
         <linkdir>
@@ -1366,12 +1438,21 @@
         </linkdir>
         <linkdir>
             <file>libraries/freertos_plus/standard/tls/include/iot_tls.h</file>
-            <path>libraries/freertos_plus/standard/tls</path>
+            <path>libraries/freertos_plus/standard/tls/include/</path>
+        </linkdir>
+		<linkdir>
+            <file>libraries/freertos_plus/standard/tls/src/iot_tls.c</file>
+            <path>libraries/freertos_plus/standard/tls/src/</path>
         </linkdir>
         <linkdir>
             <file>libraries/freertos_plus/standard/utils/include/iot_pki_utils.h</file>
             <file>libraries/freertos_plus/standard/utils/include/iot_system_init.h</file>
             <path>libraries/freertos_plus/standard/utils/include</path>
+        </linkdir>
+		<linkdir>
+             <file>libraries/freertos_plus/standard/utils/src/iot_system_init.c</file>
+			 <file>libraries/freertos_plus/standard/utils/src/iot_pki_utils.c</file>
+            <path>libraries/freertos_plus/standard/utils/src</path>
         </linkdir>
         <linkdir>
             <toolchain>RXC</toolchain>
