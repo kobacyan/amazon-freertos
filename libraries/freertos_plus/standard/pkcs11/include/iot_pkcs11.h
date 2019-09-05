@@ -1,6 +1,6 @@
 /*
- * Amazon FreeRTOS
- * Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+ * Amazon FreeRTOS PKCS #11 V1.0.0
+ * Copyright (C) 2018 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -23,11 +23,14 @@
  * http://www.FreeRTOS.org
  */
 
-
 #ifndef _AWS_PKCS11_H_
 #define _AWS_PKCS11_H_
 
 #include <stdint.h>
+
+#ifdef _WIN32
+    #pragma pack(push, cryptoki, 1)
+#endif
 
 /**
  * @brief Amazon FreeRTOS PKCS#11 Interface.
@@ -232,5 +235,8 @@ CK_RV xFindObjectWithLabelAndClass( CK_SESSION_HANDLE xSession,
 CK_RV vAppendSHA256AlgorithmIdentifierSequence( uint8_t * x32ByteHashedMessage,
                                                 uint8_t * x51ByteHashOidBuffer );
 
+#ifdef _WIN32
+    #pragma pack(pop, cryptoki)
+#endif
 
 #endif /* ifndef _AWS_PKCS11_H_ */

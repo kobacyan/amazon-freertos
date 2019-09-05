@@ -299,7 +299,7 @@ void vNetworkInterfaceAllocateRAMToBuffers( NetworkBufferDescriptor_t pxNetworkB
     uint8_t *buffer_address;
     R_BSP_SECTION_OPERATORS_INIT(B_ETHERNET_BUFFERS_1)
 
-	buffer_address = R_BSP_SECTOP(B_ETHERNET_BUFFERS_1);
+    buffer_address = R_BSP_SECTOP(B_ETHERNET_BUFFERS_1);
 
     for( ul = 0; ul < ipconfigNUM_NETWORK_BUFFER_DESCRIPTORS; ul++ )
     {
@@ -460,7 +460,7 @@ void EINT_Trig_isr(void *ectrl)
  **********************************************************************************************************************/
 static void check_ether_link(void * pvParameters)
 {
-	R_BSP_ASM_INTERNAL_NOT_USED(pvParameters);
+	INTERNAL_NOT_USED(pvParameters);
 
     while(1)
     {

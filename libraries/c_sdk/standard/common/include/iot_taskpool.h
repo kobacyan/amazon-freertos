@@ -1,5 +1,5 @@
 /*
- * Amazon FreeRTOS Common V1.0.0
+ * Amazon FreeRTOS Common V1.1.0
  * Copyright (C) 2018 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -271,7 +271,7 @@ IotTaskPoolError_t IotTaskPool_CreateJob( IotTaskPoolRoutine_t userCallback,
 /* @[declare_taskpool_createjob] */
 
 /**
- * @brief Creates a job for the task pool by allocating the job dynamically.
+ * brief Creates a job for the task pool by allocating the job dynamically.
  *
  * A recyclable job does not need to be allocated twice, but it can rather be reused through
  * subsequent calls to @ref IotTaskPool_CreateRecyclableJob.

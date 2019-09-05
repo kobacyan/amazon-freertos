@@ -1,5 +1,5 @@
 /*
- * Amazon FreeRTOS V201906.00 Major
+ * Amazon FreeRTOS V201908.00
  * Copyright (C) 2018 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -827,7 +827,7 @@ CK_RV xInitializePkcs11Token()
     {
         /* Initialize the token if it is not already. */
         xResult = pxFunctionList->C_InitToken( pxSlotId[ 0 ],
-                                               configPKCS11_DEFAULT_USER_PIN,
+                                               ( CK_UTF8CHAR_PTR ) configPKCS11_DEFAULT_USER_PIN,
                                                sizeof( configPKCS11_DEFAULT_USER_PIN ) - 1,
                                                ( CK_UTF8CHAR_PTR ) "FreeRTOS" );
     }

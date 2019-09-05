@@ -1,5 +1,5 @@
 /*
- * Amazon FreeRTOS MQTT V2.0.0
+ * Amazon FreeRTOS MQTT V2.1.0
  * Copyright (C) 2018 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -40,8 +40,8 @@
 /*------------------------- MQTT library functions --------------------------*/
 
 /**
- * @functions_page{mqtt, MQTT}
- * @functions_brief{mqtt}
+ * @functions_page{MQTT, MQTT}
+ * @functions_brief{MQTT}
  * - @function_name{mqtt_function_init}
  * @function_brief{mqtt_function_init}
  * - @function_name{mqtt_function_cleanup}
