@@ -339,6 +339,9 @@
         <incdir>
             <path>${AFR_HOME}/libraries/c_sdk/aws/shadow/include</path>
         </incdir>
+		<incdir>
+            <path>${AFR_HOME}/libraries/c_sdk/standard/https/include</path>
+        </incdir>
         <incdir>
             <path>${AFR_HOME}/libraries/freertos_plus/aws/greengrass/include</path>
         </incdir>
@@ -356,6 +359,9 @@
         </incdir>
         <incdir>
             <path>${AFR_HOME}/libraries/3rdparty/tinycbor</path>
+        </incdir>
+		<incdir>
+            <path>${AFR_HOME}/libraries/3rdparty/http-parser</path>
         </incdir>
 		<incdir>
             <path>${AFR_HOME}/libraries/3rdparty/jsmn</path>
