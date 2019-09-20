@@ -61,6 +61,12 @@
 #include "iot_crypto.h"
 #include "platform.h"
 #include "sx_ulpgn_driver.h"
+/* WiFi configuration includes. */
+#include "aws_wifi_config.h"
+
+/* Credentials includes. */
+#include "aws_clientcredential.h"
+#include "iot_default_root_certificates.h"
 
 #undef _SECURE_SOCKETS_WRAPPER_NOT_REDEFINE
 /* Internal context structure. */

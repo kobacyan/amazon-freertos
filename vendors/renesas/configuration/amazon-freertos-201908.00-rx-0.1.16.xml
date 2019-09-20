@@ -103,7 +103,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
-            <mappedramrom>DPFRAM2=RPFRAM2</mappedramrom>
+            
         </sections>
 
 

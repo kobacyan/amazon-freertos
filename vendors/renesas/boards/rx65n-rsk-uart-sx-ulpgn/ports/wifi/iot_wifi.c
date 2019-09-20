@@ -101,6 +101,7 @@ WIFIReturnCode_t WIFI_On(void) {
 #endif
         /* Wi-Fi init done*/
         xWIFIInitDone = pdTRUE;
+
     }
 
     if (0 == sx_ulpgn_wifi_init()) {
@@ -351,3 +352,8 @@ BaseType_t WIFI_IsConnected(void) {
     return xIsConnected;
 }
 
+WIFIReturnCode_t WIFI_RegisterNetworkStateChangeEventCallback( IotNetworkStateChangeEventCallback_t xCallback  )
+{
+    /** Needs to implement dispatching network state change events **/
+    return eWiFiNotSupported;
+}
