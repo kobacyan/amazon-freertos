@@ -65,10 +65,9 @@ Change Logs
 --------------------------------------------------------------------------
 201908.00-rx-0.1.15
  [UPDATED] Update aws/amazon-freertos version to 201908.00.
+ [TESTED] demos MQTT echo behavior for RX65N RSK CC-RX e2 studio with E2 Emulator Lite
+ [ADDED] Release tag for e2 studio.
  
- [TESTED] demos MQTT echo behavior for
- RX65N RSK CC-RX e2 studio with E2 Emulator Lite
-
 --------------------------------------------------------------------------
 Development Environment (recommended)
 --------------------------------------------------------------------------
