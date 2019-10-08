@@ -2250,6 +2250,11 @@
 			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_bsp_config.h</locationURI>
 		</link>
 		<link>
+			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_bsp_config_readme.txt</name>
+			<type>1</type>
+			<locationURI>SMC_GENERATED_LOC/r_config/r_bsp_config_readme.txt</locationURI>
+		</link>
+		<link>
 			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_bsp_interrupt_config.h</name>
 			<type>1</type>
 			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_bsp_interrupt_config.h</locationURI>
@@ -2292,27 +2297,27 @@
 		<link>
 			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</locationURI>
+			<locationURI>SMC_GENERATED_LOC/r_pincfg/r_ether_rx_pinset.c</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</locationURI>
+			<locationURI>SMC_GENERATED_LOC/r_pincfg/r_ether_rx_pinset.h</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</locationURI>
+			<locationURI>SMC_GENERATED_LOC/r_pincfg/r_pinset.h</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</locationURI>
+			<locationURI>SMC_GENERATED_LOC/r_pincfg/r_sci_rx_pinset.c</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</locationURI>
+			<locationURI>SMC_GENERATED_LOC/r_pincfg/r_sci_rx_pinset.h</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/FIT/v120/r_bsp/mcu/rx65n/register_access/ccrx/iodefine.h</name>
@@ -2322,7 +2327,7 @@
 	</linkedResources>
 	<filteredResources>
 		<filter>
-			<id>1565250623481</id>
+			<id>1570497396052</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -2357,11 +2362,28 @@
 				<arguments>1.0-name-matches-false-false-rx65n</arguments>
 			</matcher>
 		</filter>
+		<filter>
+			<id>1570498390022</id>
+			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen</name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-true-r_bsp|r_byteq|r_flash_rx|r_s12ad_rx|r_sci_rx|r_ether_rx</arguments>
+			</matcher>
+		</filter>
 	</filteredResources>
 	<variableList>
 		<variable>
 			<name>AFR_HOME</name>
 			<value>$%7BPARENT-5-PROJECT_LOC%7D</value>
+		</variable>
+		<variable>
+			<name>SMC_GENERATED_LOC</name>
+			<value>$%7BAFR_HOME%7D/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen</value>
+		</variable>
+		<variable>
+			<name>SMC_LINKED_LOC</name>
+			<value>$%7BPROJECT_LOC%7D/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen</value>
 		</variable>
 	</variableList>
 </projectDescription>
