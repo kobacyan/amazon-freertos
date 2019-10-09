@@ -1875,11 +1875,6 @@
 			<locationURI>AFR_HOME/vendors/renesas/FIT/v120/r_bsp/board/generic_rx65n/r_bsp_interrupt_config_reference.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/FIT/v120/r_bsp/board/user/r_bsp.h</name>
-			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/FIT/v120/r_bsp/board/user/r_bsp.h</locationURI>
-		</link>
-		<link>
 			<name>vendors/renesas/FIT/v120/r_bsp/mcu/all/dbsct.c</name>
 			<type>1</type>
 			<locationURI>AFR_HOME/vendors/renesas/FIT/v120/r_bsp/mcu/all/dbsct.c</locationURI>
