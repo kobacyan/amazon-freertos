@@ -461,10 +461,10 @@ static IotNetworkManager_t networkManager =
     {
         bool ret = true;
 
-        if( WIFI_On() != eWiFiSuccess )
-        {
-            ret = false;
-        }
+//        if( WIFI_On() != eWiFiSuccess )
+//        {
+//            ret = false;
+//        }
 
         #if ( IOT_BLE_ENABLE_WIFI_PROVISIONING == 0 )
             if( ret == true )
