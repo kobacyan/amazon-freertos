@@ -328,7 +328,7 @@ Configuration Options
 /* USB Clock Divider Select.
    Available divisors = /2, /3, /4, /5
 */
-#define BSP_CFG_UCK_DIV                 (5) /* Generated value. Do not edit this manually */
+#define BSP_CFG_UCK_DIV                 (2) /* Generated value. Do not edit this manually */
 
 /* Configure BCLK output pin (only effective when external bus enabled)
    Values 0=no output, 1 = BCK frequency, 2= BCK/2 frequency
@@ -604,16 +604,6 @@ Configuration Options
    Don't change if there is no special processing with higher priority than all fit modules.
 */
 #define BSP_CFG_FIT_IPL_MAX                         (0xF)
-/* For some BSP functions, it is necessary to ensure that, while these functions are executing, interrupts from other
-   FIT modules do not occur. By controlling the IPL, these functions disable interrupts that are at or below the
-   specified interrupt priority level.
-   This macro sets the IPL. Range is 0x0 - 0xF.
-   Please set this macro more than IPR for other FIT module interrupts.
-   The default value is 0xF (maximum value).
-   Don't change if there is no special processing with higher priority than all fit modules.
-*/
-#define BSP_CFG_FIT_IPL_MAX                         (0xF)
-
 /* This macro is used to select which SCI channel used for debug serial terminal.
  */
 #define MY_BSP_CFG_SERIAL_TERM_SCI                  (5)
