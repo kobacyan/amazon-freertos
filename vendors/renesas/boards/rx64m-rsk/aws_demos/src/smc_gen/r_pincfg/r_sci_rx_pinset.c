@@ -19,10 +19,10 @@
 /***********************************************************************************************************************
 * File Name    : r_sci_rx_pinset.c
 * Version      : 1.0.2
-* Device(s)    : R5F565NEDxFC
+* Device(s)    : R5F564MLCxFC
 * Tool-Chain   : RXC toolchain
 * Description  : Setting of port and mpc registers
-* Creation Date: 2019-05-19
+* Creation Date: 2019-10-09
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -36,43 +36,26 @@ Global variables and functions
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
-* Function Name: R_SCI_PinSet_SCI2
+* Function Name: R_SCI_PinSet_SCI7
 * Description  : This function initializes pins for r_sci_rx module
 * Arguments    : none
 * Return Value : none
 ***********************************************************************************************************************/
-void R_SCI_PinSet_SCI2()
+void R_SCI_PinSet_SCI7()
 {
     R_BSP_RegisterProtectDisable(BSP_REG_PROTECT_MPC);
 
-    /* Set RXD2/SMISO2 pin */
-    MPC.P52PFS.BYTE = 0x0AU;
-    PORT5.PMR.BIT.B2 = 1U;
+    /* Set SCK7 pin */
+    MPC.P91PFS.BYTE = 0x0AU;
+    PORT9.PMR.BIT.B1 = 1U;
 
-    /* Set TXD2/SMOSI2 pin */
-    MPC.P50PFS.BYTE = 0x0AU;
-    PORT5.PMR.BIT.B0 = 1U;
+    /* Set RXD7/SMISO7 pin */
+    MPC.P92PFS.BYTE = 0x0AU;
+    PORT9.PMR.BIT.B2 = 1U;
 
-    R_BSP_RegisterProtectEnable(BSP_REG_PROTECT_MPC);
-}
-
-/***********************************************************************************************************************
-* Function Name: R_SCI_PinSet_SCI8
-* Description  : This function initializes pins for r_sci_rx module
-* Arguments    : none
-* Return Value : none
-***********************************************************************************************************************/
-void R_SCI_PinSet_SCI8()
-{
-    R_BSP_RegisterProtectDisable(BSP_REG_PROTECT_MPC);
-
-    /* Set RXD8/SMISO8/SSCL8 pin */
-    MPC.PJ1PFS.BYTE = 0x0AU;
-    PORTJ.PMR.BIT.B1 = 1U;
-
-    /* Set TXD8/SMOSI8/SSDA8 pin */
-    MPC.PJ2PFS.BYTE = 0x0AU;
-    PORTJ.PMR.BIT.B2 = 1U;
+    /* Set TXD7/SMOSI7 pin */
+    MPC.P90PFS.BYTE = 0x0AU;
+    PORT9.PMR.BIT.B0 = 1U;
 
     R_BSP_RegisterProtectEnable(BSP_REG_PROTECT_MPC);
 }

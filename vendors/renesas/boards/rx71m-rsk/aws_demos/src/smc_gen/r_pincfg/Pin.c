@@ -20,9 +20,9 @@
 /***********************************************************************************************************************
 * File Name    : Pin.c
 * Version      : 1.0.2
-* Device(s)    : R5F565NEDxFC
+* Device(s)    : R5F571MLCxFC
 * Description  : This file implements SMC pin code generation.
-* Creation Date: 2019-07-18
+* Creation Date: 2019-10-09
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -132,31 +132,18 @@ void R_Pins_Create(void)
     MPC.PC3PFS.BYTE = 0x11U;
     PORTC.PMR.BYTE |= 0x08U;
 
-    /* Set RXD2 pin */
-    MPC.P52PFS.BYTE = 0x0AU;
-    PORT5.PMR.BYTE |= 0x04U;
+    /* Set RXD7 pin */
+    MPC.P92PFS.BYTE = 0x0AU;
+    PORT9.PMR.BYTE |= 0x04U;
 
-    /* Set RXD8 pin */
-    MPC.PJ1PFS.BYTE = 0x0AU;
-    PORTJ.PMR.BYTE |= 0x02U;
+    /* Set SCK7 pin */
+    MPC.P91PFS.BYTE = 0x0AU;
+    PORT9.PMR.BYTE |= 0x02U;
 
-    /* Set TXD2 pin */
-    PORT5.PODR.BYTE |= 0x01U;
-    MPC.P50PFS.BYTE = 0x0AU;
-    PORT5.PDR.BYTE |= 0x01U;
-
-    /* Set TXD8 pin */
-    PORTJ.PODR.BYTE |= 0x04U;
-    MPC.PJ2PFS.BYTE = 0x0AU;
-    PORTJ.PDR.BYTE |= 0x04U;
-
-    /* Set USB0_OVRCURA pin */
-    MPC.P14PFS.BYTE = 0x12U;
-    PORT1.PMR.BYTE |= 0x10U;
-
-    /* Set USB0_VBUSEN pin */
-    MPC.P32PFS.BYTE = 0x13U;
-    PORT3.PMR.BYTE |= 0x04U;
+    /* Set TXD7 pin */
+    PORT9.PODR.BYTE |= 0x01U;
+    MPC.P90PFS.BYTE = 0x0AU;
+    PORT9.PDR.BYTE |= 0x01U;
 
     R_BSP_RegisterProtectEnable(BSP_REG_PROTECT_MPC);
 }   

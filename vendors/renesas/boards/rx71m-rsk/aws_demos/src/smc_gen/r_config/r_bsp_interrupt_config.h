@@ -14,49 +14,39 @@
 * following link:
 * http://www.renesas.com/disclaimer 
 *
-* Copyright (C) 2016 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 /***********************************************************************************************************************
 * File Name    : r_bsp_interrupt_config.h
 * Description  : This module maps Interrupt A & B interrupts. More information on how this is done is given below.
 ***********************************************************************************************************************/
 /**********************************************************************************************************************
-* History : DD.MM.YYYY Version   Description
-*         : 01.10.2016 1.00      First Release
-*         : 15.05.2017 2.00      Changed the name of the following macro definition, because there was a mistake
-*                                in the name of macro definition.
-*                                - From XXX_TPU0_TGI0V to XXX_TPU0_TCI0V.
-*                                - From XXX_TPU1_TGI1V to XXX_TPU1_TCI1V.
-*                                - From XXX_TPU1_TGI1U to XXX_TPU1_TCI1U.
-*                                - From XXX_TPU2_TGI2V to XXX_TPU2_TCI2V.
-*                                - From XXX_TPU2_TGI2U to XXX_TPU2_TCI2U.
-*                                - From XXX_TPU3_TGI3V to XXX_TPU3_TCI3V.
-*                                - From XXX_TPU4_TGI4V to XXX_TPU4_TCI4V.
-*                                - From XXX_TPU4_TGI4U to XXX_TPU4_TCI4U.
-*                                - From XXX_TPU5_TGI5V to XXX_TPU5_TCI5V.
-*                                - From XXX_TPU5_TGI5U to XXX_TPU5_TCI5U.
-*                                - From XXX_MTU0_TGIV0 to XXX_MTU0_TCIV0.
-*                                - From XXX_MTU1_TGIV1 to XXX_MTU1_TCIV1.
-*                                - From XXX_MTU1_TGIU1 to XXX_MTU1_TCIU1.
-*                                - From XXX_MTU2_TGIV2 to XXX_MTU2_TCIV2.
-*                                - From XXX_MTU2_TGIU2 to XXX_MTU2_TCIU2.
-*                                - From XXX_MTU3_TGIV3 to XXX_MTU3_TCIV3.
-*                                - From XXX_MTU4_TGIV4 to XXX_MTU4_TCIV4.
-*                                - From XXX_MTU6_TGIV6 to XXX_MTU6_TCIV6.
-*                                - From XXX_MTU7_TGIV7 to XXX_MTU7_TCIV7.
-*                                - From XXX_MTU8_TGIV8 to XXX_MTU8_TCIV8.
-*                                Added select processing of the following software configurable interrupt source.
-*                                - TSIP_PROC_BUSY
-*                                - TSIP_ROMOK
-*                                - TSIP_LONG_PLG
-*                                - TSIP_TEST_BUSY
-*                                - TSIP_WRRDY0
-*                                - TSIP_WRRDY1
-*                                - TSIP_WRRDY4
-*                                - TSIP_RDRDY0
-*                                - TSIP_RDRDY1
-*                                - TSIP_INTEGRATE_WRRDY
-*                                - TSIP_INTEGRATE_RDRDY
+* History : DD.MM.YYYY Version  Description
+*         : 14.01.2014 1.00     First Release
+*         : 15.05.2017 1.10     Changed the name of the following macro definition, because there was a mistake
+*                               in the name of macro definition.
+*                               - From XXX_TPU0_TGI0V to XXX_TPU0_TCI0V.
+*                               - From XXX_TPU1_TGI1V to XXX_TPU1_TCI1V.
+*                               - From XXX_TPU1_TGI1U to XXX_TPU1_TCI1U.
+*                               - From XXX_TPU2_TGI2V to XXX_TPU2_TCI2V.
+*                               - From XXX_TPU2_TGI2U to XXX_TPU2_TCI2U.
+*                               - From XXX_TPU3_TGI3V to XXX_TPU3_TCI3V.
+*                               - From XXX_TPU4_TGI4V to XXX_TPU4_TCI4V.
+*                               - From XXX_TPU4_TGI4U to XXX_TPU4_TCI4U.
+*                               - From XXX_TPU5_TGI5V to XXX_TPU5_TCI5V.
+*                               - From XXX_TPU5_TGI5U to XXX_TPU5_TCI5U.
+*                               - From XXX_MTU0_TGIV0 to XXX_MTU0_TCIV0.
+*                               - From XXX_MTU1_TGIV1 to XXX_MTU1_TCIV1.
+*                               - From XXX_MTU1_TGIU1 to XXX_MTU1_TCIU1.
+*                               - From XXX_MTU2_TGIV2 to XXX_MTU2_TCIV2.
+*                               - From XXX_MTU2_TGIU2 to XXX_MTU2_TCIU2.
+*                               - From XXX_MTU3_TGIV3 to XXX_MTU3_TCIV3.
+*                               - From XXX_MTU4_TGIV4 to XXX_MTU4_TCIV4.
+*                               - From XXX_MTU6_TGIV6 to XXX_MTU6_TCIV6.
+*                               - From XXX_MTU7_TGIV7 to XXX_MTU7_TCIV7.
+*                               - From XXX_MTU8_TGIV8 to XXX_MTU8_TCIV8.
+*                               Removed the following macro definition.
+*                               - BSP_MAPPED_INT_CFG_A_VECT_MTU8_TGIU8
 ***********************************************************************************************************************/
 #ifndef R_BSP_INTERRUPT_CONFIG_REF_HEADER_FILE
 #define R_BSP_INTERRUPT_CONFIG_REF_HEADER_FILE
@@ -137,27 +127,21 @@ Macro definitions
 #define BSP_MAPPED_INT_CFG_B_VECT_CAN1_TXF1                               182
 #define BSP_MAPPED_INT_CFG_B_VECT_CAN1_RXM1                               183
 #define BSP_MAPPED_INT_CFG_B_VECT_CAN1_TXM1                               184
+#define BSP_MAPPED_INT_CFG_B_VECT_CAN2_RXF2                               
+#define BSP_MAPPED_INT_CFG_B_VECT_CAN2_TXF2                               
+#define BSP_MAPPED_INT_CFG_B_VECT_CAN2_RXM2                               
+#define BSP_MAPPED_INT_CFG_B_VECT_CAN2_TXM2                               188
 #define BSP_MAPPED_INT_CFG_B_VECT_USB0_USBI0                              185
 #define BSP_MAPPED_INT_CFG_B_VECT_S12ADC0_S12ADI0                         186
 #define BSP_MAPPED_INT_CFG_B_VECT_S12ADC0_S12GBADI0                       187
-#define BSP_MAPPED_INT_CFG_B_VECT_S12ADC0_S12GCADI0                       188
 #define BSP_MAPPED_INT_CFG_B_VECT_S12ADC1_S12ADI1                         189
 #define BSP_MAPPED_INT_CFG_B_VECT_S12ADC1_S12GBADI1                       190
-#define BSP_MAPPED_INT_CFG_B_VECT_S12ADC1_S12GCADI1                       191
+#define BSP_MAPPED_INT_CFG_B_VECT_DES_DESEND                              
+#define BSP_MAPPED_INT_CFG_B_VECT_SHA_SHADEND                             195
+#define BSP_MAPPED_INT_CFG_B_VECT_SHA_SHAEND                              196
 #define BSP_MAPPED_INT_CFG_B_VECT_RNG_RNGEND                              192
 #define BSP_MAPPED_INT_CFG_B_VECT_ELC_ELSR18I                             193
 #define BSP_MAPPED_INT_CFG_B_VECT_ELC_ELSR19I                             194
-#define BSP_MAPPED_INT_CFG_B_VECT_TSIP_PROC_BUSY                          195
-#define BSP_MAPPED_INT_CFG_B_VECT_TSIP_ROMOK                              196
-#define BSP_MAPPED_INT_CFG_B_VECT_TSIP_LONG_PLG                           197
-#define BSP_MAPPED_INT_CFG_B_VECT_TSIP_TEST_BUSY                          198
-#define BSP_MAPPED_INT_CFG_B_VECT_TSIP_WRRDY0                             199
-#define BSP_MAPPED_INT_CFG_B_VECT_TSIP_WRRDY1                             200
-#define BSP_MAPPED_INT_CFG_B_VECT_TSIP_WRRDY4                             201
-#define BSP_MAPPED_INT_CFG_B_VECT_TSIP_RDRDY0                             202
-#define BSP_MAPPED_INT_CFG_B_VECT_TSIP_RDRDY1                             203
-#define BSP_MAPPED_INT_CFG_B_VECT_TSIP_INTEGRATE_WRRDY                    204
-#define BSP_MAPPED_INT_CFG_B_VECT_TSIP_INTEGRATE_RDRDY                    205
 
 /* Interrupt A Sources.
  * -Valid vector numbers are 208-255.
@@ -207,8 +191,46 @@ Macro definitions
 #define BSP_MAPPED_INT_CFG_A_VECT_MTU8_TGIC8                              248
 #define BSP_MAPPED_INT_CFG_A_VECT_MTU8_TGID8                              249
 #define BSP_MAPPED_INT_CFG_A_VECT_MTU8_TCIV8                              250
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT0_GTCIA0                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT0_GTCIB0                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT0_GTCIC0                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT0_GTCID0                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT0_GDTE0                              
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT0_GTCIE0                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT0_GTCIF0                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT0_GTCIV0                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT0_GTCIU0                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPTA_ETGIN                              
+#define BSP_MAPPED_INT_CFG_A_VECT_GPTA_ETGIP                              
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT1_GTCIA1                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT1_GTCIB1                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT1_GTCIC1                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT1_GTCID1                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT1_GDTE1                              
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT1_GTCIE1                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT1_GTCIF1                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT1_GTCIV1                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT1_GTCIU1                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT2_GTCIA2                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT2_GTCIB2                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT2_GTCIC2                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT2_GTCID2                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT2_GDTE2                              
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT2_GTCIE2                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT2_GTCIF2                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT2_GTCIV2                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT2_GTCIU2                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT3_GTCIA3                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT3_GTCIB3                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT3_GTCIC3                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT3_GTCID3                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT3_GDTE3                              
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT3_GTCIE3                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT3_GTCIF3                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT3_GTCIV3                             
+#define BSP_MAPPED_INT_CFG_A_VECT_GPT3_GTCIU3                             
+#define BSP_MAPPED_INT_CFG_A_VECT_EPTPC_IPLS                              
 #define BSP_MAPPED_INT_CFG_A_VECT_AES_AESRDY                              251
 #define BSP_MAPPED_INT_CFG_A_VECT_AES_AESEND                              252
-
+ 
 #endif /* R_BSP_INTERRUPT_CONFIG_REF_HEADER_FILE */
-

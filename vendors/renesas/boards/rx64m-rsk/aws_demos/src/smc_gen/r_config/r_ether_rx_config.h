@@ -1,3 +1,4 @@
+/* Generated configuration header file - do not edit */
 /***********************************************************************************************************************
  * DISCLAIMER
  * This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products. No
@@ -49,14 +50,14 @@
  Please set the value 30 ETHER_CFG_CH0_PHY_ADDRESS when use default setting of the RSK+RX65N/RSK+RX65N_2MB.
  Please set the value 0 ETHER_CFG_CH0_PHY_ADDRESS and value 1 ETHER_CFG_CH1_PHY_ADDRESS when use default setting of the RSK+RX64M/RSK+RX71M.
  */
-    #define ETHER_CFG_CH0_PHY_ADDRESS                   (30)     /* Please define the PHY-LSI address in the range of 0-31. */
+    #define ETHER_CFG_CH0_PHY_ADDRESS                   (0)     /* Please define the PHY-LSI address in the range of 0-31. */
     #define ETHER_CFG_CH1_PHY_ADDRESS                   (1)     /* Please define the PHY-LSI address in the range of 0-31. */
 
 /* The number of Rx descriptors. */
-    #define ETHER_CFG_EMAC_RX_DESCRIPTORS               (1)
+    #define ETHER_CFG_EMAC_RX_DESCRIPTORS               (12)
 
 /* The number of Tx descriptors. */
-    #define ETHER_CFG_EMAC_TX_DESCRIPTORS               (1)
+    #define ETHER_CFG_EMAC_TX_DESCRIPTORS               (4)
 
 /* Please define the size of the sending and receiving buffer in the value where one frame can surely be stored 
  because the driver is single-frame/single-buffer processing.  */
@@ -95,7 +96,7 @@
  0 = unused  (use PHY-LSI status register)
  1 = use     (use LINKSTA signal)
  */
-    #define ETHER_CFG_USE_LINKSTA                       (1)     /* This setting is reflected in all channels */
+    #define ETHER_CFG_USE_LINKSTA                       (0)     /* This setting is reflected in all channels */
 
 /* Definition of whether or not to use KSZ8041NL of the Micrel Inc.
  0 = unused

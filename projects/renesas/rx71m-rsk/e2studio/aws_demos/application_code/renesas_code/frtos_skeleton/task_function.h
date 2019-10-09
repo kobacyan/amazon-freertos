@@ -14,24 +14,10 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2013-2016 Renesas Electronics Corporation. All rights reserved.
-***********************************************************************************************************************/
-/***********************************************************************************************************************
-* File Name     : r_sys_time_rx_config.h
-* Description   : Configures the SYSTEM TIME module
-************************************************************************************************************************
-* History : DD.MM.YYYY Version Description
-*           30.11.2016 1.00    Initial Release
-***********************************************************************************************************************/
-#ifndef SYS_TIME_CONFIG_H
-#define SYS_TIME_CONFIG_H
-
-#include "platform.h"
-
-/***********************************************************************************************************************
-Configuration Options
+* Copyright (C) 2019 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
-/* no configuration is exist for this module */
+#ifndef TASK_FUNCTION_H_
+#define TASK_FUNCTION_H_
 
-#endif /* SYS_TIME_CONFIG_H */
+#endif /* TASK_FUNCTION_H_ */

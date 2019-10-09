@@ -14,15 +14,15 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2018 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2019 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 * File Name    : r_smc_cgc.h
-* Version      : 1.3.0
-* Device(s)    : R5F565NEDxFC
+* Version      : 1.5.0
+* Device(s)    : R5F571MLCxFC
 * Description  : This file implements cgc setting.
-* Creation Date: 2019-05-19
+* Creation Date: 2019-10-09
 ***********************************************************************************************************************/
 
 #ifndef SMC_CGC_H
@@ -183,6 +183,9 @@ Macro definitions (Register bit)
 /*
     Main Clock Oscillator Forced Oscillation Control Register (MOFCR)
 */
+/* Main Clock Oscillator Forced Oscillation (MOFXIN) */
+#define _00_CGC_MAINOSC_NOT_CONTROLLED      (0x00U) /* Oscillator is not controlled by this bit */
+#define _01_CGC_MAINOSC_FORCE_OSCILLATED    (0x01U) /* The main clock oscillator is forcedly oscillated */
 /* Main Oscillator Drive Capability 2 Switching (MODRV2[1:0]) */
 #define _00_CGC_MAINOSC_UNDER24M            (0x00U) /* 20.1 to 24 MHz */
 #define _10_CGC_MAINOSC_UNDER20M            (0x10U) /* 16.1 to 20 MHz */
