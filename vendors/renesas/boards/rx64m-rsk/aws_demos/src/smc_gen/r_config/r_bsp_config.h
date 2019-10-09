@@ -544,5 +544,19 @@ Configuration Options
 */
 #define BSP_CFG_FIT_IPL_MAX                         (0xF)
 
+/* This macro is used to select which SCI channel used for debug serial terminal.
+ */
+#define MY_BSP_CFG_SERIAL_TERM_SCI                  (7)
+
+/* OTA setting
+ * (0) : Disable
+ * (1) : Enable
+ */
+#define MY_BSP_CFG_OTA_ENABLE                       (0)
+
+/* This macro is used to select which SCI channel used for OTA.
+ */
+#define MY_BSP_CFG_USE_USBIP                        (0)
+
 #endif /* R_BSP_CONFIG_REF_HEADER_FILE */
 
