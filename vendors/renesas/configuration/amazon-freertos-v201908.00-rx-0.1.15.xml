@@ -46,6 +46,7 @@
             <AWS_device_shadow>aws_shadow_config.h</AWS_device_shadow>
             <AWS_mqtt>iot_mqtt_agent_config.h</AWS_mqtt>
             <AWS_mqtt>iot_mqtt_config.h</AWS_mqtt>
+		  <AWS_mqtt>aws_mqtt_config.h</AWS_mqtt>
             <AWS_gdd>aws_ggd_config.h</AWS_gdd>
             <AWS_tcp_ip>FreeRTOSIPConfig.h</AWS_tcp_ip>
             <AWS_secure_socket>aws_secure_sockets_config.h</AWS_secure_socket>
