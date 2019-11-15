@@ -370,24 +370,6 @@
 							<tool id="com.renesas.cdt.managedbuild.renesas.ccrx.base.rtosConfig.1733071265" name="RTOS Configurator" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.base.rtosConfig"/>
 						</toolChain>
 					</folderInfo>
-					<folderInfo id="com.renesas.cdt.managedbuild.renesas.ccrx.hardwaredebug.configuration.216582545.335295411" name="/" resourcePath="vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen">
-						<toolChain id="com.renesas.cdt.managedbuild.renesas.ccrx.hardwaredebug.toolChain.1015731575" name="Renesas CCRX Toolchain" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.hardwaredebug.toolChain" unusedChildren="">
-							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF;org.eclipse.cdt.core.PE" id="com.renesas.cdt.managedbuild.renesas.ccrx.base.targetPlatform" osList="win32" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.base.targetPlatform"/>
-							<tool id="com.renesas.cdt.managedbuild.renesas.ccrx.base.dsp.997813052" name="DSP Assembler" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.base.dsp.283334129"/>
-							<tool id="com.renesas.cdt.managedbuild.renesas.ccrx.base.common.1356850124" name="Common" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.base.common.1850118877"/>
-							<tool id="com.renesas.cdt.managedbuild.renesas.ccrx.base.compiler.789015655" name="Compiler" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.base.compiler.829055">
-								<inputType id="com.renesas.cdt.managedbuild.renesas.ccrx.compiler.gcc.inputType.1134611428" name="Compiler Input C" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.compiler.gcc.inputType"/>
-								<inputType id="com.renesas.cdt.managedbuild.renesas.ccrx.compiler.gpp.inputType.655260" name="Compiler Input CPP" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.compiler.gpp.inputType"/>
-							</tool>
-							<tool id="com.renesas.cdt.managedbuild.renesas.ccrx.base.assembler.1336381925" name="Assembler" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.base.assembler.175236271">
-								<inputType id="com.renesas.cdt.managedbuild.renesas.ccrx.assembler.inputType.1818116460" name="Assembler InputType" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.assembler.inputType"/>
-							</tool>
-							<tool id="com.renesas.cdt.managedbuild.renesas.ccrx.base.linker.820631108" name="Linker" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.base.linker.2099553218"/>
-							<tool id="com.renesas.cdt.managedbuild.renesas.ccrx.base.librarian.1313980970" name="Library Generator" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.base.librarian.1357919725"/>
-							<tool id="com.renesas.cdt.managedbuild.renesas.ccrx.base.converter.1587409159" name="Converter" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.base.converter.1607322956"/>
-							<tool id="com.renesas.cdt.managedbuild.renesas.ccrx.base.rtosConfig.1949853877" name="RTOS Configurator" superClass="com.renesas.cdt.managedbuild.renesas.ccrx.base.rtosConfig.1733071265"/>
-						</toolChain>
-					</folderInfo>
 					<sourceEntries>
 						<entry excluding="src" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
 					</sourceEntries>
