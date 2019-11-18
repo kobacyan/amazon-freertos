@@ -2945,7 +2945,7 @@
 	<variableList>
 		<variable>
 			<name>AWS_IOT_MCU_ROOT</name>
-			<value>$%7BPARENT-5-PROJECT_LOC%7D</value>
+			<value>$%7BPARENT-4-PROJECT_LOC%7D</value>
 		</variable>
 	</variableList>
 </projectDescription>
