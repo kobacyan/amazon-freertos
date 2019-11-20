@@ -3,7 +3,11 @@
 <general version="2.0.0.0">
 <configuration active="true" id="com.renesas.smc.toolchain.gnuarm.configuration.release">
 <property id="com.renesas.smc.service.project.buildArtefactType" values="com.renesas.smc.service.project.buildArtefactType.exe"/>
-<toolchain id="com.renesas.smc.toolchain.gnuarm.noneeabi"/>
+<toolchain id="com.renesas.smc.toolchain.gnuarm.noneeabi">
+<option id="com.renesas.smc.toolchain.option.rtos" key="com.renesas.smc.toolchain.option.rtos.freertos">
+<item id="com.renesas.smc.toolchain.option.rtos.freertos" value="AmazonFreeRTOS_RX_vv201908.00-rx-0.1.15"/>
+</option>
+</toolchain>
 </configuration>
 <platform id="R7S921053"/>
 </general>
@@ -475,6 +479,34 @@
 </component>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
+</configuration>
+<configuration inuse="true" name="FreeRTOS_Object">
+<component display="FreeRTOS_Object" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.object"/>
+<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+</configuration>
+<configuration inuse="true" name="FreeRTOS_Kernel">
+<component display="FreeRTOS_Kernel" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.kernel"/>
+<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+</configuration>
+<configuration inuse="true" name="AWS_device_shadow">
+<component display="AWS_device_shadow" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.device_shadow"/>
+<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+</configuration>
+<configuration inuse="true" name="AWS_tcp_ip">
+<component display="AWS_tcp_ip" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.tcp_ip"/>
+<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+</configuration>
+<configuration inuse="true" name="AWS_mqtt">
+<component display="AWS_mqtt" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.mqtt"/>
+<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+</configuration>
+<configuration inuse="true" name="AWS_secure_socket">
+<component display="AWS_secure_socket" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.secure_socket"/>
+<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+</configuration>
+<configuration inuse="true" name="AWS_ggd">
+<component display="AWS_ggd" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.ggd"/>
+<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
 </tool>
 </smc>
