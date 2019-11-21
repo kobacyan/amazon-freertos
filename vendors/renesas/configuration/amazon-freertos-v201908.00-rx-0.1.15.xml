@@ -14,9 +14,9 @@
         <product>GNURX</product>
         <version>4.8.4</version>
     </toolchain>
-	
-	
-	<toolchain>
+    
+    
+    <toolchain>
         <brand>GNU</brand>
         <product>GNUARM</product>
         <version>6.3.1</version>
@@ -31,7 +31,7 @@
         <group>RX65N</group>
         <group>RX71M</group>
     </target>
-	<additionaltarget>
+    <additionaltarget>
         <family>RZ</family>
         <series>RZA</series>
         <group>RZA2M</group>
@@ -51,14 +51,14 @@
         <desc>A real-time operating system for RX MCUs</desc>
         <details>The real-time operating system augments FreeRTOS kernel with libraries for connectivity, security, and over-the-air updates</details>
         <function>RTOS</function>
-		
-		<configgenpath>
+        
+        <configgenpath>
             <path>config_files</path>
             <FreeRTOS_kernel>FreeRTOSConfig.h</FreeRTOS_kernel>
             <AWS_device_shadow>aws_shadow_config.h</AWS_device_shadow>
             <AWS_mqtt>iot_mqtt_agent_config.h</AWS_mqtt>
             <AWS_mqtt>iot_mqtt_config.h</AWS_mqtt>
-		  <AWS_mqtt>aws_mqtt_config.h</AWS_mqtt>
+          <AWS_mqtt>aws_mqtt_config.h</AWS_mqtt>
             <AWS_gdd>aws_ggd_config.h</AWS_gdd>
             <AWS_tcp_ip>FreeRTOSIPConfig.h</AWS_tcp_ip>
             <AWS_secure_socket>aws_secure_sockets_config.h</AWS_secure_socket>
@@ -66,8 +66,8 @@
         <objectgenpath>
             <path>application_code/renesas_code</path>
         </objectgenpath>
-		
-		<standardlibrary>
+        
+        <standardlibrary>
             <toolchain>RXC</toolchain>
             <libname>ctype.h</libname>
             <libname>math.h</libname>
@@ -108,7 +108,7 @@
             <toolchain>RXC</toolchain>
             <series>RX700</series>
             <group>RX71M</group>
-			<section>
+            <section>
                 <name>B_ETHERNET_BUFFERS_1</name>
                 <name>B_RX_DESC_1</name>
                 <name>B_TX_DESC_1</name>
@@ -120,12 +120,12 @@
             </section>
             
         </sections>
-		
-		<sections>
+        
+        <sections>
             <toolchain>RXC</toolchain>
             <series>RX600</series>
             <group>RX64M</group>
-			<section>
+            <section>
                 <name>B_ETHERNET_BUFFERS_1</name>
                 <name>B_RX_DESC_1</name>
                 <name>B_TX_DESC_1</name>
@@ -173,7 +173,7 @@
             <group>RX71M</group>
             <path>${AFR_HOME}/vendors/renesas/rx/amazon_freertos_common/compiler_support/ccrx</path>
         </incdir>
-				
+                
         <incdir>
             <toolchain>GNURX</toolchain>
             <series>RX600</series>
@@ -212,172 +212,172 @@
             <group>RX71M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_bsp/board/generic_rx71m</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/configuration</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/compiler/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/drivers/r_cache/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/drivers/r_cpg/inc</path>
         </incdir>
-		<!--RZA2M -->
-		<incdir>
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/drivers/r_gpio/inc</path>
         </incdir>
-		
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/drivers/r_intc/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/drivers/r_mmu/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/drivers/r_stb/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/os_abstraction/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/sc_drivers/r_adc/inc</path>
         </incdir>
-		
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/sc_drivers/r_cbuffer/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/sc_drivers/r_ether</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/sc_drivers/r_ether/inc</path>
         </incdir>
-		
-		
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/sc_drivers/r_ether/src</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/sc_drivers/r_ether/src/phy</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/sc_drivers/r_ether/src/targets/rza2m-ebk</path>
         </incdir>
-		
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/sc_drivers/r_ostm/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/sc_drivers/r_riic/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/sc_drivers/r_scifa/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/system/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/core_package/generate/system/iodefine</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/src/renesas/application/inc</path>
         </incdir>
-		
-		<!--RZA2M -->
-		<incdir>
+        
+        <!--RZA2M -->
+        <incdir>
            <series>RZA</series>
            <group>RZA2M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/src/renesas/application/console/inc</path>
         </incdir>
-		
+        
         <incdir>
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/general</path>
         </incdir>
@@ -459,7 +459,7 @@
             <group>RX71M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_s12ad_rx/src/targets/rx71m</path>
         </incdir>
-		<incdir>
+        <incdir>
             <toolchain>RXC</toolchain>
             <series>RX600</series>
             <series>RX700</series>
@@ -468,14 +468,14 @@
             <group>RX71M</group>
             <path>${AFR_HOME}/freertos_kernel/portable/Renesas/RX600v2</path>
         </incdir>
-		<!--RZA2M -->
-		<incdir>
+        <!--RZA2M -->
+        <incdir>
              <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <path>${AFR_HOME}/freertos_kernel/portable/GCC/ARM_CA9_RZA2M</path>
         </incdir>
-		
+        
         <incdir>
             <toolchain>GNURX</toolchain>
             <series>RX600</series>
@@ -485,11 +485,11 @@
             <group>RX71M</group>
             <path>${AFR_HOME}/freertos_kernel/portable/GCC/RX600v2</path>
         </incdir>
-		
-		
-		
+        
+        
+        
 
-		
+        
         <incdir>
             <path>${PROJECT_LOC}/config_files</path>
         </incdir>
@@ -528,19 +528,19 @@
             <toolchain>GNURX</toolchain>
             <path>${AFR_HOME}/libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/Compiler/GCC</path>
         </incdir>
-		<!--RZA2M -->
-		<incdir>
+        <!--RZA2M -->
+        <incdir>
             <toolchain>GNUARM</toolchain>
             <path>${AFR_HOME}/libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/Compiler/GCC</path>
         </incdir>
-		
+        
         <incdir>
             <path>${AFR_HOME}/libraries/freertos_plus/standard/tls/include</path>
         </incdir>
         <incdir>
             <path>${AFR_HOME}/libraries/freertos_plus/standard/crypto/include</path>
         </incdir>
-		<incdir>
+        <incdir>
             <path>${AFR_HOME}/libraries/freertos_plus/standard/pkcs11/include</path>
         </incdir>
         <incdir>
@@ -564,7 +564,7 @@
         <incdir>
             <path>${AFR_HOME}/libraries/c_sdk/aws/shadow/include</path>
         </incdir>
-		<incdir>
+        <incdir>
             <path>${AFR_HOME}/libraries/c_sdk/standard/https/include</path>
         </incdir>
         <incdir>
@@ -585,10 +585,10 @@
         <incdir>
             <path>${AFR_HOME}/libraries/3rdparty/tinycbor</path>
         </incdir>
-		<incdir>
+        <incdir>
             <path>${AFR_HOME}/libraries/3rdparty/http-parser</path>
         </incdir>
-		<incdir>
+        <incdir>
             <path>${AFR_HOME}/libraries/3rdparty/jsmn</path>
         </incdir>
         <impdir>
@@ -611,12 +611,12 @@
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/application_code/main.c</file>
             <path>application_code</path>
         </impdir>
-		
-		<!--RZA2M -->
-		
-		<impdir>
+        
+        <!--RZA2M -->
+        
+        <impdir>
             <series>RZA</series>
-		  <group>RZA2M</group>
+          <group>RZA2M</group>
             <file>vendors/renesas/boards/rz/rza2m-ebk/aws_demos/application_code/main.c</file>
             <path>application_code</path>
         </impdir>
@@ -662,8 +662,8 @@
             <file>demos/network_manager/iot_network_manager_private.h</file>
             <path>application_code/demos/network_manager</path>
         </impdir>
-		
-		
+        
+        
         <impdir>
             <series>RX600</series>
             <group>RX64M</group>
@@ -727,8 +727,8 @@
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/config_files/mbedtls_user_config.h</file>
             <path>config_files</path>
         </impdir>
-		<!--RZA2M -->
-		<impdir>
+        <!--RZA2M -->
+        <impdir>
             <series>RZA</series>
             <group>RZA2M</group>
             <file>vendors/renesas/rz/rza2m-ebk/aws_demos/config_files/aws_bufferpool_config.h</file>
@@ -749,7 +749,7 @@
             <file>vendors/renesas/rz/rza2m-ebk/aws_demos/config_files/mbedtls_user_config.h</file>
             <path>config_files</path>
         </impdir>
-		
+        
         <impdir>
             <series>RX600</series>
             <group>RX64M</group>
@@ -768,15 +768,15 @@
             <folder>demos/vendors/renesas/boards/rx71m-rsk/aws_demos/application_code/renesas_code</folder>
             <path>application_code/renesas_code</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
             <series>RZA</series>
-        <group>RZA2M</group>		
+        <group>RZA2M</group>        
             <folder>demos/vendors/renesas/rz/rza2m-ebk/aws_demos/application_code/renesas_code</folder>
             <path>application_code/renesas_code</path>
         </impdir>
-		
+        
         <impdir>
             <series>RX600</series>
             <series>RX700</series>
@@ -1220,13 +1220,13 @@
             <group>RX64M</group>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.c</file>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.h</file>
-		  <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
+          <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</file>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</file>
-			<file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.c</file>
-			<file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
+            <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.c</file>
+            <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
             <path>application_code/renesas_code/smc_gen/r_pincfg</path>
         </impdir>
         <impdir>
@@ -1236,11 +1236,11 @@
             <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.h</file>
             <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</file>
-		<file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
+        <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
             <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</file>
-			<file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.c</file>
-			<file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
+            <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.c</file>
+            <file>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
             <path>application_code/renesas_code/smc_gen/r_pincfg</path>
         </impdir>
         <impdir>
@@ -1250,565 +1250,565 @@
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.h</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</file>
-		<file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
+        <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</file>
-			<file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.c</file>
-			<file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
+            <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.c</file>
+            <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
             <path>application_code/renesas_code/smc_gen/r_pincfg</path>
         </impdir>
 <!--RZA2M -->
 
-	<impdir>
+    <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/compiler/init/_exit.c</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/init/_kill.c</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/init/dso_handle.c</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/init/fini.c</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/init/init.c</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/init/r_compiler_abstraction.c</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/init/sections.c</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/init/syscalls.c</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/init/_kill.c</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/init/dso_handle.c</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/init/fini.c</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/init/init.c</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/init/r_compiler_abstraction.c</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/init/sections.c</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/init/syscalls.c</file>
             <path>application_code/renesas_code/core_package/generate/compiler/init</path>
          </impdir>
-		<!--RZA2M core_package compiler asm-->
-		<impdir>
+        <!--RZA2M core_package compiler asm-->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/compiler/asm/_exit.c</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/asm/cpu.asm</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/asm/initsect.asm</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/asm/irq.asm</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/asm/irqfiq_handler.asm</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/asm/mmu_operation.asm</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/asm/r_cache_l1_rza2.asm</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/asm/reset_handler.asm</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/asm/vector_mirrortable.asm</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/asm/vector_table.asm</file>
-			<file>vendors/renesas/rz/core_package/generate/compiler/asm/vfp_init.asm</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/asm/cpu.asm</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/asm/initsect.asm</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/asm/irq.asm</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/asm/irqfiq_handler.asm</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/asm/mmu_operation.asm</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/asm/r_cache_l1_rza2.asm</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/asm/reset_handler.asm</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/asm/vector_mirrortable.asm</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/asm/vector_table.asm</file>
+            <file>vendors/renesas/rz/core_package/generate/compiler/asm/vfp_init.asm</file>
             <path>application_code/renesas_code/core_package/generate/compiler/asm</path>
         </impdir>
-		
-		<!--RZA2M core_package compiler inc-->
-		<impdir>
+        
+        <!--RZA2M core_package compiler inc-->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/compiler/inc/compiler_settings.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/compiler/inc/r_compiler_abstraction_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/compiler/inc/swi.h</file>
+          <file>vendors/renesas/rz/core_package/generate/compiler/inc/r_compiler_abstraction_api.h</file>
+          <file>vendors/renesas/rz/core_package/generate/compiler/inc/swi.h</file>
             <path>application_code/renesas_code/core_package/generate/compiler/inc</path>
         </impdir>
-		
-		<!--RZA2M core_package configuration-->
-		<impdir>
+        
+        <!--RZA2M core_package configuration-->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/configuration/r_cache_rza2_config.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/configuration/r_devlink_wrapper_cfg.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/configuration/r_eeprom_sample.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/configuration/r_intc_rza2_config.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/configuration/r_intc_user.c</file>
-		  <file>vendors/renesas/rz/core_package/generate/configuration/r_scifa_rza2_config.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/configuration/r_startup_config.h</file>
+          <file>vendors/renesas/rz/core_package/generate/configuration/r_devlink_wrapper_cfg.h</file>
+          <file>vendors/renesas/rz/core_package/generate/configuration/r_eeprom_sample.h</file>
+          <file>vendors/renesas/rz/core_package/generate/configuration/r_intc_rza2_config.h</file>
+          <file>vendors/renesas/rz/core_package/generate/configuration/r_intc_user.c</file>
+          <file>vendors/renesas/rz/core_package/generate/configuration/r_scifa_rza2_config.h</file>
+          <file>vendors/renesas/rz/core_package/generate/configuration/r_startup_config.h</file>
             <path>application_code/renesas_code/core_package/generate/configuration</path>
         </impdir>
-		
-		<!--RZA2M core_package drivers r_cache  inc-->
-		<impdir>
+        
+        <!--RZA2M core_package drivers r_cache  inc-->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_cache/inc/r_cache_l1_rza2m_asm.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_cache/inc/r_cache_lld_rza2m.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_cache/inc/r_cache_lld_rza2m.h</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_cache/inc</path>
         </impdir>
-		
-		<!--RZA2M core_package drivers r_cache  inc-->
-		<impdir>
+        
+        <!--RZA2M core_package drivers r_cache  inc-->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_cache/src/lld/r_cache_lld_rza2m.c</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_cache/src/lld</path>
         </impdir>
-		
-		<!--RZA2M core_package drivers r_cache  inc-->
-		<impdir>
+        
+        <!--RZA2M core_package drivers r_cache  inc-->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_cpg/inc/r_cpg_drv_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_cpg/inc/r_cpg_drv_link.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_cpg/inc/r_cpg_drv_sc_cfg.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_cpg/inc/r_cpg_hld_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_cpg/inc/r_cpg_lld_rza2m.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_cpg/inc/r_cpg_drv_link.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_cpg/inc/r_cpg_drv_sc_cfg.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_cpg/inc/r_cpg_hld_api.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_cpg/inc/r_cpg_lld_rza2m.h</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_cpg/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_cpg/src/lld/r_cpg_lld_rza2m.c</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_cpg/src/lld</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_cpg/src/hld/r_cpg_drv_api.c</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_cpg/src/hld</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_gpio/inc/r_gpio_drv_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_gpio/inc/r_gpio_drv_link.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_gpio/inc/r_gpio_drv_sc_cfg.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_gpio/inc/r_gpio_lld_rza2m.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_gpio/inc/r_gpio_drv_link.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_gpio/inc/r_gpio_drv_sc_cfg.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_gpio/inc/r_gpio_lld_rza2m.h</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_gpio/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_gpio/src/lld/r_gpio_lld_rza2m.c</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_gpio/src/lld</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_gpio/src/hld/r_gpio_drv_api.c</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_gpio/src/hld</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_intc/inc/r_intc_drv_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_intc/inc/r_intc_drv_link.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_intc/inc/r_intc_lld_rza2m.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_intc/inc/r_intc_drv_link.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_intc/inc/r_intc_lld_rza2m.h</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_intc/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_intc/src/lld/r_intc_lld_rza2m_handler.c</file>
-			<file>vendors/renesas/rz/core_package/generate/drivers/r_intc/src/lld/r_intc_lld_rza2m.c</file>
+            <file>vendors/renesas/rz/core_package/generate/drivers/r_intc/src/lld/r_intc_lld_rza2m.c</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_intc/src/lld</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_mmu/inc/r_mmu_drv_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_mmu/inc/r_mmu_drv_link.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_mmu/inc/r_mmu_drv_sc_cfg.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_mmu/inc/r_mmu_lld_rza2m.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_mmu/inc/r_mmu_drv_link.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_mmu/inc/r_mmu_drv_sc_cfg.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_mmu/inc/r_mmu_lld_rza2m.h</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_mmu/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_mmu/src/lld/r_mmu_lld_rza2m.c</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_mmu/src/lld</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_stb/inc/r_stb_drv_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_stb/inc/r_stb_drv_link.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/drivers/r_stb/inc/r_stb_lld_rza2m.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_stb/inc/r_stb_drv_link.h</file>
+          <file>vendors/renesas/rz/core_package/generate/drivers/r_stb/inc/r_stb_lld_rza2m.h</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_stb/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/drivers/r_stb/src/lld/r_stb_lld_rza2m.c</file>
             <path>application_code/renesas_code/core_package/generate/drivers/r_stb/src/lld</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_os_abstraction_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_os_abstraction_typedef.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_os_private_vector.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_task_priority.h</file>
+          <file>vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_os_abstraction_typedef.h</file>
+          <file>vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_os_private_vector.h</file>
+          <file>vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_task_priority.h</file>
             <path>application_code/renesas_code/core_package/generate/os_abstraction/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/os_abstraction/src/r_os_abstraction_api.c</file>
             <path>vendors/renesas/rz/core_package/generate/os_abstraction/src</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_adc/inc/r_adc_drv_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_adc/inc/r_adc_drv_link.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_adc/inc/r_adc_drv_sc_cfg.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_adc/inc/r_adc_lld_rza2m.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_adc/inc/r_adc_drv_link.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_adc/inc/r_adc_drv_sc_cfg.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_adc/inc/r_adc_lld_rza2m.h</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_adc/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_adc/src/hld/r_adc_drv_api.c</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_adc/src/hld</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_adc/src/lld/r_adc_lld_rza2m.c</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_adc/src/lld</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_cbuffer/inc/r_cbuffer.h</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_cbuffer/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_cbuffer/src/r_cbuffer.c</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_cbuffer/src</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/inc/r_ether_drv_sc_cfg.h</file>
-			<file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/inc/r_ether_rza2_if.h</file>
+            <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/inc/r_ether_rza2_if.h</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_ether/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/r_ether_rza2_private.h</file>
-			<file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/r_ether_rza2.c</file>
+            <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/r_ether_rza2.c</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_ether/src</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/phy/phy.c</file>
-			<file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/phy/phy.h</file>
+            <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/phy/phy.h</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_ether/src/phy</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/targets/rza2m-ebk/r_ether_rza2_config.h</file>
-			<file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/targets/rza2m-ebk/r_ether_setting_rza2m.c</file>
-			<file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/targets/rza2m-ebk/r_pinset.c</file>
-			<file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/targets/rza2m-ebk/r_pinset.h</file>
+            <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/targets/rza2m-ebk/r_ether_setting_rza2m.c</file>
+            <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/targets/rza2m-ebk/r_pinset.c</file>
+            <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/targets/rza2m-ebk/r_pinset.h</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_ether/src/targets/rza2m-ebk</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ostm/inc/r_ostm_drv_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ostm/inc/r_ostm_drv_link.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ostm/inc/r_ostm_drv_sc_cfg.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ostm/inc/r_ostm_lld_rza2m.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ostm/inc/r_ostm_drv_link.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ostm/inc/r_ostm_drv_sc_cfg.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ostm/inc/r_ostm_lld_rza2m.h</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_ostm/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ostm/src/hld/r_ostm_drv_api.c</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_ostm/src/hld</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_ostm/src/lld/r_ostm_lld_rza2m.c</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_ostm/src/lld</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_riic_drv_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_riic_drv_link.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_riic_drv_sc_cfg.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_riic_hld_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_riic_hld_prv.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_rza2m_riic_lld_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_rza2m_riic_lld_cfg.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_rza2m_riic_lld_prv.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_riic_drv_link.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_riic_drv_sc_cfg.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_riic_hld_api.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_riic_hld_prv.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_rza2m_riic_lld_api.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_rza2m_riic_lld_cfg.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/inc/r_rza2m_riic_lld_prv.h</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_riic/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/src/hld/r_riic_drv_api.c</file>
-			<file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/src/hld/r_riic_hld_prv.c</file>
+            <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/src/hld/r_riic_hld_prv.c</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_riic/src/hld</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/src/lld/r_rza2_riic_lld_int.c</file>
-			<file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/src/lld/r_rza2_riic_lld.c</file>
+            <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_riic/src/lld/r_rza2_riic_lld.c</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_riic/src/lld</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_rza2_scifa_lld_cfg.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_rza2_scifa_lld.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_device_cfg.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_drv_api.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_drv_link.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_drv_sc_cfg.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_hld_prv.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_lld_rza2m_api.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_rza2_scifa_lld.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_device_cfg.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_drv_api.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_drv_link.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_drv_sc_cfg.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_hld_prv.h</file>
+          <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/inc/r_scifa_lld_rza2m_api.h</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_scifa/inc</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/src/hld/r_scifa_drv_api.c</file>
-			<file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/src/hld/r_scifa_hld_prv.c</file>
+            <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/src/hld/r_scifa_hld_prv.c</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_scifa/src/hld</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/src/lld/r_rza2_scifa_lld_baud.c</file>
-			<file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/src/lld/r_rza2_scifa_lld.c</file>
+            <file>vendors/renesas/rz/core_package/generate/sc_drivers/r_scifa/src/lld/r_rza2_scifa_lld.c</file>
             <path>application_code/renesas_code/core_package/generate/sc_drivers/r_scifa/src/lld</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/system/hwsetup.c</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/r_devlink_wrapper.c</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/rza_io_regrw.c</file>		
+          <file>vendors/renesas/rz/core_package/generate/system/r_devlink_wrapper.c</file>
+          <file>vendors/renesas/rz/core_package/generate/system/rza_io_regrw.c</file>        
             <path>application_code/renesas_code/core_package/generate/system</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/system/inc/devlink.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/inc/driver.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/inc/hwsetup.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/inc/r_devimp_wrapper.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/inc/r_typedefs.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/inc/rza_io_regrw.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/inc/driver.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/inc/hwsetup.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/inc/r_devimp_wrapper.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/inc/r_typedefs.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/inc/rza_io_regrw.h</file>
             <path>application_code/renesas_code/core_package/generate/system/inc</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/adc_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/bsc_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/ceu_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/cpg_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/csi2link_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/dmac_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/drpk_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/drw_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/edmac_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/eptpc_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/etherc_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/gpio_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/gpt_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/hyper_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/imr2_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/intc_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/irda_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/jcu_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/lvds_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/mtu_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/nandc_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/octa_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/ostm_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/pl310_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/pmg_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/poe3_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/prr_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/ptpedmac_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/rcan_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/rcanfd_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/riic_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/rspi_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/rtc_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/scifa_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/scim_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/sdmmc_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/spdif_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/spibsc_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/sprite_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/ssif_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/usb_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/vdc6_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/vin_iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/wdt_iobitmask.h</file>		  
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/bsc_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/ceu_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/cpg_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/csi2link_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/dmac_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/drpk_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/drw_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/edmac_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/eptpc_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/etherc_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/gpio_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/gpt_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/hyper_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/imr2_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/intc_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/irda_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/jcu_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/lvds_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/mtu_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/nandc_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/octa_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/ostm_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/pl310_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/pmg_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/poe3_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/prr_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/ptpedmac_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/rcan_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/rcanfd_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/riic_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/rspi_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/rtc_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/scifa_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/scim_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/sdmmc_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/spdif_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/spibsc_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/sprite_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/ssif_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/usb_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/vdc6_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/vin_iobitmask.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmasks/wdt_iobitmask.h</file>          
             <path>application_code/renesas_code/core_package/generate/system/iodefine/iobitmasks</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/adc_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/bsc_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/ceu_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/cpg_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/csi2link_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/dmac_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/drpk_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/drw_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/edmac_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/eptpc_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/etherc_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/gpio_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/gpt_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/hyper_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/imr_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/intc_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/irda_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/jcu_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/lvds_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/mtu_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/nandc_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/octa_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/ostm_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/pl_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/pmg_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/poe_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/poeg_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/prr_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/ptpedmac_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/rcan_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/rcanfd_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/riic_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/rspi_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/rtc_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/scifa_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/scim_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/sdmmc_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/spdif_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/spibsc_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/sprite_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/ssif_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/usb_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/vdc_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/vin_iodefine.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/wdt_iodefine.h</file>		  
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/bsc_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/ceu_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/cpg_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/csi2link_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/dmac_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/drpk_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/drw_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/edmac_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/eptpc_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/etherc_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/gpio_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/gpt_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/hyper_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/imr_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/intc_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/irda_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/jcu_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/lvds_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/mtu_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/nandc_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/octa_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/ostm_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/pl_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/pmg_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/poe_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/poeg_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/prr_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/ptpedmac_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/rcan_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/rcanfd_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/riic_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/rspi_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/rtc_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/scifa_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/scim_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/sdmmc_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/spdif_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/spibsc_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/sprite_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/ssif_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/usb_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/vdc_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/vin_iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefines/wdt_iodefine.h</file>          
             <path>application_code/renesas_code/core_package/generate/system/iodefine/iodefines</path>
         </impdir>
-		
-		<!--RZA2M -->
-		<impdir>
+        
+        <!--RZA2M -->
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefine.h</file>
             <path>application_code/renesas_code/core_package/generate/system/iodefine</path>
         </impdir>
-		
-		<impdir>
+        
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/boards/rza2m-ebk/aws_demos/src/renesas/application/console/inc/console.h</file>
-			<file>vendors/renesas/boards/rza2m-ebk/aws_demos/src/renesas/application/console/inc/wild_compare.h</file>
+            <file>vendors/renesas/boards/rza2m-ebk/aws_demos/src/renesas/application/console/inc/wild_compare.h</file>
             <path>application_code/renesas_code/src/renesas/application/console/inc</path>
         </impdir>
 
-		<impdir>
+        <impdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/boards/rza2m-ebk/aws_demos/src/renesas/application/inc/application_cfg.h</file>
-			<file>vendors/renesas/boards/rza2m-ebk/aws_demos/src/renesas/application/inc/main.h</file>
-			<file>vendors/renesas/boards/rza2m-ebk/aws_demos/src/renesas/application/inc/version.h</file>
+            <file>vendors/renesas/boards/rza2m-ebk/aws_demos/src/renesas/application/inc/main.h</file>
+            <file>vendors/renesas/boards/rza2m-ebk/aws_demos/src/renesas/application/inc/version.h</file>
             <path>application_code/renesas_code/src/renesas/application/inc</path>
         </impdir>
 
@@ -1844,18 +1844,18 @@
             <file>freertos_kernel/portable/MemMang/heap_4.c</file>
             <path>freertos_kernel/portable/MemMang</path>
         </linkdir>
-		
-		
-		<!--RZA2M -->
-		
-		<linkdir>
-		<toolchain>GNUARM</toolchain>
+        
+        
+        <!--RZA2M -->
+        
+        <linkdir>
+        <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>freertos_kernel/portable/MemMang/heap_5.c</file>
             <path>freertos_kernel/portable/MemMang</path>
         </linkdir>
-		
+        
         <linkdir>
             <toolchain>RXC</toolchain>
             <series>RX600</series>
@@ -1879,18 +1879,18 @@
             <file>freertos_kernel/portable/GCC/RX600v2/portmacro.h</file>
             <path>freertos_kernel/portable/GCC/RX600v2</path>
         </linkdir>
-		<!--RZA2M -->
-		<linkdir>
+        <!--RZA2M -->
+        <linkdir>
             <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>freertos_kernel/portable/GCC/ARM_CA9_RZA2M/port.c</file>
             <file>freertos_kernel/portable/GCC/ARM_CA9_RZA2M/portasm.S</file>
             <file>freertos_kernel/portable/GCC/ARM_CA9_RZA2M/portmacro.h</file>
-		<file>freertos_kernel/portable/GCC/ARM_CA9_RZA2M/3rt_access.S</file>
+        <file>freertos_kernel/portable/GCC/ARM_CA9_RZA2M/3rt_access.S</file>
             <path>freertos_kernel/portable/GCC/ARM_CA9_RZA2M</path>
         </linkdir>
-		
+        
         <linkdir>
             <file>libraries/3rdparty/http-parser/http_parser.c</file>
             <file>libraries/3rdparty/http-parser/http_parser.h</file>
@@ -2275,16 +2275,16 @@
             <file>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/NetworkInterface/RX/NetworkInterface.c</file>
             <path>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/NetworkInterface/RX</path>
         </linkdir>
-		
-		<!--RZA2M -->
-		<linkdir>
+        
+        <!--RZA2M -->
+        <linkdir>
             <series>RZA</series>
-            <group>RZA2M</group>				
+            <group>RZA2M</group>                
             <file>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/NetworkInterface/RZ/ether_callback.c</file>
             <file>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/NetworkInterface/RZ/NetworkInterface.c</file>
             <path>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/NetworkInterface/RZ</path>
         </linkdir>
-		
+        
         <linkdir>
             <file>libraries/freertos_plus/standard/freertos_plus_tcp/source/FreeRTOS_ARP.c</file>
             <file>libraries/freertos_plus/standard/freertos_plus_tcp/source/FreeRTOS_DHCP.c</file>
@@ -2309,7 +2309,7 @@
             <file>libraries/freertos_plus/standard/tls/include/iot_tls.h</file>
             <path>libraries/freertos_plus/standard/tls/include</path>
         </linkdir>
-		<linkdir>
+        <linkdir>
             <file>libraries/freertos_plus/standard/tls/src/iot_tls.c</file>
             <path>libraries/freertos_plus/standard/tls/src</path>
         </linkdir>
@@ -2318,9 +2318,9 @@
             <file>libraries/freertos_plus/standard/utils/include/iot_system_init.h</file>
             <path>libraries/freertos_plus/standard/utils/include</path>
         </linkdir>
-		<linkdir>
+        <linkdir>
              <file>libraries/freertos_plus/standard/utils/src/iot_system_init.c</file>
-			 <file>libraries/freertos_plus/standard/utils/src/iot_pki_utils.c</file>
+             <file>libraries/freertos_plus/standard/utils/src/iot_pki_utils.c</file>
             <path>libraries/freertos_plus/standard/utils/src</path>
         </linkdir>
         <linkdir>
@@ -2380,65 +2380,77 @@
             <file>vendors/renesas/boards/rx71m-rsk/ports/pkcs11/iot_pkcs11_pal.c</file>
             <path>vendors/renesas/boards/rx71m-rsk/ports/pkcs11</path>
         </linkdir>
-		
-		<!--RZA2M -->
-		<linkdir>
+        
+        <!--RZA2M -->
+        <linkdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/boards/rza2m-ebk/ports/pkcs11/iot_pkcs11_pal.c</file>
             <path>vendors/renesas/boards/rza2m-ebk/ports/pkcs11</path>
         </linkdir>
-		
-        <mdf>vendors/renesas/configuration</mdf>
-		<!--RZA2M -->
-		<linkdir>
+
+        <!--RZA2M -->
+        <linkdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/amazon_freertos_common/cryptogram_sample.c</file>
-			<file>vendors/renesas/rz/amazon_freertos_common/entropy_hardware_poll.c</file>
-			<file>vendors/renesas/rz/amazon_freertos_common/freertos_usr_func.c</file>
-			<file>vendors/renesas/rz/amazon_freertos_common/helper.c</file>
-			<file>vendors/renesas/rz/amazon_freertos_common/PRND.c</file>
-			<file>vendors/renesas/rz/amazon_freertos_common/r_eeprom_sample.c</file>	
+            <file>vendors/renesas/rz/amazon_freertos_common/entropy_hardware_poll.c</file>
+            <file>vendors/renesas/rz/amazon_freertos_common/freertos_usr_func.c</file>
+            <file>vendors/renesas/rz/amazon_freertos_common/helper.c</file>
+            <file>vendors/renesas/rz/amazon_freertos_common/PRND.c</file>
+            <file>vendors/renesas/rz/amazon_freertos_common/r_eeprom_sample.c</file>    
             <path>vendors/renesas/rz/amazon_freertos_common</path>
         </linkdir>
-		
-		<!--RZA2M amazon_freertos_common -->
-		<linkdir>
+        
+        <!--RZA2M amazon_freertos_common -->
+        <linkdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/amazon_freertos_common/aws_pkcs11_config.h</file>
-			<file>vendors/renesas/rz/amazon_freertos_common/os_port_freertos.h</file>
-			<file>vendors/renesas/rz/amazon_freertos_common/r_eeprom_sample.h</file>
-			<file>vendors/renesas/rz/amazon_freertos_common/r_scifa_rza2_config.h</file>
+            <file>vendors/renesas/rz/amazon_freertos_common/os_port_freertos.h</file>
+            <file>vendors/renesas/rz/amazon_freertos_common/r_eeprom_sample.h</file>
+            <file>vendors/renesas/rz/amazon_freertos_common/r_scifa_rza2_config.h</file>
             <path>vendors/renesas/rz/amazon_freertos_common/inc</path>
         </linkdir>
-		<!--RZA2M core_package compiler init-->
-		
-		
-		<!--RZA2M -->
-		<linkdir>
+        <!--RZA2M core_package compiler init-->
+        
+        
+        <!--RZA2M -->
+        <linkdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/rz/core_package/generate/system/iodefine/iobitmask.h</file>
-		  <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefine.h</file>
+          <file>vendors/renesas/rz/core_package/generate/system/iodefine/iodefine.h</file>
             <path>vendors/renesas/rz/core_package/generate/system/iodefine</path>
         </linkdir>
-		
-		<!--RZA2M -->
-		<linkdir>
+        
+        <!--RZA2M -->
+        <linkdir>
            <toolchain>GNUARM</toolchain>
             <series>RZA</series>
            <group>RZA2M</group>
             <file>vendors/renesas/boards/rza2m-ebk/ports/pkcs11/pkcs11.h</file>
             <path>vendors/renesas/boards/rza2m-ebk/ports/pkcs11</path>
         </linkdir>
-		
-		
-		
+        <mdf>vendors/renesas/configuration/common</mdf>
+        <!-- for device filter -->
+        <devicemdf>
+            <toolchain>RXC</toolchain>
+            <series>RX600</series>
+            <series>RX700</series>
+            <group>RX64M</group>
+            <group>RX71M</group>
+            <path>vendors/renesas/configuration/rx/commonrx</path>
+        </devicemdf>
+        <devicemdf>
+            <toolchain>GNUARM</toolchain>
+            <series>RZA</series>
+            <group>RZA2M</group>
+            <path>vendors/renesas/configuration/rz/rza2m</path>
+        </devicemdf>
     </package>
 </refinfo>
