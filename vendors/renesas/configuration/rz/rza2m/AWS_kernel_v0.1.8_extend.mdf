@@ -604,7 +604,7 @@ Disable: omit.</description>
         </property>
         <property id="configMEMORY_TYPE_FOR_ALLOCATOR" display="Type of memory for allocator" default="0" type="textbox">
             <constraint display="Value must be an integer">testInteger("${configMEMORY_TYPE_FOR_ALLOCATOR}")</constraint>
-            <constraint display="Value must be in the range 1 ~ 32">("${configMEMORY_TYPE_FOR_ALLOCATOR}" &gt;= 1) &amp;&amp; ("${configMEMORY_TYPE_FOR_ALLOCATOR}" &lt;= 32)</constraint>
+            <constraint display="Value must be in the range 0 ~ 31">("${configMEMORY_TYPE_FOR_ALLOCATOR}" &gt;= 0) &amp;&amp; ("${configMEMORY_TYPE_FOR_ALLOCATOR}" &lt;= 31)</constraint>
             <description>Type of memory for allocator</description>
         </property>
         <property id="configINTERRUPT_CONTROLLER_BASE_ADDRESS" display="Interrupt controller base address" default="0xE8221000" type="textbox">
