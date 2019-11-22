@@ -2436,7 +2436,7 @@
             <file>vendors/renesas/boards/rza2m-ebk/ports/pkcs11/pkcs11.h</file>
             <path>vendors/renesas/boards/rza2m-ebk/ports/pkcs11</path>
         </linkdir>
-        <mdf>vendors/renesas/configuration/common</mdf>
+        <mdf>vendors/renesas/configuration</mdf>
         <!-- for device filter -->
         <devicemdf>
             <toolchain>RXC</toolchain>
