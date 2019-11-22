@@ -254,9 +254,12 @@
 <entry attribute="9" id="" name="Reserved" physicalAddress="0xE0000000" size="128" virtualAddress="0xE0000000"/>
 <entry attribute="0" id="" name="Peripheral I/O" physicalAddress="0xE8000000" size="384" virtualAddress="0xE8000000"/>
 </tool>
+<tool id="Summary" version="1.0.0.0">
+<option id="com.renesas.smc.code.type" value="Linked File"/>
+</tool>
 <tool id="SWComponent" version="1.0.0.0">
 <configuration channel="r_adc" inuse="true" name="adc">
-<component description="依存モジュール: r_cbuffer バージョン 1.03&#10;Analogue to digital converter driver" detailDescription="" display="r_adc" id="r_adc1.02" version="1.02">
+<component description="Dependency : r_cbuffer version(s) 1.03&#10;Analogue to digital converter driver" detailDescription="" display="r_adc" id="r_adc1.02" version="1.02">
 <gridItem id="ADTRG#" selectedIndex="0"/>
 <gridItem id="AN000" selectedIndex="0"/>
 <gridItem id="AN001" selectedIndex="0"/>
@@ -271,7 +274,7 @@
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="RIIC3" inuse="true" name="riic3">
-<component description="依存モジュール: r_cpg バージョン 1.03&#10;RIIC Driver" detailDescription="" display="r_riic" id="r_riic1.03" version="1.03">
+<component description="Dependency : r_cpg version(s) 1.03&#10;RIIC Driver" detailDescription="" display="r_riic" id="r_riic1.03" version="1.03">
 <gridItem id="RIIC3SCL" selectedIndex="1"/>
 <gridItem id="RIIC3SDA" selectedIndex="1"/>
 <gridItem id="RIIC3" selectedIndex="1"/>
@@ -306,7 +309,7 @@
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="SCIFA4" inuse="true" name="scifa4">
-<component description="依存モジュール: r_cbuffer バージョン 1.03&#10;依存モジュール: r_cpg バージョン 1.03&#10;SCIFA Driver IMPORTANT - Prior to using this module please ensure os_abstraction &#10;&#9;  driver version 3.03 (or later) is included in your project (any variant)" detailDescription="" display="r_scifa" id="r_scifa2.00" version="2.00">
+<component description="Dependency : r_cbuffer version(s) 1.03&#10;Dependency : r_cpg version(s) 1.03&#10;SCIFA Driver IMPORTANT - Prior to using this module please ensure os_abstraction &#10;&#9;  driver version 3.03 (or later) is included in your project (any variant)" detailDescription="" display="r_scifa" id="r_scifa2.00" version="2.00">
 <gridItem id="TxD4" selectedIndex="1"/>
 <gridItem id="RxD4" selectedIndex="1"/>
 <gridItem id="SCK4" selectedIndex="0"/>
@@ -349,12 +352,12 @@
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="r_cbuffer" inuse="true" name="cbuffer0">
-<component description="依存モジュール: なし&#10;Common software for buffer processing" detailDescription="" display="r_cbuffer" id="r_cbuffer1.03" version="1.03"/>
+<component description="Dependencies : None&#10;Common software for buffer processing" detailDescription="" display="r_cbuffer" id="r_cbuffer1.03" version="1.03"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="r_ether" inuse="true" name="ether1">
-<component description="依存モジュール: なし&#10;Ethernet driver" detailDescription="" display="r_ether" id="r_ether1.11" version="1.11">
+<component description="Dependencies : None&#10;Ethernet driver" detailDescription="" display="r_ether" id="r_ether1.11" version="1.11">
 <gridItem id="ET0_COL" selectedIndex="0"/>
 <gridItem id="ET0_CRS" selectedIndex="0"/>
 <gridItem id="ET0_EXOUT/ET0_SCLKIN" selectedIndex="0"/>
@@ -428,47 +431,47 @@
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="r_cache" inuse="true" name="cache0">
-<component description="依存モジュール: なし&#10;Cache Module (Configure Memory using MMU TAB)" detailDescription="" display="r_cache" id="r_cache1.03" version="1.03"/>
+<component description="Dependencies : None&#10;Cache Module (Configure Memory using MMU TAB)" detailDescription="" display="r_cache" id="r_cache1.03" version="1.03"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="r_iodefine" inuse="true" name="iodefine0">
-<component description="依存モジュール: なし&#10;Hardware access to I/O peripherals on RZA2M device&#10;IMPORTANT - Please read if using projects generated by e2sudio 7.1-7.4&#10;&#9;  Remove the following files from project prior to installing this module:&#10;&#9;  generate\system\inc\iobitmask.h&#10;&#9;  generate\system\inc\iodefine.h&#10;&#9;  Remove the following folders from project prior to installing this module:&#10;&#9;  generate\system\inc\iobitmasks&#10;&#9;  generate\system\inc\iodefines&#10;&#9;  Remove the following folders from &#10;&#9;  Settings -&gt; C/C++ Build -&gt; Cross ARM C++ Compiler --&gt; Includes dialog&#10;&#9;  &quot;${ProjDirPath}/generate/system/inc/iobitmasks&quot;&#10;&#9;  &quot;${ProjDirPath}/generate/system/inc/iodefines&quot;" detailDescription="" display="r_iodefine" id="r_iodefine2.02" version="2.02"/>
+<component description="Dependencies : None&#10;Hardware access to I/O peripherals on RZA2M device&#10;IMPORTANT - Please read if using projects generated by e2sudio 7.1-7.4&#10;&#9;  Remove the following files from project prior to installing this module:&#10;&#9;  generate\system\inc\iobitmask.h&#10;&#9;  generate\system\inc\iodefine.h&#10;&#9;  Remove the following folders from project prior to installing this module:&#10;&#9;  generate\system\inc\iobitmasks&#10;&#9;  generate\system\inc\iodefines&#10;&#9;  Remove the following folders from &#10;&#9;  Settings -&gt; C/C++ Build -&gt; Cross ARM C++ Compiler --&gt; Includes dialog&#10;&#9;  &quot;${ProjDirPath}/generate/system/inc/iobitmasks&quot;&#10;&#9;  &quot;${ProjDirPath}/generate/system/inc/iodefines&quot;" detailDescription="" display="r_iodefine" id="r_iodefine2.02" version="2.02"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="r_cpg" inuse="true" name="cpg0">
-<component description="依存モジュール: なし&#10;Clock Pulse Generator Module (Configure using Clocks TAB)" detailDescription="" display="r_cpg" id="r_cpg1.03" version="1.03"/>
+<component description="Dependencies : None&#10;Clock Pulse Generator Module (Configure using Clocks TAB)" detailDescription="" display="r_cpg" id="r_cpg1.03" version="1.03"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="r_gpio" inuse="true" name="gpio0">
-<component description="依存モジュール: なし&#10;General Purpose Input/Output Pin Module (Configure using Pins TAB)" detailDescription="" display="r_gpio" id="r_gpio1.04" version="1.04"/>
+<component description="Dependencies : None&#10;General Purpose Input/Output Pin Module (Configure using Pins TAB)" detailDescription="" display="r_gpio" id="r_gpio1.04" version="1.04"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="r_intc" inuse="true" name="intc0">
-<component description="依存モジュール: なし&#10;Interrupt Controller Module" detailDescription="" display="r_intc" id="r_intc1.04" version="1.04"/>
+<component description="Dependencies : None&#10;Interrupt Controller Module" detailDescription="" display="r_intc" id="r_intc1.04" version="1.04"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="r_mmu" inuse="true" name="mmu0">
-<component description="依存モジュール: なし&#10;Memory Management Module (Configure Memory using MMU TAB)" detailDescription="" display="r_mmu" id="r_mmu1.03" version="1.03"/>
+<component description="Dependencies : None&#10;Memory Management Module (Configure Memory using MMU TAB)" detailDescription="" display="r_mmu" id="r_mmu1.03" version="1.03"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="r_stb" inuse="true" name="stb0">
-<component description="依存モジュール: なし&#10;Standby control Management Module" detailDescription="" display="r_stb" id="r_stb1.03" version="1.03"/>
+<component description="Dependencies : None&#10;Standby control Management Module" detailDescription="" display="r_stb" id="r_stb1.03" version="1.03"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="r_os_abstraction_freertos" inuse="true" name="os_abstraction_freertos0">
-<component description="依存モジュール: r_ostm バージョン 1.04&#10;os abstraction layer for FreeRTOS&#10;IMPORTANT - Prior to using this module please add &#10;&#9;  #define R_COMPILER_WEAK __attribute__((weak))&#10;&#9;  to generate\compiler\inc\r_compiler_abstraction_api.h &#10;&#9;  In addition please exclude and memory heap implementation  &#10;&#9;  supplied in your FreeRTOS port (example location freertos\portable\memmang)" detailDescription="" display="r_os_abstraction_freertos" id="r_os_abstraction_freertos3.03" version="3.03"/>
+<component description="Dependency : r_ostm version(s) 1.04&#10;os abstraction layer for FreeRTOS&#10;IMPORTANT - Prior to using this module please add &#10;&#9;  #define R_COMPILER_WEAK __attribute__((weak))&#10;&#9;  to generate\compiler\inc\r_compiler_abstraction_api.h &#10;&#9;  In addition please exclude and memory heap implementation  &#10;&#9;  supplied in your FreeRTOS port (example location freertos\portable\memmang)" detailDescription="" display="r_os_abstraction_freertos" id="r_os_abstraction_freertos3.03" version="3.03"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 <configuration channel="OSTM0" inuse="true" name="ostm_reserved" required="true">
-<component description="依存モジュール: r_cpg バージョン 1.03&#10;OS Timer Driver" detailDescription="" display="r_ostm" id="r_ostm1.05" version="1.05">
+<component description="Dependency : r_cpg version(s) 1.03&#10;OS Timer Driver" detailDescription="" display="r_ostm" id="r_ostm1.05" version="1.05">
 <gridItem id="OSTM_MODE" selectedIndex="0"/>
 <gridItem id="OSTM_COUNTER_FORMAT" selectedIndex="0"/>
 <gridItem id="OSTM_TIME" selectedIndex="1000"/>
@@ -480,33 +483,242 @@
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
-<configuration inuse="true" name="FreeRTOS_Object">
-<component display="FreeRTOS_Object" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.object"/>
-<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+<configuration id="070b8102-38f4-4d53-82d3-01cd0a109cc2" inuse="true" name="FreeRTOS_Object">
+<allocatable id="OBJECT" name="OBJECT"/>
+<component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to create and configure new object of FreeRTOS." detailDescription="" display="FreeRTOS_Object" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.object" version="1.0.0"/>
+<allocator description="FreeRTOS Object component for RZ" display="FreeRTOS_Object" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.object.rz" type="object">
+<context/>
+</allocator>
+<source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration inuse="true" name="FreeRTOS_Kernel">
-<component display="FreeRTOS_Kernel" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.kernel"/>
-<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+<configuration id="e04d8240-8c8a-4b23-9dd4-066ffda92ecd" inuse="true" name="FreeRTOS_Kernel">
+<component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="FreeRTOS_kernel" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.kernel" version="1.0.0">
+<gridItem id="configENABLE_BACKWARD_COMPATIBILITY" selectedIndex="1"/>
+<gridItem id="configUSE_PREEMPTION" selectedIndex="1"/>
+<gridItem id="configUSE_PORT_OPTIMISED_TASK_SELECTION" selectedIndex="0"/>
+<gridItem id="configMAX_PRIORITIES" selectedIndex="7"/>
+<gridItem id="configTICK_RATE_HZ" selectedIndex="1000"/>
+<gridItem id="configMINIMAL_STACK_SIZE" selectedIndex="( unsigned short ) 512"/>
+<gridItem id="configTOTAL_HEAP_SIZE" selectedIndex="( size_t ) ( 1024U * 1024U )"/>
+<gridItem id="configMAX_TASK_NAME_LEN" selectedIndex="24"/>
+<gridItem id="configUSE_TRACE_FACILITY" selectedIndex="1"/>
+<gridItem id="configUSE_16_BIT_TICKS" selectedIndex="0"/>
+<gridItem id="configIDLE_SHOULD_YIELD" selectedIndex="1"/>
+<gridItem id="configUSE_MUTEXES" selectedIndex="1"/>
+<gridItem id="configUSE_RECURSIVE_MUTEXES" selectedIndex="1"/>
+<gridItem id="configQUEUE_REGISTRY_SIZE" selectedIndex="8"/>
+<gridItem id="configUSE_APPLICATION_TASK_TAG" selectedIndex="0"/>
+<gridItem id="configUSE_COUNTING_SEMAPHORES" selectedIndex="1"/>
+<gridItem id="configUSE_ALTERNATIVE_API" selectedIndex="0"/>
+<gridItem id="configNUM_THREAD_LOCAL_STORAGE_POINTERS" selectedIndex="3"/>
+<gridItem id="configRECORD_STACK_HIGH_ADDRESS" selectedIndex="1"/>
+<gridItem id="configUSE_DAEMON_TASK_STARTUP_HOOK" selectedIndex="1"/>
+<gridItem id="configCPU_CLOCK_HZ" selectedIndex="s_sc_cpg_sub_clock_div_config[0].sub_clk_frequency_khz * 1000"/>
+<gridItem id="configPERIPHERAL_CLOCK_HZ" selectedIndex="s_sc_cpg_sub_clock_div_config[2].sub_clk_frequency_khz * 1000"/>
+<gridItem id="configUSE_QUEUE_SETS" selectedIndex="1"/>
+<gridItem id="configUSE_TICK_HOOK" selectedIndex="0"/>
+<gridItem id="configUSE_IDLE_HOOK" selectedIndex="0"/>
+<gridItem id="configUSE_MALLOC_FAILED_HOOK" selectedIndex="1"/>
+<gridItem id="configCHECK_FOR_STACK_OVERFLOW" selectedIndex="0"/>
+<gridItem id="configUSE_TIMERS" selectedIndex="1"/>
+<gridItem id="configTIMER_TASK_PRIORITY" selectedIndex="6"/>
+<gridItem id="configTIMER_QUEUE_LENGTH" selectedIndex="5"/>
+<gridItem id="configTIMER_TASK_STACK_DEPTH" selectedIndex="configMINIMAL_STACK_SIZE * 2"/>
+<gridItem id="configKERNEL_INTERRUPT_PRIORITY" selectedIndex="1"/>
+<gridItem id="configMAX_SYSCALL_INTERRUPT_PRIORITY" selectedIndex="4"/>
+<gridItem id="configTICK_VECTOR" selectedIndex="0"/>
+<gridItem id="configUSE_EVENT_GROUPS" selectedIndex="1"/>
+<gridItem id="configGENERATE_RUN_TIME_STATS" selectedIndex="0"/>
+<gridItem id="configUSE_CO_ROUTINES" selectedIndex="0"/>
+<gridItem id="configMAX_CO_ROUTINE_PRIORITIES" selectedIndex="2"/>
+<gridItem id="configSUPPORT_DYNAMIC_ALLOCATION" selectedIndex="1"/>
+<gridItem id="configSUPPORT_STATIC_ALLOCATION" selectedIndex="1"/>
+<gridItem id="INCLUDE_vTaskPrioritySet" selectedIndex="1"/>
+<gridItem id="INCLUDE_uxTaskPriorityGet" selectedIndex="1"/>
+<gridItem id="INCLUDE_vTaskDelete" selectedIndex="1"/>
+<gridItem id="INCLUDE_vTaskCleanUpResources" selectedIndex="0"/>
+<gridItem id="INCLUDE_vTaskSuspend" selectedIndex="1"/>
+<gridItem id="INCLUDE_vTaskDelayUntil" selectedIndex="1"/>
+<gridItem id="INCLUDE_vTaskDelay" selectedIndex="1"/>
+<gridItem id="INCLUDE_uxTaskGetStackHighWaterMark" selectedIndex="1"/>
+<gridItem id="INCLUDE_xTaskGetSchedulerState" selectedIndex="1"/>
+<gridItem id="INCLUDE_xTimerGetTimerTaskHandle" selectedIndex="0"/>
+<gridItem id="INCLUDE_xTaskGetIdleTaskHandle" selectedIndex="0"/>
+<gridItem id="INCLUDE_xQueueGetMutexHolder" selectedIndex="1"/>
+<gridItem id="INCLUDE_eTaskGetState" selectedIndex="1"/>
+<gridItem id="INCLUDE_xEventGroupSetBitsFromISR" selectedIndex="1"/>
+<gridItem id="INCLUDE_xTimerPendFunctionCall" selectedIndex="1"/>
+<gridItem id="INCLUDE_xTaskGetCurrentTaskHandle" selectedIndex="1"/>
+<gridItem id="INCLUDE_xTaskAbortDelay" selectedIndex="1"/>
+<gridItem id="configUSE_STATS_FORMATTING_FUNCTIONS" selectedIndex="1"/>
+<gridItem id="configPRINTF( X )" selectedIndex="vLoggingPrintf X"/>
+<gridItem id="configPRINT( X )" selectedIndex="vLoggingPrint( X )"/>
+<gridItem id="configPRINT_STRING( x )" selectedIndex="uart_string_printf( x )"/>
+<gridItem id="configLOGGING_MAX_MESSAGE_LENGTH" selectedIndex="192"/>
+<gridItem id="configLOGGING_INCLUDE_TIME_AND_TASK_NAME" selectedIndex="1"/>
+<gridItem id="configINCLUDE_DEMO_DEBUG_STATS" selectedIndex="1"/>
+<gridItem id="configCOMMAND_INT_MAX_OUTPUT_SIZE" selectedIndex="1"/>
+<gridItem id="configMAC_ISR_SIMULATOR_PRIORITY" selectedIndex="configMAX_PRIORITIES - 1"/>
+<gridItem id="configNETWORK_INTERFACE_TO_USE" selectedIndex="2L"/>
+<gridItem id="configECHO_SERVER_ADDR0" selectedIndex="192"/>
+<gridItem id="configECHO_SERVER_ADDR1" selectedIndex="168"/>
+<gridItem id="configECHO_SERVER_ADDR2" selectedIndex="1"/>
+<gridItem id="configECHO_SERVER_ADDR3" selectedIndex="200"/>
+<gridItem id="configTCP_ECHO_CLIENT_PORT" selectedIndex="9999"/>
+<gridItem id="configMAC_ADDR0" selectedIndex="0x74"/>
+<gridItem id="configMAC_ADDR1" selectedIndex="0x90"/>
+<gridItem id="configMAC_ADDR2" selectedIndex="0x50"/>
+<gridItem id="configMAC_ADDR3" selectedIndex="0x00"/>
+<gridItem id="configMAC_ADDR4" selectedIndex="0x79"/>
+<gridItem id="configMAC_ADDR5" selectedIndex="0x03"/>
+<gridItem id="configIP_ADDR0" selectedIndex="172"/>
+<gridItem id="configIP_ADDR1" selectedIndex="27"/>
+<gridItem id="configIP_ADDR2" selectedIndex="49"/>
+<gridItem id="configIP_ADDR3" selectedIndex="127"/>
+<gridItem id="configGATEWAY_ADDR0" selectedIndex="172"/>
+<gridItem id="configGATEWAY_ADDR1" selectedIndex="27"/>
+<gridItem id="configGATEWAY_ADDR2" selectedIndex="49"/>
+<gridItem id="configGATEWAY_ADDR3" selectedIndex="1"/>
+<gridItem id="configDNS_SERVER_ADDR0" selectedIndex="143"/>
+<gridItem id="configDNS_SERVER_ADDR1" selectedIndex="103"/>
+<gridItem id="configDNS_SERVER_ADDR2" selectedIndex="47"/>
+<gridItem id="configDNS_SERVER_ADDR3" selectedIndex="193"/>
+<gridItem id="configNET_MASK0" selectedIndex="8"/>
+<gridItem id="configNET_MASK1" selectedIndex="8"/>
+<gridItem id="configNET_MASK2" selectedIndex="8"/>
+<gridItem id="configNET_MASK3" selectedIndex="0"/>
+<gridItem id="configPRINT_PORT" selectedIndex="15000"/>
+<gridItem id="configPROFILING" selectedIndex="0"/>
+<gridItem id="configRAND32()" selectedIndex="ulRand()"/>
+<gridItem id="configPLATFORM_NAME" selectedIndex="&quot;RenesasRZA2M&quot;"/>
+<gridItem id="configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H" selectedIndex="1"/>
+<gridItem id="configMAX_API_CALL_INTERRUPT_PRIORITY" selectedIndex="25"/>
+<gridItem id="configAPPLICATION_ALLOCATED_HEAP" selectedIndex="1"/>
+<gridItem id="configUSE_TICKLESS_IDLE" selectedIndex="0"/>
+<gridItem id="configSMALL_STACK_SIZE" selectedIndex="( unsigned short ) 2048"/>
+<gridItem id="configDEFAULT_STACK_SIZE" selectedIndex="( unsigned short ) 4096"/>
+<gridItem id="configMEMORY_TYPE_FOR_ALLOCATOR" selectedIndex="0"/>
+<gridItem id="configINTERRUPT_CONTROLLER_BASE_ADDRESS" selectedIndex="0xE8221000"/>
+<gridItem id="configINTERRUPT_CONTROLLER_CPU_INTERFACE_OFFSET" selectedIndex="0x1000"/>
+<gridItem id="configUNIQUE_INTERRUPT_PRIORITIES" selectedIndex="32"/>
+</component>
+<allocator description="FreeRTOS Amazon kernel component for RZ" display="AWS_kernel" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.kernel.rz" type="gridConfiguration">
+<context/>
+</allocator>
+<source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration inuse="true" name="AWS_device_shadow">
-<component display="AWS_device_shadow" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.device_shadow"/>
-<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+<configuration id="ddff85af-47c4-4c62-a2cf-d0c6039136a0" inuse="true" name="AWS_device_shadow">
+<component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_device_shadow" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.device_shadow" version="1.0.0">
+<gridItem id="shadowConfigJSON_JSMN_TOKENS" selectedIndex="64"/>
+<gridItem id="shadowConfigJSON_CLIENT_TOKEN" selectedIndex="&quot;clientToken&quot;"/>
+<gridItem id="shadowConfigUNIQUE_CLIENT_TOKEN_CHECK" selectedIndex="1"/>
+</component>
+<allocator description="FreeRTOS Amazon device shadow component for RZ" display="AWS_shadow" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.device_shadow.rz" type="gridConfiguration">
+<context/>
+</allocator>
+<source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration inuse="true" name="AWS_tcp_ip">
-<component display="AWS_tcp_ip" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.tcp_ip"/>
-<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+<configuration id="9daf8ed3-c0cf-4dee-b619-a8c5d91286d4" inuse="true" name="AWS_tcp_ip">
+<component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_tcp_ip" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.tcp_ip" version="1.0.0">
+<gridItem id="ipconfigHAS_DEBUG_PRINTF" selectedIndex="0"/>
+<gridItem id="ipconfigHAS_PRINTF" selectedIndex="0"/>
+<gridItem id="ipconfigBYTE_ORDER" selectedIndex="0"/>
+<gridItem id="ipconfigDRIVER_INCLUDED_RX_IP_CHECKSUM" selectedIndex="0"/>
+<gridItem id="ipconfigSOCK_DEFAULT_RECEIVE_BLOCK_TIME" selectedIndex="10000"/>
+<gridItem id="ipconfigSOCK_DEFAULT_SEND_BLOCK_TIME" selectedIndex="10000"/>
+<gridItem id="ipconfigUSE_DNS_CACHE" selectedIndex="0"/>
+<gridItem id="ipconfigDNS_REQUEST_ATTEMPTS" selectedIndex="2"/>
+<gridItem id="ipconfigIP_TASK_PRIORITY" selectedIndex="configMAX_PRIORITIES - 2"/>
+<gridItem id="ipconfigIP_TASK_STACK_SIZE_WORDS" selectedIndex="configMINIMAL_STACK_SIZE * 5"/>
+<gridItem id="ipconfigUSE_NETWORK_EVENT_HOOK" selectedIndex="0"/>
+<gridItem id="ipconfigUDP_MAX_SEND_BLOCK_TIME_TICKS" selectedIndex="5000 / portTICK_PERIOD_MS"/>
+<gridItem id="ipconfigUSE_DHCP" selectedIndex="0"/>
+<gridItem id="ipconfigDHCP_REGISTER_HOSTNAME" selectedIndex="0"/>
+<gridItem id="ipconfigDHCP_USES_UNICAST" selectedIndex="0"/>
+<gridItem id="ipconfigDHCP_SEND_DISCOVER_AFTER_AUTO_IP" selectedIndex="1"/>
+<gridItem id="ipconfigUSE_DHCP_HOOK" selectedIndex="1"/>
+<gridItem id="ipconfigMAXIMUM_DISCOVER_TX_PERIOD" selectedIndex="120000 / portTICK_PERIOD_MS"/>
+<gridItem id="ipconfigARP_CACHE_ENTRIES" selectedIndex="6"/>
+<gridItem id="ipconfigMAX_ARP_RETRANSMISSIONS" selectedIndex="5"/>
+<gridItem id="ipconfigMAX_ARP_AGE" selectedIndex="150"/>
+<gridItem id="ipconfigINCLUDE_FULL_INET_ADDR" selectedIndex="1"/>
+<gridItem id="ipconfigNUM_NETWORK_BUFFER_DESCRIPTORS" selectedIndex="ETHER_CFG_EMAC_TX_DESCRIPTORS"/>
+<gridItem id="ipconfigEVENT_QUEUE_LENGTH" selectedIndex="ipconfigNUM_NETWORK_BUFFER_DESCRIPTORS + 5"/>
+<gridItem id="ipconfigALLOW_SOCKET_SEND_WITHOUT_BIND" selectedIndex="0"/>
+<gridItem id="ipconfigUDP_TIME_TO_LIVE" selectedIndex="128"/>
+<gridItem id="ipconfigTCP_TIME_TO_LIVE" selectedIndex="128"/>
+<gridItem id="ipconfigUSE_TCP" selectedIndex="0"/>
+<gridItem id="ipconfigUSE_TCP_WIN" selectedIndex="1"/>
+<gridItem id="ipconfigNETWORK_MTU" selectedIndex="1500"/>
+<gridItem id="ipconfigUSE_DNS" selectedIndex="0"/>
+<gridItem id="ipconfigREPLY_TO_INCOMING_PINGS" selectedIndex="0"/>
+<gridItem id="ipconfigSUPPORT_OUTGOING_PINGS" selectedIndex="1"/>
+<gridItem id="ipconfigSUPPORT_SELECT_FUNCTION" selectedIndex="1"/>
+<gridItem id="ipconfigFILTER_OUT_NON_ETHERNET_II_FRAMES" selectedIndex="0"/>
+<gridItem id="ipconfigETHERNET_DRIVER_FILTERS_FRAME_TYPES" selectedIndex="1"/>
+<gridItem id="configWINDOWS_MAC_INTERRUPT_SIMULATOR_DELAY" selectedIndex="20 / portTICK_PERIOD_MS"/>
+<gridItem id="ipconfigPACKET_FILLER_SIZE" selectedIndex="2"/>
+<gridItem id="ipconfigTCP_WIN_SEG_COUNT" selectedIndex="240"/>
+<gridItem id="ipconfigTCP_RX_BUFFER_LENGTH" selectedIndex="11680"/>
+<gridItem id="ipconfigTCP_TX_BUFFER_LENGTH" selectedIndex="11680"/>
+<gridItem id="ipconfigTCP_KEEP_ALIVE" selectedIndex="0"/>
+<gridItem id="ipconfigTCP_KEEP_ALIVE_INTERVAL" selectedIndex="20"/>
+<gridItem id="ipconfigSOCKET_HAS_USER_SEMAPHORE" selectedIndex="1"/>
+<gridItem id="ipconfigSOCKET_HAS_USER_WAKE_CALLBACK" selectedIndex="0"/>
+<gridItem id="ipconfigUSE_CALLBACKS" selectedIndex="1"/>
+<gridItem id="ipconfigZERO_COPY_TX_DRIVER" selectedIndex="1"/>
+<gridItem id="ipconfigZERO_COPY_RX_DRIVER" selectedIndex="1"/>
+<gridItem id="ipconfigUSE_LINKED_RX_MESSAGES" selectedIndex="1"/>
+</component>
+<allocator description="FreeRTOS Amazon component for RZ" display="AWS_tcp_ip" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.tcp_ip.rz" type="gridConfiguration">
+<context/>
+</allocator>
+<source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration inuse="true" name="AWS_mqtt">
-<component display="AWS_mqtt" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.mqtt"/>
-<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+<configuration id="c2e14108-e10a-4cb2-9f83-e02b66f47f8f" inuse="true" name="AWS_mqtt">
+<component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_mqtt" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.mqtt" version="1.0.0">
+<gridItem id="mqttconfigENABLE_METRICS" selectedIndex="0"/>
+<gridItem id="mqttOPERATION_TIMEOUT_MS" selectedIndex="120000"/>
+<gridItem id="mqttconfigKEEP_ALIVE_INTERVAL_SECONDS" selectedIndex="100"/>
+<gridItem id="mqttconfigKEEP_ALIVE_ACTUAL_INTERVAL_TICKS" selectedIndex="pdMS_TO_TICKS( 300000 )"/>
+<gridItem id="mqttconfigKEEP_ALIVE_TIMEOUT_TICKS" selectedIndex="1000"/>
+<gridItem id="mqttconfigMQTT_TASK_STACK_DEPTH" selectedIndex="2048"/>
+<gridItem id="mqttconfigMQTT_TASK_PRIORITY" selectedIndex="configMAX_PRIORITIES - 3"/>
+<gridItem id="mqttconfigMAX_BROKERS" selectedIndex="2"/>
+<gridItem id="mqttconfigMAX_PARALLEL_OPS" selectedIndex="5"/>
+<gridItem id="mqttconfigTCP_SEND_TIMEOUT_MS" selectedIndex="20"/>
+<gridItem id="mqttconfigRX_BUFFER_SIZE" selectedIndex="1024"/>
+<gridItem id="mqttconfigMQTT_TASK_MAX_BLOCK_TICKS" selectedIndex="100"/>
+<gridItem id="mqttconfigENABLE_SUBSCRIPTION_MANAGEMENT" selectedIndex="0"/>
+<gridItem id="mqttconfigSUBSCRIPTION_MANAGER_MAX_TOPIC_LENGTH" selectedIndex="128"/>
+<gridItem id="mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS" selectedIndex="8"/>
+<gridItem id="mqttconfigENABLE_DEBUG_LOGS" selectedIndex="1"/>
+</component>
+<allocator description="FreeRTOS Amazon mqtt component for RZ" display="AWS_mqtt" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.mqtt.rz" type="gridConfiguration">
+<context/>
+</allocator>
+<source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration inuse="true" name="AWS_secure_socket">
-<component display="AWS_secure_socket" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.secure_socket"/>
-<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+<configuration id="59f9fbba-60fc-4629-9c53-5cc059e45d9a" inuse="true" name="AWS_secure_socket">
+<component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_secure_socket" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.secure_socket" version="1.0.0">
+<gridItem id="socketsconfigBYTE_ORDER" selectedIndex="0"/>
+<gridItem id="socketsconfigDEFAULT_SEND_TIMEOUT" selectedIndex="10000"/>
+<gridItem id="socketsconfigDEFAULT_RECV_TIMEOUT" selectedIndex="10000"/>
+</component>
+<allocator description="FreeRTOS Amazon secure socket component for RZ" display="AWS_secure_socket" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.secure_socket.rz" type="gridConfiguration">
+<context/>
+</allocator>
+<source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration inuse="true" name="AWS_ggd">
-<component display="AWS_ggd" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.ggd"/>
-<source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+<configuration id="6a3d2ec6-aac2-4501-bb84-b844645a85a2" inuse="true" name="AWS_ggd">
+<component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_ggd" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.ggd" version="1.0.0">
+<gridItem id="ggdconfigCORE_NETWORK_INTERFACE" selectedIndex="0"/>
+<gridItem id="ggdconfigJSON_MAX_TOKENS" selectedIndex="128"/>
+</component>
+<allocator description="FreeRTOS Amazon gdd component for RZ" display="AWS_ggd" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.ggd.rz" type="gridConfiguration">
+<context/>
+</allocator>
+<source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
 </tool>
 </smc>

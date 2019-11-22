@@ -1872,29 +1872,39 @@
 			<locationURI>AFR_HOME/vendors/renesas/rz/core_package/generate/compiler/init/syscalls.c</locationURI>
 		</link>
 		<link>
+			<name>vendors/renesas/rz/core_package/generate/os_abstraction/doc/r11an0309eg0320-os-abstraction-gcc.pdf</name>
+			<type>1</type>
+			<locationURI>SMC_GENERATED_LOC/generate/os_abstraction/doc/r11an0309eg0320-os-abstraction-gcc.pdf</locationURI>
+		</link>
+		<link>
 			<name>vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_os_abstraction_api.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_os_abstraction_api.h</locationURI>
+			<locationURI>SMC_GENERATED_LOC/generate/os_abstraction/inc/r_os_abstraction_api.h</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_os_abstraction_typedef.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_os_abstraction_typedef.h</locationURI>
+			<locationURI>SMC_GENERATED_LOC/generate/os_abstraction/inc/r_os_abstraction_typedef.h</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_os_private_vector.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_os_private_vector.h</locationURI>
+			<locationURI>SMC_GENERATED_LOC/generate/os_abstraction/inc/r_os_private_vector.h</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_task_priority.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/rz/core_package/generate/os_abstraction/inc/r_task_priority.h</locationURI>
+			<locationURI>SMC_GENERATED_LOC/generate/os_abstraction/inc/r_task_priority.h</locationURI>
+		</link>
+		<link>
+			<name>vendors/renesas/rz/core_package/generate/os_abstraction/src/heap_renesas.c</name>
+			<type>1</type>
+			<locationURI>SMC_GENERATED_LOC/generate/os_abstraction/src/heap_renesas.c</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/rz/core_package/generate/os_abstraction/src/r_os_abstraction_api.c</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/rz/core_package/generate/os_abstraction/src/r_os_abstraction_api.c</locationURI>
+			<locationURI>SMC_GENERATED_LOC/generate/os_abstraction/src/r_os_abstraction_api.c</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/rz/core_package/generate/system/inc/devlink.h</name>
@@ -2793,7 +2803,7 @@
 		</variable>
 		<variable>
 			<name>SMC_LINKED_LOC</name>
-			<value>$%7BPROJECT_LOC%7D/vendors/renesas/rz/core_package/generate</value>
+			<value>$%7BPROJECT_LOC%7D/vendors/renesas/rz/core_package</value>
 		</variable>
 	</variableList>
 </projectDescription>
