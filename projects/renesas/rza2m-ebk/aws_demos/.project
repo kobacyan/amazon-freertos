@@ -347,11 +347,6 @@
 			<locationURI>AFR_HOME/demos/dev_mode_key_provisioning/src/aws_dev_mode_key_provisioning.c</locationURI>
 		</link>
 		<link>
-			<name>freertos_kernel/portable/MemMang/heap_5.c</name>
-			<type>1</type>
-			<locationURI>AFR_HOME/freertos_kernel/portable/MemMang/heap_5.c</locationURI>
-		</link>
-		<link>
 			<name>libraries/3rdparty/jsmn/jsmn.c</name>
 			<type>1</type>
 			<locationURI>AFR_HOME/libraries/3rdparty/jsmn/jsmn.c</locationURI>
@@ -2792,6 +2787,17 @@
 			<locationURI>AFR_HOME/vendors/renesas/rz/core_package/generate/sc_drivers/r_ether/src/targets/rza2m-ebk/r_pinset.h</locationURI>
 		</link>
 	</linkedResources>
+	<filteredResources>
+		<filter>
+			<id>1574408818988</id>
+			<name>freertos_kernel/portable/MemMang</name>
+			<type>6</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-true-heap_5.c</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 	<variableList>
 		<variable>
 			<name>AFR_HOME</name>
