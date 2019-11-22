@@ -81,10 +81,10 @@
 #define configAPPLICATION_ALLOCATED_HEAP        (1)
 #define configUSE_TICKLESS_IDLE                 (0)
 
-#define configSMALL_STACK_SIZE                  ( ( unsigned short ) 2048 )
-#define configDEFAULT_STACK_SIZE                ( ( unsigned short ) 4096 )
+#define configSMALL_STACK_SIZE                  (( unsigned short ) 2048)
+#define configDEFAULT_STACK_SIZE                (( unsigned short ) 4096)
 
-#define configMEMORY_TYPE_FOR_ALLOCATOR         ( 0 ) // todo may need updating ree 2017.12.12
+#define configMEMORY_TYPE_FOR_ALLOCATOR         (0) // todo may need updating ree 2017.12.12
 
 /* Prevent C code being included in assembly files when the IAR compiler is
 used. */
@@ -125,11 +125,11 @@ code (which is where the vector table is defined). */
 #define configENABLE_BACKWARD_COMPATIBILITY        1
 #define configUSE_PREEMPTION                       1
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION    0
-#define configMAX_PRIORITIES                       ( TASK_NUMBER_OF_PRIORITIES )
-#define configTICK_RATE_HZ                         ( ( portTickType ) 1000 )
-#define configMINIMAL_STACK_SIZE                   ( ( unsigned short ) 512 )
-#define configTOTAL_HEAP_SIZE                      ( ( size_t ) ( 1024U * 1024U ) )
-#define configMAX_TASK_NAME_LEN                    ( 24 )
+#define configMAX_PRIORITIES                       (7)
+#define configTICK_RATE_HZ                         (1000)
+#define configMINIMAL_STACK_SIZE                   (( unsigned short ) 512)
+#define configTOTAL_HEAP_SIZE                      (( size_t ) ( 1024U * 1024U ))
+#define configMAX_TASK_NAME_LEN                    (24)
 #define configUSE_TRACE_FACILITY                   1
 #define configUSE_16_BIT_TICKS                     0
 #define configIDLE_SHOULD_YIELD                    1
@@ -145,21 +145,21 @@ code (which is where the vector table is defined). */
 
 #define configUSE_DAEMON_TASK_STARTUP_HOOK 1
 
-#define configCPU_CLOCK_HZ              ( 528000000UL )
-#define configPERIPHERAL_CLOCK_HZ       ( 66660000UL )
-#define configUSE_QUEUE_SETS            0
+#define configCPU_CLOCK_HZ              (s_sc_cpg_sub_clock_div_config[0].sub_clk_frequency_khz * 1000)
+#define configPERIPHERAL_CLOCK_HZ       (s_sc_cpg_sub_clock_div_config[2].sub_clk_frequency_khz * 1000)
+#define configUSE_QUEUE_SETS            1
 
 /* Hook function related definitions. */
 #define configUSE_TICK_HOOK                        0
 #define configUSE_IDLE_HOOK                        0
-#define configUSE_MALLOC_FAILED_HOOK               0
-#define configCHECK_FOR_STACK_OVERFLOW             2      /* Not applicable to the Win32 port. */
+#define configUSE_MALLOC_FAILED_HOOK               1
+#define configCHECK_FOR_STACK_OVERFLOW             0      /* Not applicable to the Win32 port. */
 
 /* Software timer related definitions. */
 #define configUSE_TIMERS                           1
-#define configTIMER_TASK_PRIORITY                  ( configMAX_PRIORITIES - 1 )
+#define configTIMER_TASK_PRIORITY                  (6)
 #define configTIMER_QUEUE_LENGTH                   5
-#define configTIMER_TASK_STACK_DEPTH               ( configMINIMAL_STACK_SIZE * 2 )
+#define configTIMER_TASK_STACK_DEPTH               (configMINIMAL_STACK_SIZE * 2)
 
 /* The interrupt priority used by the kernel itself for the tick interrupt and
 the pended interrupt.  This would normally be the lowest priority. */
@@ -184,13 +184,13 @@ peripheral chosen.  As supplied this is CMT0. */
 /* Run time stats gathering definitions. */
 unsigned long ulGetRunTimeCounterValue( void );
 void vConfigureTimerForRunTimeStats( void );
-#define configGENERATE_RUN_TIME_STATS    1
+#define configGENERATE_RUN_TIME_STATS    0
 //#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS()    vConfigureTimerForRunTimeStats()
 #define portGET_RUN_TIME_COUNTER_VALUE()            ulGetRunTimeCounterValue()
 
 /* Co-routine definitions. */
 #define configUSE_CO_ROUTINES                   0    //190325 multiple definition. (line 137)
-#define configMAX_CO_ROUTINE_PRIORITIES         ( 2 )
+#define configMAX_CO_ROUTINE_PRIORITIES         (2)
 
 /* Currently the TCP/IP stack is using dynamic allocation, and the MQTT task is
  * using static allocation. */
@@ -202,7 +202,7 @@ void vConfigureTimerForRunTimeStats( void );
 #define INCLUDE_vTaskPrioritySet                1
 #define INCLUDE_uxTaskPriorityGet               1
 #define INCLUDE_vTaskDelete                     1
-#define INCLUDE_vTaskCleanUpResources           1
+#define INCLUDE_vTaskCleanUpResources           0
 #define INCLUDE_vTaskSuspend                    1
 #define INCLUDE_vTaskDelayUntil                 1
 #define INCLUDE_vTaskDelay                      1
@@ -275,11 +275,11 @@ extern void vLoggingPrint( const char * pcMessage );
  * command interpreter running, and it has its own local output buffer, so the
  * global buffer is just set to be one byte long as it is not used and should not
  * take up unnecessary RAM. */
-#define configCOMMAND_INT_MAX_OUTPUT_SIZE    2096
+#define configCOMMAND_INT_MAX_OUTPUT_SIZE    1
 
 /* Only used when running in the FreeRTOS Windows simulator.  Defines the
  * priority of the task used to simulate Ethernet interrupts. */
-#define configMAC_ISR_SIMULATOR_PRIORITY     ( configMAX_PRIORITIES - 1 )
+#define configMAC_ISR_SIMULATOR_PRIORITY     (configMAX_PRIORITIES - 1)
 
 /* This demo creates a virtual network connection by accessing the raw Ethernet
  * or WiFi data to and from a real network connection.  Many computers have more
@@ -298,9 +298,9 @@ extern void vLoggingPrint( const char * pcMessage );
  * http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_TCP/UDP_Echo_Clients.html. */
 #define configECHO_SERVER_ADDR0              192
 #define configECHO_SERVER_ADDR1              168
-#define configECHO_SERVER_ADDR2              128
-#define configECHO_SERVER_ADDR3              1
-#define configTCP_ECHO_CLIENT_PORT           7
+#define configECHO_SERVER_ADDR2              1
+#define configECHO_SERVER_ADDR3              200
+#define configTCP_ECHO_CLIENT_PORT           9999
 
 /* Default MAC address configuration.  The demo creates a virtual network
  * connection that uses this MAC address by accessing the raw Ethernet/WiFi data
@@ -310,32 +310,32 @@ extern void vLoggingPrint( const char * pcMessage );
 #define configMAC_ADDR0                      0x74
 #define configMAC_ADDR1                      0x90
 #define configMAC_ADDR2                      0x50
-#define configMAC_ADDR3                      0xC0
-#define configMAC_ADDR4                      0xFE
-#define configMAC_ADDR5                      0xF1
+#define configMAC_ADDR3                      0x00
+#define configMAC_ADDR4                      0x79
+#define configMAC_ADDR5                      0x03
 
 /* Default IP address configuration.  Used in ipconfigUSE_DHCP is set to 0, or
  * ipconfigUSE_DHCP is set to 1 but a DNS server cannot be contacted. */
-#define configIP_ADDR0                       192
-#define configIP_ADDR1                       168
-#define configIP_ADDR2                       128
-#define configIP_ADDR3                       2
+#define configIP_ADDR0                       172
+#define configIP_ADDR1                       27
+#define configIP_ADDR2                       49
+#define configIP_ADDR3                       127
 
 /* Default gateway IP address configuration.  Used in ipconfigUSE_DHCP is set to
  * 0, or ipconfigUSE_DHCP is set to 1 but a DNS server cannot be contacted. */
-#define configGATEWAY_ADDR0                  192
-#define configGATEWAY_ADDR1                  168
-#define configGATEWAY_ADDR2                  128
-#define configGATEWAY_ADDR3                  100
+#define configGATEWAY_ADDR0                  172
+#define configGATEWAY_ADDR1                  27
+#define configGATEWAY_ADDR2                  49
+#define configGATEWAY_ADDR3                  1
 
 /* Default DNS server configuration.  OpenDNS addresses are 208.67.222.222 and
  * 208.67.220.220.  Used in ipconfigUSE_DHCP is set to 0, or ipconfigUSE_DHCP is
  * set to 1 but a DNS server cannot be contacted.*/
 
-#define configDNS_SERVER_ADDR0               192
-#define configDNS_SERVER_ADDR1               168
-#define configDNS_SERVER_ADDR2               128
-#define configDNS_SERVER_ADDR3               200
+#define configDNS_SERVER_ADDR0               143
+#define configDNS_SERVER_ADDR1               103
+#define configDNS_SERVER_ADDR2               47
+#define configDNS_SERVER_ADDR3               193
 
 /* Default netmask configuration.  Used in ipconfigUSE_DHCP is set to 0, or
  * ipconfigUSE_DHCP is set to 1 but a DNS server cannot be contacted. */
@@ -345,9 +345,9 @@ extern void vLoggingPrint( const char * pcMessage );
 #define configNET_MASK3                      0
 
 /* The UDP port to which print messages are sent. */
-#define configPRINT_PORT                     ( 15000 )
+#define configPRINT_PORT                     (15000)
 
-#define configPROFILING                      ( 0 )
+#define configPROFILING                      (0)
 
 /* Pseudo random number generater used by some demo tasks. */
 uint32_t ulRand(void);
