@@ -347,6 +347,11 @@
 			<locationURI>AFR_HOME/demos/dev_mode_key_provisioning/src/aws_dev_mode_key_provisioning.c</locationURI>
 		</link>
 		<link>
+			<name>freertos_kernel/portable/MemMang/heap_5.c</name>
+			<type>1</type>
+			<locationURI>AFR_HOME/freertos_kernel/portable/MemMang/heap_5.c</locationURI>
+		</link>
+		<link>
 			<name>libraries/3rdparty/jsmn/jsmn.c</name>
 			<type>1</type>
 			<locationURI>AFR_HOME/libraries/3rdparty/jsmn/jsmn.c</locationURI>
@@ -1892,11 +1897,6 @@
 			<locationURI>SMC_GENERATED_LOC/generate/os_abstraction/inc/r_task_priority.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/rz/core_package/generate/os_abstraction/src/heap_renesas.c</name>
-			<type>1</type>
-			<locationURI>SMC_GENERATED_LOC/generate/os_abstraction/src/heap_renesas.c</locationURI>
-		</link>
-		<link>
 			<name>vendors/renesas/rz/core_package/generate/os_abstraction/src/r_os_abstraction_api.c</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/generate/os_abstraction/src/r_os_abstraction_api.c</locationURI>
@@ -2805,7 +2805,7 @@
 		</variable>
 		<variable>
 			<name>SMC_GENERATED_LOC</name>
-			<value>$%7BAFR_HOME%7D/vendors/renesas/rz/core_package/generate</value>
+			<value>$%7BAFR_HOME%7D/vendors/renesas/rz/core_package</value>
 		</variable>
 		<variable>
 			<name>SMC_LINKED_LOC</name>

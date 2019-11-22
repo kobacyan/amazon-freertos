@@ -465,11 +465,6 @@
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
-<configuration channel="r_os_abstraction_freertos" inuse="true" name="os_abstraction_freertos0">
-<component description="Dependency : r_ostm version(s) 1.04&#10;os abstraction layer for FreeRTOS&#10;IMPORTANT - Prior to using this module please add &#10;&#9;  #define R_COMPILER_WEAK __attribute__((weak))&#10;&#9;  to generate\compiler\inc\r_compiler_abstraction_api.h &#10;&#9;  In addition please exclude and memory heap implementation  &#10;&#9;  supplied in your FreeRTOS port (example location freertos\portable\memmang)" detailDescription="" display="r_os_abstraction_freertos" id="r_os_abstraction_freertos3.03" version="3.03"/>
-<source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
-<source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
-</configuration>
 <configuration channel="OSTM0" inuse="true" name="ostm_reserved" required="true">
 <component description="Dependency : r_cpg version(s) 1.03&#10;OS Timer Driver" detailDescription="" display="r_ostm" id="r_ostm1.05" version="1.05">
 <gridItem id="OSTM_MODE" selectedIndex="0"/>
@@ -719,6 +714,11 @@
 <context/>
 </allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
+</configuration>
+<configuration channel="r_os_abstraction_amazon" inuse="true" name="os_abstraction_amazon">
+<component description="Dependency : r_ostm version(s) 1.04&#10;os abstraction layer for certified Amazon FreeRTOS &#10;IMPORTANT - Prior to using this module please add &#10;&#9;  #define R_COMPILER_WEAK __attribute__((weak))&#10;&#9;  to generate\compiler\inc\r_compiler_abstraction_api.h" detailDescription="" display="r_os_abstraction_amazon" id="r_os_abstraction_amazon3.03" version="3.03"/>
+<source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
+<source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
 </tool>
 </smc>
