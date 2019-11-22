@@ -43,10 +43,10 @@ A high tick rate frequency will have the effect of reducing the 'time slice' giv
             <description>Generally this should not be reduced from the value set in the FreeRTOSConfig.h file provided with the demo application for the port you are using.
 The stack size is specified in words, not bytes.</description>
         </property>
-        <property id="configTOTAL_HEAP_SIZE" display="The total amount of RAM available in the FreeRTOS heap" default="( size_t ) ( 128U * 1024U )" type="textbox">
+        <property id="configTOTAL_HEAP_SIZE" display="The total amount of RAM available in the FreeRTOS heap" default="( size_t ) ( 1024U * 1024U )" type="textbox">
             <description>This value will only be used if configSUPPORT_DYNAMIC_ALLOCATION is set to 1 and the application makes use of one of the sample memory allocation schemes provided in the FreeRTOS source code download.</description>
         </property>
-        <property id="configMAX_TASK_NAME_LEN" display="The maximum permissible length of name" default="12" type="textbox">
+        <property id="configMAX_TASK_NAME_LEN" display="The maximum permissible length of name" default="24" type="textbox">
             <constraint display="Value must be an integer">testInteger("${configMAX_TASK_NAME_LEN}")</constraint>
             <constraint display="Value must be in the range 1 ~ 255">("${configMAX_TASK_NAME_LEN}" &gt;= 1) &amp;&amp; ("${configMAX_TASK_NAME_LEN}" &lt;= 255)</constraint>
             <description>The maximum permissible of the descriptive name given to a task when the task is created.
@@ -84,7 +84,7 @@ Readers should familiarise themselves with the differences between mutexes and b
             <description>Enable: include recursive mutex functionality in the build.
 Disable: omit recursive mutex functionality from the build.</description>
         </property>
-        <property id="configQUEUE_REGISTRY_SIZE" display="Queue registry size" default="0" type="textbox">
+        <property id="configQUEUE_REGISTRY_SIZE" display="Queue registry size" default="8" type="textbox">
             <constraint display="Value must be an integer">testInteger("${configQUEUE_REGISTRY_SIZE}")</constraint>
             <constraint display="Value must be equal or greater than 0">("${configQUEUE_REGISTRY_SIZE}" &gt;= 0) </constraint>
             <description>The queue registry has two purposes, both of which are associated with RTOS kernel aware debugging:
@@ -128,12 +128,12 @@ Disable: disable record stack high address</description>
             <description>Enable: use a daemon task startup hook.
 Disable: omit a a daemon task startup hook.</description>
         </property>
-        <property id="configCPU_CLOCK_HZ" display="The frequency of the CPU clock" default="BSP_ICLK_HZ" type="textbox">
-            <constraint display="default disable" actionOnFail="disable">("${configCPU_CLOCK_HZ}" == BSP_ICLK_HZ)</constraint>
+        <property id="configCPU_CLOCK_HZ" display="The frequency of the CPU clock" default="s_sc_cpg_sub_clock_div_config[0].sub_clk_frequency_khz * 1000" type="textbox">
+            <constraint display="default disable" actionOnFail="disable">("${configCPU_CLOCK_HZ}" == s_sc_cpg_sub_clock_div_config[0].sub_clk_frequency_khz * 1000)</constraint>
             <description>Enter the frequency in Hz at which the internal clock that driver the peripheral used to generate the tick interrupt will be executing - this is normally the same clock that drives the internal CPU clock. This value is required in order to correctly configure timer peripherals.</description>
         </property>
-        <property id="configPERIPHERAL_CLOCK_HZ" display="The frequency of the PERIPHERAL clock" default="BSP_PCLKB_HZ" type="textbox">
-            <constraint display="default disable" actionOnFail="disable">("${configPERIPHERAL_CLOCK_HZ}" == BSP_PCLK_HZ)</constraint>
+        <property id="configPERIPHERAL_CLOCK_HZ" display="The frequency of the PERIPHERAL clock" default="s_sc_cpg_sub_clock_div_config[2].sub_clk_frequency_khz * 1000" type="textbox">
+            <constraint display="default disable" actionOnFail="disable">("${configPERIPHERAL_CLOCK_HZ}" == s_sc_cpg_sub_clock_div_config[2].sub_clk_frequency_khz * 1000)</constraint>
             <description>Enter the frequency of the PERIPHERAL clock.</description>
         </property>
         <property id="configUSE_QUEUE_SETS" display="Queue set functionality" default="1" type="checkbox">
@@ -187,7 +187,7 @@ Disable: omit software timer functionality.</description>
             <constraint display="Value must be equal or greater than 0">("${configTIMER_QUEUE_LENGTH}" &gt;= 0) </constraint>
             <description>Sets the length of the software timer command queue. See the FreeRTOS software timers page for a full description. </description>
         </property>
-        <property id="configTIMER_TASK_STACK_DEPTH" display="The stack depth allocated to the software timer task" default="configMINIMAL_STACK_SIZE * 6" type="textbox">
+        <property id="configTIMER_TASK_STACK_DEPTH" display="The stack depth allocated to the software timer task" default="configMINIMAL_STACK_SIZE * 2" type="textbox">
             <constraint display="default disable" actionOnFail="disable">("${configTIMER_TASK_STACK_DEPTH}" == configMINIMAL_STACK_SIZE) </constraint>
             <description>Sets the stack depth allocated to the software timer service/daemon task. See the FreeRTOS software timers page for a full description. </description>
         </property>

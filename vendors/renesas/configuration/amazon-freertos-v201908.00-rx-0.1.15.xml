@@ -2444,7 +2444,7 @@
             <series>RX700</series>
             <group>RX64M</group>
             <group>RX71M</group>
-            <path>vendors/renesas/configuration/rx/commonrx</path>
+            <path>vendors/renesas/configuration</path>
         </devicemdf>
         <devicemdf>
             <toolchain>GNUARM</toolchain>

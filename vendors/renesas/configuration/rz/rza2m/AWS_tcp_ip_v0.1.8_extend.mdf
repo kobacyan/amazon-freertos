@@ -10,7 +10,7 @@
     <formatVersion>2.00</formatVersion>
     <fileTemplate></fileTemplate>
     <configuration>
-        <property id="ipconfigHAS_DEBUG_PRINTF" display="Print out the debugging messages" default="0" type="combobox">
+        <property id="ipconfigHAS_DEBUG_PRINTF" display="Print out the debugging messages" default="1" type="combobox">
             <option id="ipconfigHAS_DEBUG_PRINTF.1" display="Enable " value="1"/>
             <option id="ipconfigHAS_DEBUG_PRINTF.0" display="Disable" value="0"/>
             <description>If ipconfigHAS_DEBUG_PRINTF is set to 1 then FreeRTOS_debug_printf should be defined to the function  used to print out the debugging messages</description>
@@ -201,12 +201,12 @@ command, and ping replies.  If ipconfigHAS_PRINTF is set to 1 then FreeRTOS_prin
             <constraint display="Value must be greater than 1">("${ipconfigTCP_WIN_SEG_COUNT}" &gt;= 1) </constraint>
             <description>Define the size of the pool of TCP window descriptors</description>
         </property>
-        <property id="ipconfigTCP_RX_BUFFER_LENGTH" display="Size of Rx buffer for TCP sockets" default="3000" type="textbox">
+        <property id="ipconfigTCP_RX_BUFFER_LENGTH" display="Size of Rx buffer for TCP sockets" default="1460 * 8" type="textbox">
             <constraint display="Value must be an integer">testInteger("${ipconfigTCP_RX_BUFFER_LENGTH}")</constraint>
             <constraint display="Value must be greater than 1">("${ipconfigTCP_RX_BUFFER_LENGTH}" &gt;= 1) </constraint>
             <description>Define the size of Rx buffer for TCP sockets</description>
         </property>
-        <property id="ipconfigTCP_TX_BUFFER_LENGTH" display="Size of Tx buffer for TCP sockets" default="3000" type="textbox">
+        <property id="ipconfigTCP_TX_BUFFER_LENGTH" display="Size of Tx buffer for TCP sockets" default="1460 * 8" type="textbox">
             <constraint display="Value must be an integer">testInteger("${ipconfigTCP_TX_BUFFER_LENGTH}")</constraint>
             <constraint display="Value must be greater than 1">("${ipconfigTCP_TX_BUFFER_LENGTH}" &gt;= 1) </constraint>
             <description>Define the size of Tx buffer for TCP sockets</description>
