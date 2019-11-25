@@ -30,6 +30,7 @@
         <group>RX64M</group>
         <group>RX65N</group>
         <group>RX71M</group>
+	   <group>RX72M</group>
     </target>
     <additionaltarget>
         <family>RZ</family>
@@ -120,6 +121,22 @@
             </section>
             
         </sections>
+		
+		<sections>
+            <toolchain>RXC</toolchain>
+            <series>RX700</series>
+            <group>RX72M</group>
+			<section>          
+                <name>C_PKCS11_STORAGE*</name>
+                <address>0x00102000</address>
+            </section>
+            <section>
+                <name>B_ETHERNET_BUFFERS_1</name>
+                <name>B_RX_DESC_1</name>
+                <name>B_TX_DESC_1</name>
+                <address>0x00840000</address>
+            </section>
+        </sections>
         
         <sections>
             <toolchain>RXC</toolchain>
@@ -143,7 +160,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
-            
+            <group>RX72M</group>
         </sections>
 
 
@@ -171,6 +188,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
+		  <group>RX72M</group>
             <path>${AFR_HOME}/vendors/renesas/rx/amazon_freertos_common/compiler_support/ccrx</path>
         </incdir>
                 
@@ -181,6 +199,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
+		  <group>RX72M</group>
             <path>${AFR_HOME}/vendors/renesas/rx/amazon_freertos_common/compiler_support/gnuc</path>
         </incdir>
         <incdir>
@@ -189,6 +208,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
+		  <group>RX72M</group>
             <path>${AFR_HOME}/vendors/renesas/rx/amazon_freertos_common/network_support/onchip_rx_ether</path>
         </incdir>
         <incdir>
@@ -211,6 +231,11 @@
             <series>RX700</series>
             <group>RX71M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_bsp/board/generic_rx71m</path>
+        </incdir>
+		<incdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_bsp/board/generic_rx72m</path>
         </incdir>
         
         <!--RZA2M -->
@@ -438,6 +463,11 @@
             <group>RX71M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_sci_rx/src/targets/rx71m</path>
         </incdir>
+		<incdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_sci_rx/src/targets/rx72m</path>
+        </incdir>
         <incdir>
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_s12ad_rx</path>
         </incdir>
@@ -459,6 +489,11 @@
             <group>RX71M</group>
             <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_s12ad_rx/src/targets/rx71m</path>
         </incdir>
+		<incdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <path>${PROJECT_LOC}/application_code/renesas_code/smc_gen/r_s12ad_rx/src/targets/rx72m</path>
+        </incdir>
         <incdir>
             <toolchain>RXC</toolchain>
             <series>RX600</series>
@@ -466,6 +501,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
+		  <group>RX72M</group>
             <path>${AFR_HOME}/freertos_kernel/portable/Renesas/RX600v2</path>
         </incdir>
         <!--RZA2M -->
@@ -483,6 +519,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
+		  <group>RX72M</group>
             <path>${AFR_HOME}/freertos_kernel/portable/GCC/RX600v2</path>
         </incdir>
         
@@ -612,6 +649,13 @@
             <path>application_code</path>
         </impdir>
         
+		<impdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/application_code/main.c</file>
+            <path>application_code</path>
+        </impdir>
+		
         <!--RZA2M -->
         
         <impdir>
@@ -727,6 +771,29 @@
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/config_files/mbedtls_user_config.h</file>
             <path>config_files</path>
         </impdir>
+		
+		<impdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/aws_bufferpool_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/aws_demo_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/aws_ggd_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/aws_iot_network_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/aws_mqtt_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/aws_ota_agent_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/aws_secure_sockets_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/aws_shadow_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/aws_wifi_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/iot_pkcs11_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/FreeRTOSConfig.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/FreeRTOSIPConfig.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/iot_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/iot_mqtt_agent_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/iot_pkcs11_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/config_files/mbedtls_user_config.h</file>
+            <path>config_files</path>
+        </impdir>
+		
         <!--RZA2M -->
         <impdir>
             <series>RZA</series>
@@ -768,6 +835,13 @@
             <folder>demos/vendors/renesas/boards/rx71m-rsk/aws_demos/application_code/renesas_code</folder>
             <path>application_code/renesas_code</path>
         </impdir>
+		
+		<impdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <folder>demos/vendors/renesas/boards/rx72m-rsk/aws_demos/application_code/renesas_code</folder>
+            <path>application_code/renesas_code</path>
+        </impdir>
         
         <!--RZA2M -->
         <impdir>
@@ -783,39 +857,50 @@
             <group>RX65N</group>
             <group>RX64M</group>
             <group>RX71M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/platform.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/readme.txt</file>
+		  <group>RX72M</group>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/platform.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/readme.txt</file>
             <path>application_code/renesas_code/smc_gen/r_bsp</path>
         </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX64M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx64m/hwsetup.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx64m/hwsetup.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx64m/r_bsp_hwsetup_reference.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx64m/r_bsp.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx64m/r_bsp_config_reference.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx64m/hwsetup.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx64m/hwsetup.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx64m/r_bsp_hwsetup_reference.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx64m/r_bsp.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx64m/r_bsp_config_reference.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/board/generic_rx64m</path>
         </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX65N</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx65n/hwsetup.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx65n/hwsetup.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx65n/r_bsp_hwsetup_reference.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx65n/r_bsp.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx65n/r_bsp_config_reference.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx65n/hwsetup.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx65n/hwsetup.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx65n/r_bsp_hwsetup_reference.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx65n/r_bsp.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx65n/r_bsp_config_reference.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/board/generic_rx65n</path>
         </impdir>
         <impdir>
             <series>RX700</series>
             <group>RX71M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx71m/hwsetup.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx71m/hwsetup.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx71m/r_bsp_hwsetup_reference.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx71m/r_bsp.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/board/generic_rx71m/r_bsp_config_reference.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx71m/hwsetup.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx71m/hwsetup.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx71m/r_bsp_hwsetup_reference.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx71m/r_bsp.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx71m/r_bsp_config_reference.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/board/generic_rx71m</path>
+        </impdir>
+		<impdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx72m/hwsetup.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx72m/hwsetup.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx72m/r_bsp_hwsetup_reference.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx72m/r_bsp.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx72m/r_bsp_config_reference.h</file>
+            <path>application_code/renesas_code/smc_gen/r_bsp/board/generic_rx72m</path>
         </impdir>
         <impdir>
             <series>RX600</series>
@@ -823,318 +908,381 @@
             <group>RX65N</group>
             <group>RX64M</group>
             <group>RX71M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/dbsct.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/linker_script_rvectors.inc</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/lowlvl.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/lowlvl.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/lowsrc.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/lowsrc.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/mcu_locks.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_bsp_common.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_bsp_common.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_bsp_cpu.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_bsp_interrupts.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_bsp_interrupts.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_bsp_locking.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_bsp_mcu_startup.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_bsp_mcu_startup.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_rtos.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_rx_compiler.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_rx_intrinsic_functions.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_rx_intrinsic_functions.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/r_typedefs.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/reset_program.S</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/resetprg.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/sbrk.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/all/sbrk.h</file>
+			<group>RX72M</group>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/dbsct.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/linker_script_rvectors.inc</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/lowlvl.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/lowlvl.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/lowsrc.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/lowsrc.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/mcu_locks.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_bsp_common.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_bsp_common.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_bsp_cpu.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_bsp_interrupts.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_bsp_interrupts.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_bsp_locking.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_bsp_mcu_startup.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_bsp_mcu_startup.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_rtos.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_rx_compiler.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_rx_intrinsic_functions.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_rx_intrinsic_functions.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/r_typedefs.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/reset_program.S</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/resetprg.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/sbrk.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/all/sbrk.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/mcu/all</path>
         </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX64M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/mcu_clocks.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/mcu_clocks.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/mcu_info.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/mcu_init.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/mcu_init.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/mcu_interrupts.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/mcu_interrupts.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/mcu_locks.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/mcu_mapped_interrupts.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/mcu_mapped_interrupts.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/mcu_mapped_interrupts_private.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/r_bsp_cpu.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/r_bsp_locking.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/vecttbl.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/vecttbl.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/mcu_clocks.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/mcu_clocks.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/mcu_info.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/mcu_init.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/mcu_init.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/mcu_interrupts.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/mcu_interrupts.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/mcu_locks.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/mcu_mapped_interrupts.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/mcu_mapped_interrupts.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/mcu_mapped_interrupts_private.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/r_bsp_cpu.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/r_bsp_locking.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/vecttbl.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/vecttbl.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx64m</path>
         </impdir>
         <impdir>
             <toolchain>RXC</toolchain>
             <series>RX600</series>
             <group>RX64M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/register_access/ccrx/iodefine.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/register_access/ccrx/iodefine.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx64m/register_access/ccrx</path>
         </impdir>
         <impdir>
             <toolchain>GNURX</toolchain>
             <series>RX600</series>
             <group>RX64M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx64m/register_access/ccrx/iodefine.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx64m/register_access/ccrx/iodefine.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx64m/register_access/gnuc</path>
         </impdir>
         <impdir>
             <toolchain>RXC</toolchain>
             <series>RX600</series>
             <group>RX65N</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/mcu_clocks.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/mcu_clocks.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/mcu_info.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/mcu_init.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/mcu_init.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/mcu_interrupts.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/mcu_interrupts.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/mcu_locks.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/mcu_mapped_interrupts.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/mcu_mapped_interrupts.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/mcu_mapped_interrupts_private.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/r_bsp_cpu.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/r_bsp_locking.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/vecttbl.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/vecttbl.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/mcu_clocks.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/mcu_clocks.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/mcu_info.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/mcu_init.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/mcu_init.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/mcu_interrupts.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/mcu_interrupts.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/mcu_locks.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/mcu_mapped_interrupts.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/mcu_mapped_interrupts.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/mcu_mapped_interrupts_private.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/r_bsp_cpu.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/r_bsp_locking.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/vecttbl.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/vecttbl.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx65n</path>
         </impdir>
         <impdir>
             <toolchain>RXC</toolchain>
             <series>RX600</series>
             <group>RX65N</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/register_access/ccrx/iodefine.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/register_access/ccrx/iodefine.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx65n/register_access/ccrx</path>
         </impdir>
         <impdir>
             <toolchain>GNURX</toolchain>
             <series>RX600</series>
             <group>RX65N</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx65n/register_access/ccrx/iodefine.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/register_access/ccrx/iodefine.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx65n/register_access/gnuc</path>
         </impdir>
         <impdir>
             <toolchain>RXC</toolchain>
             <series>RX700</series>
             <group>RX71M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/mcu_clocks.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/mcu_clocks.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/mcu_info.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/mcu_init.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/mcu_init.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/mcu_interrupts.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/mcu_interrupts.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/mcu_locks.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/mcu_mapped_interrupts.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/mcu_mapped_interrupts.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/mcu_mapped_interrupts_private.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/r_bsp_cpu.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/r_bsp_locking.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/vecttbl.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/vecttbl.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/mcu_clocks.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/mcu_clocks.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/mcu_info.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/mcu_init.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/mcu_init.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/mcu_interrupts.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/mcu_interrupts.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/mcu_locks.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/mcu_mapped_interrupts.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/mcu_mapped_interrupts.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/mcu_mapped_interrupts_private.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/r_bsp_cpu.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/r_bsp_locking.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/vecttbl.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/vecttbl.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx71m</path>
         </impdir>
         <impdir>
             <toolchain>RXC</toolchain>
             <series>RX700</series>
             <group>RX71M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/register_access/ccrx/iodefine.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/register_access/ccrx/iodefine.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx71m/register_access/ccrx</path>
+        </impdir>
+		<impdir>
+            <toolchain>RXC</toolchain>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/mcu_clocks.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/mcu_clocks.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/mcu_info.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/mcu_init.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/mcu_init.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/mcu_interrupts.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/mcu_interrupts.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/mcu_locks.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/mcu_mapped_interrupts.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/mcu_mapped_interrupts.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/mcu_mapped_interrupts_private.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/r_bsp_cpu.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/r_bsp_locking.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/vecttbl.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/vecttbl.h</file>
+            <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx72m</path>
+        </impdir>
+		 <impdir>
+            <toolchain>RXC</toolchain>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/register_access/ccrx/iodefine.h</file>
+            <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx72m/register_access/ccrx</path>
         </impdir>
         <impdir>
             <toolchain>GNURX</toolchain>
             <series>RX700</series>
             <group>RX71M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_bsp/mcu/rx71m/register_access/ccrx/iodefine.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx71m/register_access/ccrx/iodefine.h</file>
             <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx71m/register_access/gnuc</path>
         </impdir>
+		<impdir>
+            <toolchain>GNURX</toolchain>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx72m/register_access/ccrx/iodefine.h</file>
+            <path>application_code/renesas_code/smc_gen/r_bsp/mcu/rx72m/register_access/gnuc</path>
+        </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_byteq/ref/r_byteq_config_reference.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_byteq/ref/r_byteq_config_reference.h</file>
             <path>application_code/renesas_code/smc_gen/r_byteq/ref</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_byteq/src/r_byteq.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_byteq/src/r_byteq_private.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_byteq/src/r_byteq.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_byteq/src/r_byteq_private.h</file>
             <path>application_code/renesas_code/smc_gen/r_byteq/src</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_byteq/r_byteq_if.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_byteq/readme.txt</file>
+            <file>vendors/renesas/rx/FIT/v122/r_byteq/r_byteq_if.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_byteq/readme.txt</file>
             <path>application_code/renesas_code/smc_gen/r_byteq</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_ether_rx/ref/r_ether_rx_config_reference.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_ether_rx/ref/r_ether_rx_config_reference.h</file>
             <path>application_code/renesas_code/smc_gen/r_ether_rx/ref</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_ether_rx/src/phy/phy.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_ether_rx/src/phy/phy.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_ether_rx/src/phy/phy.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_ether_rx/src/phy/phy.h</file>
             <path>application_code/renesas_code/smc_gen/r_ether_rx/src/phy</path>
         </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX64M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_ether_rx/src/targets/rx64m/r_ether_setting_rx64m.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_ether_rx/src/targets/rx64m/r_ether_setting_rx64m.c</file>
             <path>application_code/renesas_code/smc_gen/r_ether_rx/src/targets/rx64m</path>
         </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX65N</group>
-            <file>vendors/renesas/rx/FIT/v120/r_ether_rx/src/targets/rx65n/r_ether_setting_rx65n.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_ether_rx/src/targets/rx65n/r_ether_setting_rx65n.c</file>
             <path>application_code/renesas_code/smc_gen/r_ether_rx/src/targets/rx65n</path>
         </impdir>
         <impdir>
             <series>RX700</series>
             <group>RX71M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_ether_rx/src/targets/rx71m/r_ether_setting_rx71m.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_ether_rx/src/targets/rx71m/r_ether_setting_rx71m.c</file>
             <path>application_code/renesas_code/smc_gen/r_ether_rx/src/targets/rx71m</path>
         </impdir>
+		<impdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/rx/FIT/v122/r_ether_rx/src/targets/rx72m/r_ether_setting_rx72m.c</file>
+            <path>application_code/renesas_code/smc_gen/r_ether_rx/src/targets/rx72m</path>
+        </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_ether_rx/src/r_ether_rx_private.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_ether_rx/src/r_ether_rx.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_ether_rx/src/r_ether_rx_private.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_ether_rx/src/r_ether_rx.c</file>
             <path>application_code/renesas_code/smc_gen/r_ether_rx/src</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_ether_rx/r_ether_rx_if.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_ether_rx/readme.txt</file>
+            <file>vendors/renesas/rx/FIT/v122/r_ether_rx/r_ether_rx_if.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_ether_rx/readme.txt</file>
             <path>application_code/renesas_code/smc_gen/r_ether_rx</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/ref/r_flash_rx_config_reference.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/ref/r_flash_rx_config_reference.h</file>
             <path>application_code/renesas_code/smc_gen/r_flash_rx/ref</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_1/r_codeflash.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_1/r_codeflash.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_1/r_codeflash_extra.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_1/r_codeflash_extra.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_1/r_dataflash.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_1/r_dataflash.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_1/r_flash_common.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_1/r_flash_type1.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_1/r_flash_type1_if.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_1/r_flash_utils.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_1/r_codeflash.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_1/r_codeflash.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_1/r_codeflash_extra.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_1/r_codeflash_extra.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_1/r_dataflash.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_1/r_dataflash.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_1/r_flash_common.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_1/r_flash_type1.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_1/r_flash_type1_if.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_1/r_flash_utils.c</file>
             <path>application_code/renesas_code/smc_gen/r_flash_rx/src/flash_type_1</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_3/r_flash_type3.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_3/r_flash_type3_if.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_3/r_flash_type3.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_3/r_flash_type3_if.h</file>
             <path>application_code/renesas_code/smc_gen/r_flash_rx/src/flash_type_3</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_4/r_flash_type4.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/flash_type_4/r_flash_type4_if.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_4/r_flash_type4.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/flash_type_4/r_flash_type4_if.h</file>
             <path>application_code/renesas_code/smc_gen/r_flash_rx/src/flash_type_4</path>
         </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX64M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/targets/rx64m/r_flash_rx64m.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/targets/rx64m/r_flash_rx64m.h</file>
             <path>application_code/renesas_code/smc_gen/r_flash_rx/src/targets/rx64m</path>
         </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX65N</group>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/targets/rx65n/r_flash_rx65n.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/targets/rx65n/r_flash_rx65n.h</file>
             <path>application_code/renesas_code/smc_gen/r_flash_rx/src/targets/rx65n</path>
         </impdir>
         <impdir>
             <series>RX700</series>
             <group>RX71M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/targets/rx71m/r_flash_rx71m.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/targets/rx71m/r_flash_rx71m.h</file>
             <path>application_code/renesas_code/smc_gen/r_flash_rx/src/targets/rx71m</path>
         </impdir>
+		<impdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/targets/rx72m/r_flash_rx72m.h</file>
+            <path>application_code/renesas_code/smc_gen/r_flash_rx/src/targets/rx72m</path>
+        </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/r_flash_fcu.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/r_flash_fcu.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/r_flash_group.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/r_flash_group.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/r_flash_rx.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/r_flash_rx.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/src/r_flash_targets.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/r_flash_fcu.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/r_flash_fcu.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/r_flash_group.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/r_flash_group.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/r_flash_rx.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/r_flash_rx.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/src/r_flash_targets.h</file>
             <path>application_code/renesas_code/smc_gen/r_flash_rx/src</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/r_flash_rx_if.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_flash_rx/readme.txt</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/r_flash_rx_if.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_flash_rx/readme.txt</file>
             <path>application_code/renesas_code/smc_gen/r_flash_rx</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_s12ad_rx/ref/r_s12ad_rx_config_reference.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/ref/r_s12ad_rx_config_reference.h</file>
             <path>application_code/renesas_code/smc_gen/r_s12ad_rx/ref</path>
         </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX64M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_s12ad_rx/src/targets/rx64m/r_s12ad_rx64m.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_s12ad_rx/src/targets/rx64m/r_s12ad_rx64m_if.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/src/targets/rx64m/r_s12ad_rx64m.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/src/targets/rx64m/r_s12ad_rx64m_if.h</file>
             <path>application_code/renesas_code/smc_gen/r_s12ad_rx/src/targets/rx64m</path>
         </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX65N</group>
-            <file>vendors/renesas/rx/FIT/v120/r_s12ad_rx/src/targets/rx65n/r_s12ad_rx65n.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_s12ad_rx/src/targets/rx65n/r_s12ad_rx65n_if.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/src/targets/rx65n/r_s12ad_rx65n.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/src/targets/rx65n/r_s12ad_rx65n_if.h</file>
             <path>application_code/renesas_code/smc_gen/r_s12ad_rx/src/targets/rx65n</path>
         </impdir>
         <impdir>
             <series>RX700</series>
             <group>RX71M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_s12ad_rx/src/targets/rx71m/r_s12ad_rx71m.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_s12ad_rx/src/targets/rx71m/r_s12ad_rx71m_if.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/src/targets/rx71m/r_s12ad_rx71m.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/src/targets/rx71m/r_s12ad_rx71m_if.h</file>
             <path>application_code/renesas_code/smc_gen/r_s12ad_rx/src/targets/rx71m</path>
         </impdir>
+		 <impdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/src/targets/rx72m/r_s12ad_rx72m.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/src/targets/rx72m/r_s12ad_rx72m_if.h</file>
+            <path>application_code/renesas_code/smc_gen/r_s12ad_rx/src/targets/rx72m</path>
+        </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_s12ad_rx/src/r_s12ad_rx.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_s12ad_rx/src/r_s12ad_rx_private.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/src/r_s12ad_rx.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/src/r_s12ad_rx_private.h</file>
             <path>application_code/renesas_code/smc_gen/r_s12ad_rx/src</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_s12ad_rx/r_s12ad_rx_if.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_s12ad_rx/r_s12ad_rx_if.h</file>
             <path>application_code/renesas_code/smc_gen/r_s12ad_rx</path>
         </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX64M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/targets/rx64m/r_sci_rx64m.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/targets/rx64m/r_sci_rx64m_data.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/targets/rx64m/r_sci_rx64m_private.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx64m/r_sci_rx64m.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx64m/r_sci_rx64m_data.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx64m/r_sci_rx64m_private.h</file>
             <path>application_code/renesas_code/smc_gen/r_sci_rx/src/targets/rx64m</path>
         </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX65N</group>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/targets/rx65n/r_sci_rx65n.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/targets/rx65n/r_sci_rx65n_data.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/targets/rx65n/r_sci_rx65n_private.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx65n/r_sci_rx65n.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx65n/r_sci_rx65n_data.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx65n/r_sci_rx65n_private.h</file>
             <path>application_code/renesas_code/smc_gen/r_sci_rx/src/targets/rx65n</path>
         </impdir>
         <impdir>
             <series>RX700</series>
             <group>RX71M</group>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/targets/rx71m/r_sci_rx71m.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/targets/rx71m/r_sci_rx71m_data.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/targets/rx71m/r_sci_rx71m_private.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx71m/r_sci_rx71m.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx71m/r_sci_rx71m_data.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx71m/r_sci_rx71m_private.h</file>
             <path>application_code/renesas_code/smc_gen/r_sci_rx/src/targets/rx71m</path>
         </impdir>
+		<impdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx72m/r_sci_rx72m.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx72m/r_sci_rx72m_data.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/targets/rx72m/r_sci_rx72m_private.h</file>
+            <path>application_code/renesas_code/smc_gen/r_sci_rx/src/targets/rx72m</path>
+        </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/r_sci_rx.c</file>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/r_sci_rx_platform.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/src/r_sci_rx_private.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/r_sci_rx.c</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/r_sci_rx_platform.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/src/r_sci_rx_private.h</file>
             <path>application_code/renesas_code/smc_gen/r_sci_rx/src</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/r_sci_rx_if.h</file>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/readme.txt</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/r_sci_rx_if.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/readme.txt</file>
             <path>application_code/renesas_code/smc_gen/r_sci_rx</path>
         </impdir>
         <impdir>
-            <file>vendors/renesas/rx/FIT/v120/r_sci_rx/ref/r_sci_rx_config_reference.h</file>
+            <file>vendors/renesas/rx/FIT/v122/r_sci_rx/ref/r_sci_rx_config_reference.h</file>
             <path>application_code/renesas_code/smc_gen/r_sci_rx/ref</path>
         </impdir>
         <impdir>
@@ -1179,6 +1327,20 @@
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/general/r_smc_interrupt.h</file>
             <path>application_code/renesas_code/smc_gen/general</path>
         </impdir>
+		<impdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/general/r_cg_hardware_setup.c</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/general/r_cg_macrodriver.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/general/r_cg_userdefine.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/general/r_smc_cgc.c</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/general/r_smc_cgc.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/general/r_smc_cgc_user.c</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/general/r_smc_entry.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/general/r_smc_interrupt.c</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/general/r_smc_interrupt.h</file>
+            <path>application_code/renesas_code/smc_gen/general</path>
+        </impdir>
         <impdir>
             <series>RX600</series>
             <group>RX64M</group>
@@ -1213,6 +1375,18 @@
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_config/r_flash_rx_config.h</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_config/r_s12ad_rx_config.h</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_config/r_sci_rx_config.h</file>
+            <path>application_code/renesas_code/smc_gen/r_config</path>
+        </impdir>
+		<impdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_config/r_bsp_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_config/r_bsp_interrupt_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_config/r_byteq_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_config/r_ether_rx_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_config/r_flash_rx_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_config/r_s12ad_rx_config.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_config/r_sci_rx_config.h</file>
             <path>application_code/renesas_code/smc_gen/r_config</path>
         </impdir>
         <impdir>
@@ -1250,11 +1424,25 @@
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.h</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</file>
-        <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
+            <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</file>
             <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.c</file>
-            <file>vendors/renesas/boards/rx64m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
+            <file>vendors/renesas/boards/rx71m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
+            <path>application_code/renesas_code/smc_gen/r_pincfg</path>
+        </impdir>
+		<impdir>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.c</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.c</file>
+            <file>vendors/renesas/boards/rx72m-rsk/aws_demos/src/smc_gen/r_pincfg/r_usb_basic_pinset.h</file>
             <path>application_code/renesas_code/smc_gen/r_pincfg</path>
         </impdir>
 <!--RZA2M -->
@@ -1863,6 +2051,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
+		  <group>RX72M</group>
             <file>freertos_kernel/portable/Renesas/RX600v2/port.c</file>
             <file>freertos_kernel/portable/Renesas/RX600v2/port_asm.src</file>
             <file>freertos_kernel/portable/Renesas/RX600v2/portmacro.h</file>
@@ -1875,6 +2064,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
+			<group>RX71M</group>
             <file>freertos_kernel/portable/GCC/RX600v2/port.c</file>
             <file>freertos_kernel/portable/GCC/RX600v2/portmacro.h</file>
             <path>freertos_kernel/portable/GCC/RX600v2</path>
@@ -2252,6 +2442,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
+			<group>RX72M</group>
             <file>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/BufferManagement/BufferAllocation_2.c</file>
             <path>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/BufferManagement</path>
         </linkdir>
@@ -2262,6 +2453,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
+			<group>RX72M</group>
             <folder>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/Compiler/Renesas</folder>
             <path>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/Compiler/RX</path>
         </linkdir>
@@ -2271,6 +2463,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
+			<group>RX72M</group>
             <file>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/NetworkInterface/RX/ether_callback.c</file>
             <file>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/NetworkInterface/RX/NetworkInterface.c</file>
             <path>libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/NetworkInterface/RX</path>
@@ -2347,6 +2540,7 @@
             <group>RX64M</group>
             <group>RX65N</group>
             <group>RX71M</group>
+			<group>RX72M</group>
             <file>vendors/renesas/rx/amazon_freertos_common/network_support/onchip_rx_ether/freertos_ip_hook.c</file>
             <path>vendors/renesas/rx/amazon_freertos_common/network_support/onchip_rx_ether</path>
         </linkdir>
@@ -2379,6 +2573,13 @@
             <group>RX71M</group>
             <file>vendors/renesas/boards/rx71m-rsk/ports/pkcs11/iot_pkcs11_pal.c</file>
             <path>vendors/renesas/boards/rx71m-rsk/ports/pkcs11</path>
+        </linkdir>
+		<linkdir>
+            <toolchain>RXC</toolchain>
+            <series>RX700</series>
+            <group>RX72M</group>
+            <file>vendors/renesas/boards/rx72m-rsk/ports/pkcs11/iot_pkcs11_pal.c</file>
+            <path>vendors/renesas/boards/rx72m-rsk/ports/pkcs11</path>
         </linkdir>
         
         <!--RZA2M -->
@@ -2444,6 +2645,7 @@
             <series>RX700</series>
             <group>RX64M</group>
             <group>RX71M</group>
+		 <group>RX72M</group>
             <path>vendors/renesas/configuration</path>
         </devicemdf>
         <devicemdf>
