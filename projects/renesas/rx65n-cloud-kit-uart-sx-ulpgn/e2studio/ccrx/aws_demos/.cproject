@@ -112,6 +112,8 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_config&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_byteq&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_byteq/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_s12ad_rx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_s12ad_rx/src&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_flash_rx&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_flash_rx/src&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_flash_rx/src/flash_type_1&quot;"/>
@@ -120,8 +122,6 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_flash_rx/src/targets&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_sci_rx&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_sci_rx/src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_s12ad_rx&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_s12ad_rx/src&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/general&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../../../vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_pincfg&quot;"/>
 								</option>
@@ -205,7 +205,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="trash/" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
