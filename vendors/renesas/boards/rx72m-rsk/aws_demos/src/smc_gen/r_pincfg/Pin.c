@@ -22,7 +22,7 @@
 * Version      : 1.0.2
 * Device(s)    : R5F572MNDxBD
 * Description  : This file implements SMC pin code generation.
-* Creation Date: 2019-11-18
+* Creation Date: 2019-11-26
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -59,6 +59,91 @@ void R_Pins_Create(void)
     /* Set CLKOUT25M pin */
     MPC.PH7PFS.BYTE = 0x2AU;
     PORTH.PMR.BYTE |= 0x80U;
+
+    /* Set ET0_COL pin */
+    MPC.PK1PFS.BYTE = 0x11U;
+    PORTK.PMR.BYTE |= 0x02U;
+
+    /* Set ET0_CRS pin */
+    MPC.PM7PFS.BYTE = 0x11U;
+    PORTM.PMR.BYTE |= 0x80U;
+
+    /* Set ET0_ERXD0 pin */
+    MPC.P75PFS.BYTE = 0x11U;
+    PORT7.PMR.BYTE |= 0x20U;
+
+    /* Set ET0_ERXD1 pin */
+    MPC.P74PFS.BYTE = 0x11U;
+    PORT7.PMR.BYTE |= 0x10U;
+
+    /* Set ET0_ERXD2 pin */
+    MPC.PK4PFS.BYTE = 0x11U;
+    PORTK.PMR.BYTE |= 0x10U;
+
+    /* Set ET0_ERXD3 pin */
+    MPC.PK5PFS.BYTE = 0x11U;
+    PORTK.PMR.BYTE |= 0x20U;
+
+    /* Set ET0_ETXD0 pin */
+    MPC.PL4PFS.BYTE = 0x11U;
+    PORTL.PMR.BYTE |= 0x10U;
+
+    /* Set ET0_ETXD1 pin */
+    MPC.PL5PFS.BYTE = 0x11U;
+    PORTL.PMR.BYTE |= 0x20U;
+
+    /* Set ET0_ETXD2 pin */
+    MPC.PM4PFS.BYTE = 0x11U;
+    PORTM.PMR.BYTE |= 0x10U;
+
+    /* Set ET0_ETXD3 pin */
+    MPC.PM5PFS.BYTE = 0x11U;
+    PORTM.PMR.BYTE |= 0x20U;
+
+    /* Set ET0_LINKSTA pin */
+    MPC.P34PFS.BYTE = 0x11U;
+    PORT3.PMR.BYTE |= 0x10U;
+
+    /* Set ET0_MDC pin */
+    MPC.PK0PFS.BYTE = 0x11U;
+    PORTK.PMR.BYTE |= 0x01U;
+
+    /* Set ET0_MDIO pin */
+    MPC.PL7PFS.BYTE = 0x11U;
+    PORTL.PMR.BYTE |= 0x80U;
+
+    /* Set ET0_RX_CLK pin */
+    MPC.PL3PFS.BYTE = 0x11U;
+    PORTL.PMR.BYTE |= 0x08U;
+
+    /* Set ET0_RX_DV pin */
+    MPC.PK2PFS.BYTE = 0x11U;
+    PORTK.PMR.BYTE |= 0x04U;
+
+    /* Set ET0_RX_ER pin */
+    MPC.PL2PFS.BYTE = 0x11U;
+    PORTL.PMR.BYTE |= 0x04U;
+
+    /* Set ET0_TX_CLK pin */
+    MPC.PM6PFS.BYTE = 0x11U;
+    PORTM.PMR.BYTE |= 0x40U;
+
+    /* Set ET0_TX_EN pin */
+    MPC.PL6PFS.BYTE = 0x11U;
+    PORTL.PMR.BYTE |= 0x40U;
+
+    /* Set RXD6 pin */
+    MPC.P01PFS.BYTE = 0x0AU;
+    PORT0.PMR.BYTE |= 0x02U;
+
+    /* Set SCK6 pin */
+    MPC.P02PFS.BYTE = 0x0AU;
+    PORT0.PMR.BYTE |= 0x04U;
+
+    /* Set TXD6 pin */
+    PORT0.PODR.BYTE |= 0x01U;
+    MPC.P00PFS.BYTE = 0x0AU;
+    PORT0.PDR.BYTE |= 0x01U;
 
     R_BSP_RegisterProtectEnable(BSP_REG_PROTECT_MPC);
 }   

@@ -26,6 +26,15 @@
 ************************************************************************************************************************
 * History : DD.MM.YYYY Version  Description
 *         : 08.04.2019 1.00     First Release.
+*         : 26.07.2019 1.01     Modified comment.
+*         : 08.10.2019 1.02     Added the following macro definition.
+*                                - BSP_CFG_SWINT_UNIT1_ENABLE
+*                                - BSP_CFG_SWINT_UNIT2_ENABLE
+*                                - BSP_CFG_SWINT_TASK_BUFFER_NUMBER
+*                                - BSP_CFG_SWINT_IPR_INITIAL_VALUE
+*                               Modified comment for added support of Renesas RTOS (RI600V4 or RI600PX).
+*                               Added the following macro definition.
+*                                - BSP_CFG_RENESAS_RTOS_USED
 ***********************************************************************************************************************/
 #ifndef R_BSP_CONFIG_REF_HEADER_FILE
 #define R_BSP_CONFIG_REF_HEADER_FILE
@@ -114,26 +123,28 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
  * 0 = Use 1 stack. Disable user stack. User stack size set below will be ignored.
  * 1 = Use 2 stacks. User stack and interrupt stack will both be used.
  * NOTE: This setting is available only when using CCRX and GNUC.
+ *       This is invalid when using Renesas RTOS with CCRX.
  */
 #define BSP_CFG_USER_STACK_ENABLE       (0)
 
 /* If only 1 stack is chosen using BSP_CFG_USER_STACK_ENABLE then no RAM will be allocated for the user stack. */
 #if BSP_CFG_USER_STACK_ENABLE == 1
 /* User Stack size in bytes.
- * NOTE: This setting is available only when using CCRX and GNUC. */
+ * NOTE: This setting is available only when using CCRX and GNUC.
+ *       This is invalid when using Renesas RTOS with CCRX. */
 #define BSP_CFG_USTACK_BYTES            (0x1000)
 #endif
 
 /* Interrupt Stack size in bytes.
  * NOTE: This setting is available only when using CCRX and GNUC. */
-#define BSP_CFG_ISTACK_BYTES            (0x1000)
+#define BSP_CFG_ISTACK_BYTES            (0x400)
 
 /* Heap size in bytes.
    To disable the heap you must follow these steps:
    1) Set this macro (BSP_CFG_HEAP_BYTES) to 0.
    2) Set the macro BSP_CFG_IO_LIB_ENABLE to 0.
    3) Disable stdio from being built into the project library. This is done by going into the Renesas RX Toolchain 
-      settings and choosing the Standard Library section. After that choose 'Contents' in E2Studio.
+      settings and choosing the Standard Library section. After that choose 'Contents' in e2 studio.
       This will present a list of modules that can be included. Uncheck the box for stdio.h.
    NOTE: This setting is available only when using CCRX and GNUC. */
 #define BSP_CFG_HEAP_BYTES              (0x400)
@@ -156,6 +167,7 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
    on the differences between these 2 modes see the CPU >> Processor Mode section of your MCU's hardware manual.
    0 = Stay in Supervisor mode.
    1 = Switch to User mode.
+   NOTE: This is invalid when using Renesas RTOS with CCRX.
 */
 #define BSP_CFG_RUN_IN_USER_MODE        (0)
 
@@ -297,7 +309,7 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
 /* System Clock Divider (ICK).
    Available divisors = /1 (no division), /2, /4, /8, /16, /32, /64
 */
-#define BSP_CFG_ICK_DIV                 (1) /* Generated value. Do not edit this manually */
+#define BSP_CFG_ICK_DIV                 (2) /* Generated value. Do not edit this manually */
 
 /* Peripheral Module Clock A Divider (PCKA).
    Available divisors = /1 (no division), /2, /4, /8, /16, /32, /64
@@ -322,7 +334,7 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
 /* External Bus Clock Divider (BCLK).
    Available divisors = /1 (no division), /2, /3, /4, /8, /16, /32, /64
 */
-#define BSP_CFG_BCK_DIV                 (3) /* Generated value. Do not edit this manually */
+#define BSP_CFG_BCK_DIV                 (2) /* Generated value. Do not edit this manually */
 
 /* Flash IF Clock Divider (FCK).
    Available divisors = /1 (no division), /2, /4, /8, /16, /32, /64
@@ -332,7 +344,7 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
 /* USB Clock Divider Select.
    Available divisors = /2, /3, /4, /5
 */
-#define BSP_CFG_UCK_DIV                 (5) /* Generated value. Do not edit this manually */
+#define BSP_CFG_UCK_DIV                 (2) /* Generated value. Do not edit this manually */
 
 /* PPLL Input Frequency Division Ratio Select (PPLIDIV).
    Available divisors = /1 (no division), /2, /3
@@ -356,6 +368,7 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
 
 /* Configure SDCLK output pin (only effective when external bus enabled)
    Values 0=no output, 1 = BCK frequency
+   NOTE: The definition is invalid.
 */
 #define BSP_CFG_SDCLK_OUTPUT            (0) /* Generated value. Do not edit this manually */
 
@@ -407,7 +420,7 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
    0 = ROM cache operation disabled.
    1 = ROM cache operation enabled.
 */ 
-#define BSP_CFG_ROM_CACHE_ENABLE        (1)
+#define BSP_CFG_ROM_CACHE_ENABLE        (0)
 
 /* Configure non-cacheable area 0 of the ROM cache function.
    0 = Non-cacheable area 0 settings disabled.
@@ -607,9 +620,15 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
    1 = FreeRTOS is used.
    2 = embOS is used.(This is not available.)
    3 = MicroC_OS is used.(This is not available.)
-   4 = RI600V4 or RI600PX is used.(This is not available.)
+   4 = Renesas ITRON OS (RI600V4 or RI600PX) is used.
 */
 #define BSP_CFG_RTOS_USED               (1) /* Generated value. Do not edit this manually */
+
+/* This macro is used to select which Renesas ITRON OS.
+   0 = RI600V4 is used.
+   1 = RI600PX is used.
+*/
+#define BSP_CFG_RENESAS_RTOS_USED       (0)
 
 /* This macro is used to select which CMT channel used for system timer of RTOS.
  * The setting of this macro is only valid if the macro BSP_CFG_RTOS_USED is set to a value other than 0. */
@@ -619,7 +638,9 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
  * 1      = CMT channel 1 used for system timer of RTOS.
  * 2      = CMT channel 2 used for system timer of RTOS.
  * 3      = CMT channel 3 used for system timer of RTOS.
- * Others = Invalid. */
+ * Others = Invalid.
+ * NOTE: This is invalid when using Renesas RTOS with CCRX.
+ */
 #define BSP_CFG_RTOS_SYSTEM_TIMER       (0)
 #endif
 
@@ -729,6 +750,32 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
    Don't change if there is no special processing with higher priority than all fit modules.
 */
 #define BSP_CFG_FIT_IPL_MAX                         (0xF)
+
+/* Software Interrupt (SWINT).
+   0 = Software interrupt is not used.
+   1 = Software interrupt is used.
+   NOTE: When this macro is set to 1, the software interrupt is initialized in bsp startup routine. 
+*/
+#define BSP_CFG_SWINT_UNIT1_ENABLE    (1)
+#define BSP_CFG_SWINT_UNIT2_ENABLE    (1)
+
+/* Software Interrupt Task Buffer Number.
+   For software interrupt, this value is number of buffering user tasks.
+   So user can increase this value if user system would have many software interrupt tasks
+   and user system has enough buffer. This value requires 9 byte per task.
+   NOTE: This setting is common to all units. It can not be set individually. 
+         The maximum value is 254.
+*/
+#define BSP_CFG_SWINT_TASK_BUFFER_NUMBER     (8)
+
+/* Initial value of the software interrupt priority.
+   For software interrupt, this value is interrupt priority. Range is 0x0 - 0xF.
+   NOTE: This setting is common to all units. It can not be set individually. 
+         Please be careful that this setting is the initial value of the interrupt priority register(IPR).
+         It is possible to dynamically change the IPR.
+*/
+#define BSP_CFG_SWINT_IPR_INITIAL_VALUE     (0x1)
+
 /* This macro is used to select which SCI channel used for debug serial terminal.
  */
 #define MY_BSP_CFG_SERIAL_TERM_SCI                  (6)
@@ -751,6 +798,5 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
    0(low) - 15(high)
  */
 #define MY_BSP_CFG_SERIAL_TERM_SCI_INTERRUPT_PRIORITY   (15)
-
 #endif /* R_BSP_CONFIG_REF_HEADER_FILE */
 

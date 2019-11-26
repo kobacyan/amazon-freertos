@@ -52,18 +52,18 @@
  Please set the value 0 ETHER_CFG_CH0_PHY_ADDRESS and value 1 ETHER_CFG_CH1_PHY_ADDRESS when use default setting of the RSK+RX64M/RSK+RX71M.
  Please set the value 1 ETHER_CFG_CH0_PHY_ADDRESS and value 2 ETHER_CFG_CH1_PHY_ADDRESS when use default setting of the RSK+RX72M.
  */
-    #define ETHER_CFG_CH0_PHY_ADDRESS                   (0)     /* Please define the PHY-LSI address in the range of 0-31. */
-    #define ETHER_CFG_CH1_PHY_ADDRESS                   (1)     /* Please define the PHY-LSI address in the range of 0-31. */
+    #define ETHER_CFG_CH0_PHY_ADDRESS                   (1)     /* Please define the PHY-LSI address in the range of 0-31. */
+    #define ETHER_CFG_CH1_PHY_ADDRESS                   (2)     /* Please define the PHY-LSI address in the range of 0-31. */
 
 /* The number of Rx descriptors. */
-    #define ETHER_CFG_EMAC_RX_DESCRIPTORS               (1)
+    #define ETHER_CFG_EMAC_RX_DESCRIPTORS               (12)
 
 /* The number of Tx descriptors. */
-    #define ETHER_CFG_EMAC_TX_DESCRIPTORS               (1)
+    #define ETHER_CFG_EMAC_TX_DESCRIPTORS               (4)
 
 /* Please define the size of the sending and receiving buffer in the value where one frame can surely be stored 
  because the driver is single-frame/single-buffer processing.  */
-    #define ETHER_CFG_BUFSIZE                           (1536)  /* Must be 32-byte aligned */
+    #define ETHER_CFG_BUFSIZE                           (2048)  /* Must be 32-byte aligned */
 
 /* EINT interrupt priority level. This definition is not used when EINT interrupt is assigned to Group interrupt. */
     #define ETHER_CFG_EINT_INT_PRIORITY                 (2)     /* Please define the interruption level within the range of 1-15. */
@@ -81,8 +81,8 @@
  Please set the value 1 ETHER_CFG_CH0_PHY_ACCESS and ETHER_CFG_CH1_PHY_ACCESS when use default setting of the RSK+RX64M/RSK+RX71M.
  Please set the value 0 ETHER_CFG_CH0_PHY_ACCESS and ETHER_CFG_CH1_PHY_ACCESS when use default setting of the RSK+RX72M.
  */
-    #define ETHER_CFG_CH0_PHY_ACCESS                    (1)
-    #define ETHER_CFG_CH1_PHY_ACCESS                    (1)
+    #define ETHER_CFG_CH0_PHY_ACCESS                    (0)
+    #define ETHER_CFG_CH1_PHY_ACCESS                    (0)
 
 /* Define the access timing of MII/RMII register */
     #define ETHER_CFG_PHY_MII_WAIT                      (8)     /* Plese define the value of 1 or more */
@@ -99,7 +99,7 @@
  0 = unused  (use PHY-LSI status register)
  1 = use     (use LINKSTA signal)
  */
-    #define ETHER_CFG_USE_LINKSTA                       (1)     /* This setting is reflected in all channels */
+    #define ETHER_CFG_USE_LINKSTA                       (0)     /* This setting is reflected in all channels */
 
 /* Definition of whether or not to use KSZ8041NL of the Micrel Inc.
  0 = unused
