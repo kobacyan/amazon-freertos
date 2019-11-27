@@ -10,9 +10,9 @@
     <formatVersion>2.00</formatVersion>
     <fileTemplate></fileTemplate>
     <configuration>
-        <property id="shadowConfigJSON_JSMN_TOKENS" display="Number of jsmn tokens" default="64" type="textbox">
-            <constraint display="Value must be an integer">testInteger("${shadowConfigJSON_JSMN_TOKENS}")</constraint>
-            <constraint display="Value must be greater than 1">("${shadowConfigJSON_JSMN_TOKENS}" &gt;= 1) </constraint>
+        <property id="shadowconfigJSON_JSMN_TOKENS" display="Number of jsmn tokens" default="64" type="textbox">
+            <constraint display="Value must be an integer">testInteger("${shadowconfigJSON_JSMN_TOKENS}")</constraint>
+            <constraint display="Value must be greater than 1">("${shadowconfigJSON_JSMN_TOKENS}" &gt;= 1) </constraint>
             <description>Number of jsmn tokens to use in parsing</description>
         </property>
         <property id="shadowConfigJSON_CLIENT_TOKEN" display="The JSON key" default="&quot;clientToken&quot;" type="textbox">
