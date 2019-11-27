@@ -6,7 +6,7 @@
 <toolchain id="com.renesas.smc.toolchain.rxc.toolchain.rxc">
 <option id="com.renesas.smc.toolchain.option.buildArtefactType" key="com.renesas.smc.toolchain.option.buildArtefactType.exe"/>
 <option id="com.renesas.smc.toolchain.option.rtos" key="com.renesas.smc.toolchain.option.rtos.freertos">
-<item id="com.renesas.smc.toolchain.option.rtos.freertos" value="AmazonFreeRTOS_RX_v0.1.8"/>
+<item id="com.renesas.smc.toolchain.option.rtos.freertos" value="AmazonFreeRTOS_RX_v201908.00-rza2m-0.0.1"/>
 </option>
 </toolchain>
 </configuration>
@@ -511,7 +511,7 @@
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
-<configuration id="7dfa82c4-c044-4721-9405-96971e3b6a06" inuse="true" name="FreeRTOS_Object">
+<configuration id="46b2188c-6422-4a50-8b7b-28fbfc4858a0" inuse="true" name="FreeRTOS_Object">
 <allocatable id="OBJECT" name="OBJECT">
 <allocatable id="TASK" name="TASK">
 <option defaultValue="0" id="LinkNum" value=""/>
@@ -536,12 +536,9 @@
 </allocatable>
 </allocatable>
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to create and configure new object of FreeRTOS." detailDescription="" display="FreeRTOS_Object" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.object" version="1.0.0"/>
-<allocator description="AWS FreeRTOS Object component for RX" display="AWS_FreeRTOS_Object" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.object.rx" type="object">
-<context/>
-</allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="8e064cdd-c805-4c14-8b7a-bf750040660c" inuse="true" name="FreeRTOS_Kernel">
+<configuration id="7c4bd830-fdc9-458d-8f2d-74c4b39b682b" inuse="true" name="FreeRTOS_Kernel">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="FreeRTOS_kernel" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.kernel" version="1.0.0">
 <gridItem id="configENABLE_BACKWARD_COMPATIBILITY" selectedIndex="1"/>
 <gridItem id="configUSE_PREEMPTION" selectedIndex="1"/>
@@ -643,23 +640,17 @@
 <gridItem id="configPLATFORM_NAME" selectedIndex="&quot;RenesasRX65N&quot;"/>
 <gridItem id="configINCLUDE_PLATFORM_H_INSTEAD_OF_IODEFINE_H" selectedIndex="1"/>
 </component>
-<allocator description="FreeRTOS Amazon kernel component" display="AWS_kernel" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.kernel.rx" type="gridConfiguration">
-<context/>
-</allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="1b76d6c1-4558-448a-94b2-311a503cd194" inuse="true" name="AWS_device_shadow">
+<configuration id="457abb03-2dd8-41ce-adaf-aa63630599da" inuse="true" name="AWS_device_shadow">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_device_shadow" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.device_shadow" version="1.0.0">
 <gridItem id="shadowConfigJSON_JSMN_TOKENS" selectedIndex="64"/>
 <gridItem id="shadowConfigJSON_CLIENT_TOKEN" selectedIndex="&quot;clientToken&quot;"/>
 <gridItem id="shadowConfigUNIQUE_CLIENT_TOKEN_CHECK" selectedIndex="1"/>
 </component>
-<allocator description="FreeRTOS Amazon device shadow component" display="AWS_shadow" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.device_shadow.rx" type="gridConfiguration">
-<context/>
-</allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="e858ab1b-7de5-4490-ba62-13d633f2b4bb" inuse="true" name="AWS_tcp_ip">
+<configuration id="3e780932-e417-48dd-8d00-4481be3b9d25" inuse="true" name="AWS_tcp_ip">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_tcp_ip" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.tcp_ip" version="1.0.0">
 <gridItem id="ipconfigHAS_DEBUG_PRINTF" selectedIndex="1"/>
 <gridItem id="ipconfigHAS_PRINTF" selectedIndex="0"/>
@@ -711,12 +702,9 @@
 <gridItem id="ipconfigZERO_COPY_RX_DRIVER" selectedIndex="1"/>
 <gridItem id="ipconfigUSE_LINKED_RX_MESSAGES" selectedIndex="1"/>
 </component>
-<allocator description="FreeRTOS Amazon component" display="AWS_tcp_ip" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.tcp_ip.rx" type="gridConfiguration">
-<context/>
-</allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="d6dded2c-5b62-4ff6-b17c-310fd8a30126" inuse="true" name="AWS_mqtt">
+<configuration id="4c2ac2b7-06f6-4774-9930-2e0f6dffa4bd" inuse="true" name="AWS_mqtt">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_mqtt" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.mqtt" version="1.0.0">
 <gridItem id="mqttconfigENABLE_METRICS" selectedIndex="0"/>
 <gridItem id="mqttOPERATION_TIMEOUT_MS" selectedIndex="120000"/>
@@ -735,30 +723,21 @@
 <gridItem id="mqttconfigSUBSCRIPTION_MANAGER_MAX_SUBSCRIPTIONS" selectedIndex="8"/>
 <gridItem id="mqttconfigENABLE_DEBUG_LOGS" selectedIndex="1"/>
 </component>
-<allocator description="FreeRTOS Amazon mqtt component" display="AWS_mqtt" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.mqtt.rx" type="gridConfiguration">
-<context/>
-</allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="1cfca14a-5165-43a5-a758-52160371a21b" inuse="true" name="AWS_secure_socket">
+<configuration id="f2aef6a1-14a0-43fa-b7a4-8616e986ccbe" inuse="true" name="AWS_secure_socket">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_secure_socket" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.secure_socket" version="1.0.0">
 <gridItem id="socketsconfigBYTE_ORDER" selectedIndex="0"/>
 <gridItem id="socketsconfigDEFAULT_SEND_TIMEOUT" selectedIndex="10000"/>
 <gridItem id="socketsconfigDEFAULT_RECV_TIMEOUT" selectedIndex="10000"/>
 </component>
-<allocator description="FreeRTOS Amazon secure socket component" display="AWS_secure_socket" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.secure_socket.rx" type="gridConfiguration">
-<context/>
-</allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="660076d7-db81-451e-9661-adb57d67e569" inuse="true" name="AWS_ggd">
+<configuration id="b23a690c-91eb-4329-a1b3-3fac451f85f3" inuse="true" name="AWS_ggd">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_ggd" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.ggd" version="1.0.0">
 <gridItem id="ggdconfigCORE_NETWORK_INTERFACE" selectedIndex="0"/>
 <gridItem id="ggdconfigJSON_MAX_TOKENS" selectedIndex="128"/>
 </component>
-<allocator description="FreeRTOS Amazon gdd component" display="AWS_ggd" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.ggd.rx" type="gridConfiguration">
-<context/>
-</allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
 <configuration inuse="true" name="r_s12ad_rx">
