@@ -320,7 +320,7 @@ Configuration Options
 /* System Clock Divider (ICK).
    Available divisors = /1 (no division), /2, /4, /8, /16, /32, /64
 */
-#define BSP_CFG_ICK_DIV                 (2) /* Generated value. Do not edit this manually */
+#define BSP_CFG_ICK_DIV                 (1) /* Generated value. Do not edit this manually */
 
 /* Peripheral Module Clock A Divider (PCKA).
    Available divisors = /1 (no division), /2, /4, /8, /16, /32, /64
