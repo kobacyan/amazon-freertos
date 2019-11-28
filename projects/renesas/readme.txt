@@ -30,7 +30,7 @@ Getting Start Steps:
  step4:  Make your AWS account, and make your "Things" on AWS,
          and enable Security Policy to allow all your device will connect to your "Things".
  step5:  Make your device certification and private key and settings put this into your source code.
-         <root>/demos/common/include
+         <root>/demos/include
           aws_clientcredential.h
            clientcredentialMQTT_BROKER_ENDPOINT[]
            clientcredentialIOT_THING_NAME
@@ -39,7 +39,7 @@ Getting Start Steps:
            clientcredentialCLIENT_PRIVATE_KEY_PEM[]
  step6:  Start Renesas IDE (e2 studio) and import Amazon FreeRTOS project.
          import sequence: file->import->existing project into workspace -> select a root directory
-         The project folder is placed into <root>/demos/renesas/rx65n-rsk/ccrx-e2studio
+         The project folder is placed into <root>/projects/renesas/rx65n-rsk/e2studio/aws_demos
          Please specify this directory only.
          This directory is top of reference. You can also use other project.
          Please select tested project shown into Development Environment (tested or no matrix) section
@@ -63,6 +63,15 @@ I hope this solution will be helpful for embedded system developer in W/W.
 --------------------------------------------------------------------------
 Change Logs
 --------------------------------------------------------------------------
+v201908.00-rx-0.1.16
+ [UPDATED] Added supporting RX MCUs(RX64M, RX71M, RX72M).
+ [TESTED] demos MQTT echo behavior for 
+          RX65N RSK CC-RX e2 studio with E2 Emulator Lite.
+          RX65N Target Board + Silex SX-ULPGN PMOD CC-RX e2 studio with E2 Emulator Lite (on board).
+          RX64M RSK CC-RX e2 studio with E2 Emulator Lite.
+          RX71M RSK CC-RX e2 studio with E2 Emulator Lite.
+          RX72M RSK CC-RX e2 studio with E2 Emulator Lite.
+
 v201908.00-rx-0.1.15
  [UPDATED] Update aws/amazon-freertos version to 201908.00.
  [TESTED] demos MQTT echo behavior for RX65N RSK CC-RX e2 studio with E2 Emulator Lite.
@@ -72,6 +81,22 @@ v201908.00-rx-0.1.15
 Development Environment (recommended)
 --------------------------------------------------------------------------
 Board: Renesas Starter Kit+ for RX65N-2MB
+    [en] https://www.renesas.com/us/en/products/software-tools/boards-and-kits/renesas-starter-kits/renesas-starter-kitplus-for-rx65n-2mb.html
+    [ja] https://www.renesas.com/jp/ja/products/software-tools/boards-and-kits/renesas-starter-kits/renesas-starter-kitplus-for-rx65n-2mb.html
+
+Board: Renesas RX65N Cloud Kit
+    [en] https://www.renesas.com/us/en/products/software-tools/boards-and-kits/eval-kits/rx65n-cloud-kit.html
+    [ja] https://www.renesas.com/jp/ja/products/software-tools/boards-and-kits/eval-kits/rx65n-cloud-kit.html
+
+Board: Renesas Starter Kit+ for RX64M
+    [en] https://www.renesas.com/us/en/products/software-tools/boards-and-kits/starter-kits/renesas-starter-kitplus-for-rx64m.html
+    [ja] https://www.renesas.com/jp/ja/products/software-tools/boards-and-kits/starter-kits/renesas-starter-kitplus-for-rx64m.html
+
+Board: Renesas Starter Kit+ for RX71M
+    [en] https://www.renesas.com/us/en/products/software-tools/boards-and-kits/starter-kits/renesas-starter-kitplus-for-rx71m.html
+    [ja] https://www.renesas.com/jp/ja/products/software-tools/boards-and-kits/starter-kits/renesas-starter-kitplus-for-rx71m.html
+
+Board: Renesas Starter Kit+ for RX72M (Now ready!)
     [en] https://www.renesas.com/us/en/products/software-tools/boards-and-kits/renesas-starter-kits/renesas-starter-kitplus-for-rx65n-2mb.html
     [ja] https://www.renesas.com/jp/ja/products/software-tools/boards-and-kits/renesas-starter-kits/renesas-starter-kitplus-for-rx65n-2mb.html
 
@@ -89,21 +114,16 @@ Debugger: E2 Emulator Lite (no need to buy because Renesas Starter Kit has this 
     
     Notice: You can also use E1 Emulator but you have to modify the debugger settings on your IDE.
     
-Device Driver: RX Driver Package v120
+Device Driver: RX Driver Package v122
     [en] https://www.renesas.com/us/en/products/software-tools/software-os-middleware-driver/software-package/rx-driver-package.html
     [ja] https://www.renesas.com/jp/ja/products/software-tools/software-os-middleware-driver/software-package/rx-driver-package.html
 
-Special Device Driver for FreeRTOS: RX65N Group RX65N Real-time OS Package V1.1.00
-    [en] https://www.renesas.com/us/en/products/software-tools/software-os-middleware-driver/software-package/rx-real-time-os-package.html
-    [ja] https://www.renesas.com/jp/ja/products/software-tools/software-os-middleware-driver/software-package/rx-real-time-os-package.html
-    
 Comment:
  Renesas Starter Kit+ for RX65N-2MB is expensive/huge spec for just prototyping phase.
  I am preparing low-priced/small-spec kit as expansion board for "Target Board for RX Family".
     [en] https://www.renesas.com/us/en/products/software-tools/boards-and-kits/cpu-mpu-boards/rx-family-target-board.html
     [ja] https://www.renesas.com/jp/ja/products/software-tools/boards-and-kits/cpu-mpu-boards/rx-family-target-board.html
- Current developments is using Ethernet but I will move this to WiFi.
- And I am also preparing to corresponds to GCC for release from CC-RX compiler limitation.
+ I am also preparing to corresponds to GCC for release from CC-RX compiler limitation.
  
 --------------------------------------------------------------------------
 Development Environment (optional)
@@ -323,13 +343,16 @@ Development Environment (tested or no matrix)
 Borad number:
  (1)rx65n-rsk				: Renesas Starter Kit+ for RX65N-2MB
  (2)rx65n-rsk-uart-sx-ulpgn		: Renesas Starter Kit+ for RX65N-2MB + Silex SX-ULPGN PMOD
- (3)rx65n-envision-kit			: RX65N Envision Kit
- (4)rx65n-envision-kit-uart-sx-ulpgn	: RX65N Envision Kit + Silex SX-ULPGN PMOD
- (5)rx65n-gr-rose			: RX65N GR-ROSE
- (6)rx65n-gr-rose-uart-esp8266		: RX65N GR-ROSE (WIFI: ESP8266)
- (7)rx65n-cloud-kit-uart-sx-ulpgn	: RX65N Target Board + Silex SX-ULPGN PMOD
- (8)rx64m-gr-kaede			: RX64M GR-KAEDE
+ (3)rx65n-envision-kit			: RX65N Envision Kit -> not available
+ (4)rx65n-envision-kit-uart-sx-ulpgn	: RX65N Envision Kit + Silex SX-ULPGN PMOD -> not available
+ (5)rx65n-gr-rose			: RX65N GR-ROSE -> not available
+ (6)rx65n-gr-rose-uart-esp8266		: RX65N GR-ROSE (WIFI: ESP8266) -> not available
+ (7)rx65n-cloud-kit-uart-sx-ulpgn	: RX65N Target Board + Silex SX-ULPGN PMOD -> not available
+ (8)rx64m-gr-kaede			: RX64M GR-KAEDE -> not available
  (9)rx63n-gr-sakura2: RX63N GR-SAKURA II -> not available
+ (10)rx64m-rsk				: Renesas Starter Kit+ for RX64M
+ (11)rx71m-rsk				: Renesas Starter Kit+ for RX71M
+ (12)rx72m-rsk				: Renesas Starter Kit+ for RX72M
 
 Connection pattern number:
  (1)pattern1: wifi module has TCP/IP and SSL/TLS, Amazon recommends this pattern as RAM<16KB.
@@ -357,9 +380,12 @@ Board Connection / Compiler (1) (2) (3) (1) (2) (3) (1) (2) (3)
 (4)   (4)        /           -   -           -   -   -   -     
 (5)   (2)        /           -   -       -   -   -   -   -     
 (6)   (4)        /           -   -           -   -   -   -     
-(7)   (4)        /           *   *       -   -   -   -   -     
+(7)   (4)        /           x   *       -   -   -   -   -     
 (8)   (2)        /           -   -       -   -   -   -   -     
 (9)   (2)        /           -   -       -   -   -   -   -     
+(10)  (2)        /           x   *       -   -   -   -   -     
+(11)  (2)        /           x   *       -   -   -   -   -     
+(12)  (2)        /           x   *       -   -   -   -   -     
 
   X: tested (Amazon FreeRTOS Qualification)
   x: tested (MQTT echo demo)
