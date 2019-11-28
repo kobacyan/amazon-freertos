@@ -125,7 +125,7 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
  * NOTE: This setting is available only when using CCRX and GNUC.
  *       This is invalid when using Renesas RTOS with CCRX.
  */
-#define BSP_CFG_USER_STACK_ENABLE       (0)
+#define BSP_CFG_USER_STACK_ENABLE       (1)
 
 /* If only 1 stack is chosen using BSP_CFG_USER_STACK_ENABLE then no RAM will be allocated for the user stack. */
 #if BSP_CFG_USER_STACK_ENABLE == 1
@@ -309,7 +309,7 @@ NOTE: The RAM areas are not contiguous.It is separated by 512 KB each.
 /* System Clock Divider (ICK).
    Available divisors = /1 (no division), /2, /4, /8, /16, /32, /64
 */
-#define BSP_CFG_ICK_DIV                 (2) /* Generated value. Do not edit this manually */
+#define BSP_CFG_ICK_DIV                 (1) /* Generated value. Do not edit this manually */
 
 /* Peripheral Module Clock A Divider (PCKA).
    Available divisors = /1 (no division), /2, /4, /8, /16, /32, /64
