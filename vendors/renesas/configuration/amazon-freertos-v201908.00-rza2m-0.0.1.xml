@@ -43,7 +43,7 @@
     <package>
         <type>rtosmodule</type>
         <name>AmazonFreeRTOS_RX</name>
-        <version>v201908.00-rx-0.1.16</version>
+        <version>v201908.00-rza2m-0.0.1</version>
         <dependency>
             <module>r_bsp</module>
             <version>5.20</version>
