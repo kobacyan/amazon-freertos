@@ -1,4 +1,23 @@
 ----------------------------------------------
+Getting Start for RZ/A2M  Amazon FreeRTOS
+----------------------------------------------
+Thank you for interesting about RZ/A2M and Amazon FreeRTOS.
+Please chack the following website:
+Getting Started with the Renesas RZ/A2M Evaluation Board Kit
+https://www.renesas.com/doc/products/mpumcu/doc/rz/001/r01qs0038ej0101-rza2m-ebk-amazonfreertos.pdf
+
+RZ Family e2studio Integrated Development Environmet
+https://www.renesas.com/us/en/doc/products/tool/doc/016/r20ut4535ej0100-e2studio.pdf
+
+--------------------------------------------------------------------------
+Change Logs
+--------------------------------------------------------------------------
+v201908.00-rza2m-0.0.1
+ [UPDATED] Added supporting RZ/A2M.
+ [TESTED] demos MQTT echo behavior for 
+          RZ/A2M Evaluation Board Kit GCC e2 studio with JLink.
+
+----------------------------------------------
 Getting Start for RX MCUs Amazon FreeRTOS
 ----------------------------------------------
 Thank you for interesting about RX MCUs (RX65N is main) and Amazon FreeRTOS.
