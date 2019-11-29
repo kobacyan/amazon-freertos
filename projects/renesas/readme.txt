@@ -14,8 +14,7 @@ Change Logs
 --------------------------------------------------------------------------
 v201908.00-rza2m-0.0.1
  [UPDATED] Added supporting RZ/A2M.
- [TESTED] demos MQTT echo behavior for 
-          RZ/A2M Evaluation Board Kit GCC e2 studio with JLink.
+ [TESTED] demos MQTT echo behavior for RZ/A2M Evaluation Board Kit GCC e2 studio with JLink.
 
 ----------------------------------------------
 Getting Start for RX MCUs Amazon FreeRTOS
