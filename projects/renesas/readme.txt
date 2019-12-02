@@ -359,18 +359,18 @@ Development Environment (tested or no matrix)
 --------------------------------------------------------------------------
 
 Borad number:
- (1)rx65n-rsk				: Renesas Starter Kit+ for RX65N-2MB
- (2)rx65n-rsk-uart-sx-ulpgn		: Renesas Starter Kit+ for RX65N-2MB + Silex SX-ULPGN PMOD
- (3)rx65n-envision-kit			: RX65N Envision Kit -> not available
- (4)rx65n-envision-kit-uart-sx-ulpgn	: RX65N Envision Kit + Silex SX-ULPGN PMOD -> not available
- (5)rx65n-gr-rose			: RX65N GR-ROSE -> not available
+ (1)rx65n-rsk						: Renesas Starter Kit+ for RX65N-2MB
+ (2)rx65n-rsk-uart-sx-ulpgn			: Renesas Starter Kit+ for RX65N-2MB + Silex SX-ULPGN PMOD
+ (3)rx65n-envision-kit				: RX65N Envision Kit -> not available
+ (4)rx65n-envision-kit-uart-sx-ulpgn: RX65N Envision Kit + Silex SX-ULPGN PMOD -> not available
+ (5)rx65n-gr-rose					: RX65N GR-ROSE -> not available
  (6)rx65n-gr-rose-uart-esp8266		: RX65N GR-ROSE (WIFI: ESP8266) -> not available
  (7)rx65n-cloud-kit-uart-sx-ulpgn	: RX65N Target Board + Silex SX-ULPGN PMOD -> not available
- (8)rx64m-gr-kaede			: RX64M GR-KAEDE -> not available
+ (8)rx64m-gr-kaede					: RX64M GR-KAEDE -> not available
  (9)rx63n-gr-sakura2: RX63N GR-SAKURA II -> not available
- (10)rx64m-rsk				: Renesas Starter Kit+ for RX64M
- (11)rx71m-rsk				: Renesas Starter Kit+ for RX71M
- (12)rx72m-rsk				: Renesas Starter Kit+ for RX72M
+ (10)rx64m-rsk						: Renesas Starter Kit+ for RX64M
+ (11)rx71m-rsk						: Renesas Starter Kit+ for RX71M
+ (12)rx72m-rsk						: Renesas Starter Kit+ for RX72M
 
 Connection pattern number:
  (1)pattern1: wifi module has TCP/IP and SSL/TLS, Amazon recommends this pattern as RAM<16KB.
