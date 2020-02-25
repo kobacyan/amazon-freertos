@@ -1,0 +1,282 @@
+-------------------------------------------------
+RX65N secure boot program
+-------------------------------------------------
+Checking flash ROM status.
+bank 0 status = 0xff [LIFECYCLE_STATE_BLANK]
+bank 1 status = 0xfc [LIFECYCLE_STATE_INSTALLING]
+bank info = 1. (start bank = 0)
+start installing user program.
+copy secure boot (part1) from bank0 to bank1...OK
+copy secure boot (part2) from bank0 to bank1...OK
+update LIFECYCLE_STATE from [LIFECYCLE_STATE_INSTALLING] to [LIFECYCLE_STATE_VALID]
+bank1(temporary area) block0 erase (to update LIFECYCLE_STATE)...OK
+bank1(temporary area) block0 write (to update LIFECYCLE_STATE)...OK
+swap bank...
+-------------------------------------------------
+RX65N secure boot program
+-------------------------------------------------
+Checking flash ROM status.
+bank 0 status = 0xf8 [LIFECYCLE_STATE_VALID]
+bank 1 status = 0xff [LIFECYCLE_STATE_BLANK]
+bank info = 0. (start bank = 1)
+integrity check scheme = sig-sha256-ecdsa
+bank0(execute area) on code flash integrity check...OK
+jump to user program
+1 1 [ETHER_RECEI] Network buffers: 8 lowest 8
+2 1 [ETHER_RECEI] Heap: current 234152 lowest 234152
+3 1 [ETHER_RECEI] Queue space: lowest 13
+4 1 [IP-task] InitializeNetwork returns OK
+5 1 [IP-task] xNetworkInterfaceInitialise returns 0
+6 101 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+7 101 [ETHER_RECEI] Heap: current 234352 lowest 233352
+8 201 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+9 301 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+10 401 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+11 501 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+12 601 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+13 701 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+14 801 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+15 901 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+16 1001 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+17 1101 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+18 1201 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+19 1301 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+20 1401 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+21 1501 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+22 1601 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+23 1701 [ETHER_RECEI] R_ETHER_Read_ZC2: rc = -5
+24 1702 [ETHER_RECEI] prvLinkStatusChange( 1 )
+25 1702 [ETHER_RECEI] prvEMACHandlerTask: PHY LS now 1
+26 3001 [IP-task] xNetworkInterfaceInitialise returns 1
+27 3095 [ETHER_RECEI] Network buffers: 7 lowest 7
+28 3095 [ETHER_RECEI] Queue space: lowest 12
+29 3095 [ETHER_RECEI] Heap: current 233280 lowest 233280
+30 3195 [ETHER_RECEI] Heap: current 233776 lowest 233080
+31 3598 [IP-task] vDHCPProcess: offer c0a80204ip
+32 3603 [ETHER_RECEI] Heap: current 233160 lowest 232960
+33 3603 [IP-task] vDHCPProcess: offer c0a80204ip
+34 3603 [IP-task] IP Address: 192.168.2.4
+35 3603 [IP-task] Subnet Mask: 255.255.255.0
+36 3603 [IP-task] Gateway Address: 192.168.2.1
+37 3603 [IP-task] DNS Server Address: 192.168.2.1
+38 3703 [ETHER_RECEI] Heap: current 233888 lowest 232560
+39 3900 [Tmr Svc] The network is up and running
+40 3923 [Tmr Svc] Write certificate...
+41 4003 [ETHER_RECEI] Heap: current 232280 lowest 231880
+42 4803 [ETHER_RECEI] Heap: current 229640 lowest 229504
+43 4903 [ETHER_RECEI] Heap: current 227792 lowest 225664
+44 15789 [ETHER_RECEI] Heap: current 217376 lowest 217376
+45 15889 [ETHER_RECEI] Heap: current 217376 lowest 217176
+---------STARTING TESTS---------
+TEST(Full_TCP, AFQP_SOCKETS_CloseInvalidParams) PASS
+46 21489 [ETHER_RECEI] Heap: current 201504 lowest 201504
+47 21589 [ETHER_RECEI] Heap: current 201504 lowest 201304
+TEST(Full_TCP, AFQP_SOCKETS_CloseWithoutReceiving) PASS
+48 21747 [ETHER_RECEI] Heap: current 201928 lowest 188232
+TEST(Full_TCP, AFQP_SOCKETS_ShutdownInvalidParams) PASS
+49 21897 [ETHER_RECEI] Network buffers: 6 lowest 6
+TEST(Full_TCP, AFQP_SOCKETS_ShutdownWithoutReceiving) PASS
+50 22741 [ETHER_RECEI] Heap: current 178080 lowest 177984
+51 22841 [ETHER_RECEI] Heap: current 178080 lowest 177880
+TEST(Full_TCP, AFQP_SOCKETS_Recv_On_Unconnected_Socket) PASS
+TEST(Full_TCP, AFQP_SOCKETS_Connect_InvalidParams) PASS
+TEST(Full_TCP, AFQP_SOCKETS_Connect_InvalidAddressLength) PASS
+TEST(Full_TCP, AFQP_SOCKETS_Socket_TCP) PASS
+TEST(Full_TCP, AFQP_SOCKETS_SetSockOpt_RCVTIMEO) PASS
+52 45107 [ETHER_RECEI] Heap: current 178080 lowest 176720
+TEST(Full_TCP, AFQP_SOCKETS_NonBlocking_Test) PASS
+TEST(Full_TCP, AFQP_SOCKETS_SetSockOpt_InvalidParams) PASS
+TEST(Full_TCP, AFQP_SOCKETS_Shutdown) PASS
+TEST(Full_TCP, AFQP_SOCKETS_Close) PASS
+TEST(Full_TCP, AFQP_SOCKETS_Recv_ByteByByte) PASS
+53 65591 [ETHER_RECEI] Heap: current 178000 lowest 176624
+TEST(Full_TCP, AFQP_SOCKETS_SendRecv_VaryLength) PASS
+TEST(Full_TCP, AFQP_SOCKETS_Socket_ConcurrentCount) PASS
+TEST(Full_TCP, AFQP_SOCKETS_Socket_InvalidInputParams) PASS
+TEST(Full_TCP, AFQP_SOCKETS_Send_Invalid) PASS
+TEST(Full_TCP, AFQP_SOCKETS_Recv_Invalid) PASS
+TEST(Full_TCP, AFQP_SOCKETS_htons_HappyCase) PASS
+TEST(Full_TCP, AFQP_SOCKETS_inet_addr_quick_HappyCase) PASS
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_CloseInvalidParams) PASS
+54 75307 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+55 75680 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+56 76223 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+57 77063 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+58 78530 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+59 81182 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+60 86296 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_CloseWithoutReceiving)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:867::FAIL: Expected 0 Was -1002. Failed to connect
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_ShutdownInvalidParams) PASS
+61 86843 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+62 87222 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+63 87766 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+64 88630 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+65 90069 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+66 92714 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+67 97754 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_ShutdownWithoutReceiving)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:940::FAIL: Expected 0 Was -1002. Failed to connect
+68 98187 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+69 98587 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+70 99151 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+71 100009 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+72 101468 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+73 104103 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+74 109215 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_Recv_On_Unconnected_Socket)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:990::FAIL: Expected 0 Was -1002. Failed to connect
+75 109657 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+76 110052 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+77 110608 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+78 111451 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+79 112882 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+80 115532 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+81 120570 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_SetSockOpt_TRUSTED_SERVER_CERTIFICATE)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:2197::FAIL: Expected 0 Was -1002. Failed to connect
+82 120866 [RunTests_ta] DNS[0x4DA7]: The answer to 'a1y7loynypl0z7-ats.iot.ap-northeast-1.amazonaws.com' (344428c1ip) will be stored
+83 121151 [ETHER_RECEI] Heap: current 162432 lowest 162288
+84 121151 [ETHER_RECEI] Heap: current 162232 lowest 162232
+85 121159 [ETHER_RECEI] Heap: current 161048 lowest 161048
+86 121159 [ETHER_RECEI] Heap: current 160848 lowest 160848
+87 121159 [ETHER_RECEI] Heap: current 159168 lowest 159168
+88 121159 [ETHER_RECEI] Heap: current 158968 lowest 158968
+89 121160 [ETHER_RECEI] Heap: current 147056 lowest 147056
+90 121160 [ETHER_RECEI] Network buffers: 5 lowest 5
+91 121160 [ETHER_RECEI] Heap: current 145408 lowest 145408
+92 121160 [ETHER_RECEI] Heap: current 145208 lowest 145208
+93 121161 [ETHER_RECEI] Heap: current 145008 lowest 145008
+94 121261 [ETHER_RECEI] Heap: current 135936 lowest 135432
+95 121732 [ETHER_RECEI] Heap: current 135872 lowest 135288
+96 121832 [ETHER_RECEI] Heap: current 134336 lowest 133488
+97 121896 [ETHER_RECEI] Heap: current 133376 lowest 133336
+98 121897 [ETHER_RECEI] Heap: current 133176 lowest 133176
+99 121997 [ETHER_RECEI] Heap: current 132728 lowest 132728
+100 122097 [ETHER_RECEI] Heap: current 131112 lowest 130848
+101 122297 [ETHER_RECEI] Heap: current 129344 lowest 129200
+102 122397 [ETHER_RECEI] Heap: current 126104 lowest 126104
+103 122497 [ETHER_RECEI] Heap: current 126104 lowest 125904
+104 122815 [ETHER_RECEI] Heap: current 125680 lowest 125680
+105 122915 [ETHER_RECEI] Heap: current 125680 lowest 125480
+106 123807 [RunTests_ta] ERROR: Handshake failed with error code -9984 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_SetSockOpt_SERVER_NAME_INDICATION) PASS
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_Connect_InvalidParams) PASS
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_Connect_InvalidAddressLength) PASS
+107 134886 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+108 135273 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+109 135823 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+110 136647 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+111 138125 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+112 140827 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+113 145941 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_SetSockOpt_RCVTIMEO)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:1082::FAIL: Expected 0 Was -1002. Failed to connect
+114 146386 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+115 146790 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+116 147336 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+117 148185 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+118 149619 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+119 152257 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+120 157303 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_NonBlocking_Test)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:1163::FAIL: Expected 0 Was -1002. Failed to connect
+121 157741 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+122 158139 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+123 158671 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+124 159522 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+125 160992 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+126 163718 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+127 168758 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_SetSockOpt_InvalidParams)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:1251::FAIL: Expected 0 Was -1002. Failed to connect
+128 169200 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+129 169596 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+130 170169 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+131 171018 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+132 172469 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+133 175188 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+134 180236 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_Shutdown)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:1342::FAIL: Expected 0 Was -1002. Failed to connect
+135 180696 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+136 181101 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+137 181643 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+138 182492 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+139 183952 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+140 186658 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+141 191781 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_Close)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:1448::FAIL: Expected 0 Was -1002. Failed to connect
+142 192226 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+143 192633 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+144 193192 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+145 194053 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+146 195509 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+147 198168 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+148 203275 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_Recv_ByteByByte)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:1514::FAIL: Expected 0 Was -1002. Failed to connect
+149 203712 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+150 204120 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+151 204683 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+152 205542 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+153 207008 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+154 209718 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+155 214793 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_SendRecv_VaryLength)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:1593::FAIL: Expected 0 Was -1002. Failed to connect
+156 215234 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+157 215615 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+158 216159 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+159 216992 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+160 218435 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+161 221079 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+162 226196 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_Send_Invalid)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:2016::FAIL: Expected 0 Was -1002. Failed to connect
+163 226641 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+164 227040 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+165 227597 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+166 228442 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+167 229881 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+168 232525 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+169 237638 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_Recv_Invalid)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:2083::FAIL: Expected 0 Was -1002. Failed to connect
+170 237942 [RunTests_ta] DNS[0x115B]: The answer to 'a1y7loynypl0z7-ats.iot.ap-northeast-1.amazonaws.com' (370a875ip) will be stored
+171 238053 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_SockEventHandler) PASS
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_NonBlockingConnect) PASS
+172 241075 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+173 241463 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+174 242007 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+175 242830 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+176 244272 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+177 246913 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+178 252018 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_TwoSecureConnections)C:/devicetester_afreertos_win/amazon-freertos/libraries/abstractions/secure_sockets/test/iot_test_tcp.c:2819::FAIL: Expected 0 Was -1002. Failed to connect to secure server
+TEST(Full_TCP, AFQP_SECURE_SOCKETS_SetSecureOptionsAfterConnect) PASS
+179 254045 [ETHER_RECEI] Network buffers: 4 lowest 4
+180 254045 [ETHER_RECEI] Network buffers: 3 lowest 3
+181 254145 [ETHER_RECEI] Queue space: lowest 10
+TEST(Full_TCP, AFQP_SOCKETS_Threadsafe_SameSocketDifferentTasks) PASS
+182 256647 [ETHER_RECEI] Heap: current 120560 lowest 120144
+183 256781 [ETHER_RECEI] Heap: current 143888 lowest 120112
+184 257352 [ETHER_RECEI] Heap: current 120560 lowest 119728
+185 258982 [ETHER_RECEI] Heap: current 167392 lowest 119648
+TEST(Full_TCP, AFQP_SOCKETS_Threadsafe_DifferentSocketsDifferentTasks) PASS
+186 263453 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+187 263852 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+188 264393 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+189 265237 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+190 266677 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+191 269403 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+192 274462 [RunTests_ta] ERROR: Failed to parse custom server certificates -8576 
+Traceback (most recent call last):
+  File "C:\devicetester_afreertos_win\amazon-freertos\tools\ota_e2e_tests\aws_ota_test\aws_ota_test_case.py", line 147, in runTest
+    testResult = self.run()
+  File "C:\devicetester_afreertos_win\amazon-freertos\tools\ota_e2e_tests\aws_ota_test\aws_ota_test_case_greater_version.py", line 38, in run
+    otaUpdateId = self._otaAwsAgent.quickCreateOtaUpdate(self._otaConfig, [self._protocol])
+  File "C:\devicetester_afreertos_win\amazon-freertos\tools\ota_e2e_tests\aws_ota_test\aws_ota_aws_agent.py", line 482, in quickCreateOtaUpdate
+    'certificatePathOnDevice': otaConfig['aws_signer_certificate_file_name']
+  File "C:\devicetester_afreertos_win\amazon-freertos\tools\ota_e2e_tests\aws_ota_test\aws_ota_aws_agent.py", line 401, in createOtaUpdate
+    'expiresInSec': urlExpired
+  File "D:\Program Files\Python37\lib\site-packages\botocore\client.py", line 272, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "D:\Program Files\Python37\lib\site-packages\botocore\client.py", line 549, in _make_api_call
+    api_params, operation_model, context=request_context)
+  File "D:\Program Files\Python37\lib\site-packages\botocore\client.py", line 597, in _convert_to_request_dict
+    api_params, operation_model)
+  File "D:\Program Files\Python37\lib\site-packages\botocore\validate.py", line 297, in serialize_to_request
+    raise ParamValidationError(report=report.generate_report())
+botocore.exceptions.ParamValidationError: Parameter validation failed:
+Unknown parameter in input: "protocols", must be one of: otaUpdateId, description, targets, targetSelection, awsJobExecutionsRolloutConfig, files, roleArn, additionalParameters, tags
+Unknown parameter in input: "awsJobPresignedUrlConfig", must be one of: otaUpdateId, description, targets, targetSelection, awsJobExecutionsRolloutConfig, files, roleArn, additionalParameters, tags

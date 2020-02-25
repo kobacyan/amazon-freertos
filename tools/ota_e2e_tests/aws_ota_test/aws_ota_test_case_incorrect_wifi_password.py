@@ -18,29 +18,17 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- 
+
 http://aws.amazon.com/freertos
-http://www.FreeRTOS.org 
+http://www.FreeRTOS.org
 
 """
-from .aws_ota_test_case import *
-from .aws_ota_aws_agent import *
-from .aws_ota_test_result import OtaTestResult
+from .aws_ota_test_case import OtaTestCase
 
-class OtaTestIncorrectWifiPassword( OtaTestCase ):
-    NAME = "OtaTestIncorrectWifiPassword"
-    def __init__(self, boardConfig, otaProject, otaAwsAgent, flashComm):
-        super(OtaTestIncorrectWifiPassword, self).__init__(
-            OtaTestIncorrectWifiPassword.NAME, 
-            boardConfig,
-            otaProject, 
-            otaAwsAgent, 
-            flashComm
-        )
 
-    def getName(self):
-        return self._name
-    
+class OtaTestIncorrectWifiPassword(OtaTestCase):
+    is_positive = False
+
     def run(self):
         # Increase the version of the OTA image.
         self._otaProject.setApplicationVersion(0, 9, 1)
@@ -49,15 +37,9 @@ class OtaTestIncorrectWifiPassword( OtaTestCase ):
         # Build the project
         self._otaProject.buildProject()
         # Start an OTA Update.
-        otaUpdateId = self._otaAwsAgent.quickCreateOtaUpdate(self._otaConfig)
+        otaUpdateId = self._otaAwsAgent.quickCreateOtaUpdate(self._otaConfig, [self._protocol])
         # Reset the Wifi credentials to valid values.
         self._otaProject.setClientCredentialsForWifi(self._boardConfig['wifi_ssid'],
                                                      self._boardConfig['wifi_password'],
                                                      self._boardConfig['wifi_security'])
         return self.getTestResultAfterOtaUpdateCompletion(otaUpdateId)
-
-    def getTestResult(self, jobStatus, log):
-        if (jobStatus.status == 'FAILED'):
-            return OtaTestResult.testResultFromJobStatus(self._name, OtaTestResult.PASS, jobStatus)
-        else:
-            return OtaTestResult.testResultFromJobStatus(self._name, OtaTestResult.FAIL, jobStatus)

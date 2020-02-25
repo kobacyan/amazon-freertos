@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="0" tests="1" time="0.0">
+	<testsuite disabled="0" errors="0" failures="0" name="rx65n_rsk" package="rx65n_rsk" skipped="1" tests="1" time="0">
+		<testcase classname="rx65n_rsk.OTAEndToEndTests" name="OtaTestGreaterVersion_MQTT">
+			<skipped message="Exception found during test execution. Please check logs." type="skipped"/>
+		</testcase>
+	</testsuite>
+</testsuites>
