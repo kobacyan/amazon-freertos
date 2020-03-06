@@ -128,4 +128,5 @@
  */
 #define pkcs11configLABEL_ROOT_CERTIFICATE                 "Root Cert"
 
+#define pkcs11configIMPORT_PRIVATE_KEYS_SUPPORTED              ( 1 )
 #endif /* _AWS_PKCS11_CONFIG_H_ include guard. */

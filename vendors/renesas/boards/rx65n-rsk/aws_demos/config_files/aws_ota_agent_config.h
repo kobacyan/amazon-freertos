@@ -1,6 +1,6 @@
 /*
- * Amazon FreeRTOS V1.4.8
- * Copyright (C) 2018 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+ * FreeRTOS V1.1.8
+ * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -83,7 +83,7 @@
  *  Please note that this must be set larger than zero.
  *
  */
-#define otaconfigMAX_NUM_BLOCKS_REQUEST         128U
+#define otaconfigMAX_NUM_BLOCKS_REQUEST  1U
 
 /**
  * @brief The maximum number of requests allowed to send without a response before we abort.
@@ -92,7 +92,7 @@
  * the selected communication channel before aborting and returning error.
  *
  */
-#define otaconfigMAX_NUM_REQUEST_MOMENTUM       8U
+#define otaconfigMAX_NUM_REQUEST_MOMENTUM       32U
 
 /**
  * @brief The number of data buffers reserved by the OTA agent.

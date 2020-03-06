@@ -649,7 +649,7 @@
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
 </configuration>
-<configuration id="e0e97960-f2d4-422f-86ed-cb7e82fd347d" inuse="true" name="FreeRTOS_Object">
+<configuration id="ed28be05-a5b2-4134-84c3-004903e2d53c" inuse="true" name="FreeRTOS_Object">
 <allocatable id="OBJECT" name="OBJECT">
 <allocatable id="TASK" name="TASK">
 <option defaultValue="0" id="LinkNum" value=""/>
@@ -679,42 +679,42 @@
 </allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="189d154e-badf-4542-8b5d-d6707e53ef23" inuse="true" name="FreeRTOS_Kernel">
+<configuration id="530c7822-6270-489b-8fc4-ac7d8dda1118" inuse="true" name="FreeRTOS_Kernel">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="FreeRTOS_kernel" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.kernel" version="1.0.0"/>
 <allocator description="FreeRTOS Amazon kernel component" display="AWS_kernel" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.kernel.rx" type="gridConfiguration">
 <context/>
 </allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="73d3a99b-2f2d-4f0d-b7be-6bf4f9ae4601" inuse="true" name="AWS_device_shadow">
+<configuration id="a9509ff4-0439-4982-8692-a380925fd24d" inuse="true" name="AWS_device_shadow">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_device_shadow" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.device_shadow" version="1.0.0"/>
 <allocator description="FreeRTOS Amazon device shadow component" display="AWS_shadow" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.device_shadow.rx" type="gridConfiguration">
 <context/>
 </allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="eb990667-391d-4fe1-be93-b0c6e588ebb8" inuse="true" name="AWS_tcp_ip">
+<configuration id="a7ad3ab2-3def-4c9b-917d-894f3848afd6" inuse="true" name="AWS_tcp_ip">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_tcp_ip" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.tcp_ip" version="1.0.0"/>
 <allocator description="FreeRTOS Amazon component" display="AWS_tcp_ip" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.tcp_ip.rx" type="gridConfiguration">
 <context/>
 </allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="0cbf3b5c-ce5e-485c-96c3-c34a0ed2381c" inuse="true" name="AWS_mqtt">
+<configuration id="a4e2d770-90be-4c03-baea-9c2f4404b84e" inuse="true" name="AWS_mqtt">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_mqtt" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.mqtt" version="1.0.0"/>
 <allocator description="FreeRTOS Amazon mqtt component" display="AWS_mqtt" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.mqtt.rx" type="gridConfiguration">
 <context/>
 </allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="2d4596c9-43ff-4af1-858e-d79b1c6c8c29" inuse="true" name="AWS_secure_socket">
+<configuration id="5300a991-3a28-4087-82a4-c554d231a657" inuse="true" name="AWS_secure_socket">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_secure_socket" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.secure_socket" version="1.0.0"/>
 <allocator description="FreeRTOS Amazon secure socket component" display="AWS_secure_socket" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.secure_socket.rx" type="gridConfiguration">
 <context/>
 </allocator>
 <source description="Code generator for Real-time OS" display="RTOS Configurator" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
-<configuration id="04b7a47b-c014-48aa-bb09-952bd183814b" inuse="true" name="AWS_ggd">
+<configuration id="efbf235f-46ac-44e3-9111-3e69d9164bc8" inuse="true" name="AWS_ggd">
 <component description="This component is a part of RTOS Configurator feature that allow user to use the GUI to configure kernel setting of AFR" detailDescription="" display="AWS_ggd" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.ggd" version="1.0.0"/>
 <allocator description="FreeRTOS Amazon gdd component" display="AWS_ggd" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.ggd.rx" type="gridConfiguration">
 <context/>
@@ -900,8 +900,8 @@
 <gridItem id="ETHER_CFG_MODE_SEL" selectedIndex="0"/>
 <gridItem id="ETHER_CFG_CH0_PHY_ADDRESS" selectedIndex="30"/>
 <gridItem id="ETHER_CFG_CH1_PHY_ADDRESS" selectedIndex="1"/>
-<gridItem id="ETHER_CFG_EMAC_RX_DESCRIPTORS" selectedIndex="1"/>
-<gridItem id="ETHER_CFG_EMAC_TX_DESCRIPTORS" selectedIndex="1"/>
+<gridItem id="ETHER_CFG_EMAC_RX_DESCRIPTORS" selectedIndex="6"/>
+<gridItem id="ETHER_CFG_EMAC_TX_DESCRIPTORS" selectedIndex="3"/>
 <gridItem id="ETHER_CFG_BUFSIZE" selectedIndex="1536"/>
 <gridItem id="ETHER_CFG_EINT_INT_PRIORITY" selectedIndex="1"/>
 <gridItem id="ETHER_CFG_AL1_INT_PRIORTY" selectedIndex="1"/>
@@ -910,7 +910,7 @@
 <gridItem id="ETHER_CFG_PHY_MII_WAIT" selectedIndex="8"/>
 <gridItem id="ETHER_CFG_PHY_DELAY_RESET" selectedIndex="0x00020000L"/>
 <gridItem id="ETHER_CFG_LINK_PRESENT" selectedIndex="0"/>
-<gridItem id="ETHER_CFG_USE_LINKSTA" selectedIndex="1"/>
+<gridItem id="ETHER_CFG_USE_LINKSTA" selectedIndex="0"/>
 <gridItem id="ETHER_CFG_USE_PHY_KSZ8041NL" selectedIndex="0"/>
 </component>
 <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>

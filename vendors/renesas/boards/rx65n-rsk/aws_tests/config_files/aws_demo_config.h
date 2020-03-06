@@ -26,7 +26,6 @@
 #ifndef _AWS_DEMO_CONFIG_H_
 #define _AWS_DEMO_CONFIG_H_
 
-#define CONFIG_OTA_UPDATE_DEMO_ENABLED
 
 #define democonfigSHADOW_DEMO_NUM_TASKS                   ( 1 )
 

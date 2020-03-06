@@ -38,9 +38,6 @@
  */
 #define CODE_SIGNENR_PUBLIC_KEY_PEM "Paste code signer public key here."
 
-
-
-
 extern const uint8_t code_signer_public_key[];
 extern const uint32_t code_signer_public_key_length;
 
