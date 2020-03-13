@@ -158,5 +158,9 @@
 <component display="AWS_ggd" id="com.renesas.smc.tools.swcomponent.rtosconfigurator.freertos.amazon.ggd"/>
 <source id="com.renesas.smc.tools.swcomponent.rtosconfigurator.source"/>
 </configuration>
+<configuration channel="r_os_abstraction_amazon" inuse="true" name="os_abstraction_amazon">
+<component display="r_os_abstraction_amazon" id="r_os_abstraction_amazon3.03" version="3.03"/>
+<source display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
+</configuration>
 </tool>
 </smc>
