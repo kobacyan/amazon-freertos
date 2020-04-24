@@ -1436,9 +1436,29 @@
       <path>libraries/c_sdk/aws/shadow/src</path>
     </linkdir>
     <linkdir>
-      <file>libraries/c_sdk/standard/common/include/private/iot_logging.h</file>
-      <file>libraries/c_sdk/standard/common/include/private/iot_taskpool_internal.h</file>
+      <folder>libraries/c_sdk/standard/common/include/private</folder>
       <path>libraries/c_sdk/standard/common/include/private</path>
+    </linkdir>
+	<linkdir>
+      <file>libraries/c_sdk/standard/https/include/types/iot_https_types.h</file>
+      <path>libraries/c_sdk/standard/https/include/types</path>
+    </linkdir>
+	<linkdir>
+      <file>libraries/c_sdk/standard/https/include/iot_https_client.h</file>
+	  <file>libraries/c_sdk/standard/https/include/iot_https_utils.h</file>
+      <path>libraries/c_sdk/standard/https/include</path>
+    </linkdir>
+	<linkdir>
+      <file>libraries/c_sdk/standard/mqtt/include/types/iot_mqtt_types.h</file>
+      <path>libraries/c_sdk/standard/mqtt/include/types</path>
+    </linkdir>
+	<linkdir>
+      <file>libraries/c_sdk/standard/mqtt/include/iot_mqtt.h</file>
+	  <file>libraries/c_sdk/standard/mqtt/include/iot_mqtt_agent.h</file>
+	  <file>libraries/c_sdk/standard/mqtt/include/iot_mqtt_agent_config_defaults.h</file>
+	  <file>libraries/c_sdk/standard/mqtt/include/iot_mqtt_config_defaults.h</file>
+	  <file>libraries/c_sdk/standard/mqtt/include/iot_mqtt_lib.h</file>
+      <path>libraries/c_sdk/standard/mqtt/include</path>
     </linkdir>
     <linkdir>
       <file>libraries/c_sdk/standard/common/include/types/iot_network_types.h</file>
@@ -1447,6 +1467,7 @@
     </linkdir>
     <linkdir>
       <file>libraries/c_sdk/standard/common/include/iot_appversion32.h</file>
+	  <file>libraries/c_sdk/standard/common/include/iot_atomic.h</file>
       <file>libraries/c_sdk/standard/common/include/iot_init.h</file>
       <file>libraries/c_sdk/standard/common/include/iot_linear_containers.h</file>
       <file>libraries/c_sdk/standard/common/include/iot_logging_setup.h</file>
@@ -1540,8 +1561,7 @@
       <file>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOSIPConfigDefaults.h</file>
       <file>libraries/freertos_plus/standard/freertos_plus_tcp/include/IPTraceMacroDefaults.h</file>
       <file>libraries/freertos_plus/standard/freertos_plus_tcp/include/NetworkBufferManagement.h</file>
-      <file>libraries/freertos_plus/standard/freertos_plus_tcp/include/
-.h</file>
+      <file>libraries/freertos_plus/standard/freertos_plus_tcp/include/NetworkInterface.h</file>
       <path>libraries/freertos_plus/standard/freertos_plus_tcp/include</path>
     </linkdir>
     <linkdir>
