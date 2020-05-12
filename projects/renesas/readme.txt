@@ -12,7 +12,7 @@ https://www.renesas.com/us/en/doc/products/tool/doc/016/r20ut4535ej0100-e2studio
 --------------------------------------------------------------------------
 Change Logs
 --------------------------------------------------------------------------
-v201908.00-rza2m-0.0.1
+v201908.00-rza2m-0.1.0
  [UPDATED] Added supporting RZ/A2M.
  [TESTED] demos MQTT echo behavior for RZ/A2M Evaluation Board Kit GCC e2 studio with JLink.
 
