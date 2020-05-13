@@ -27,82 +27,82 @@
 		<link>
 			<name>application_code/main.c</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/application_code/main.c</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/application_code/main.c</locationURI>
 		</link>
 		<link>
 			<name>config_files/FreeRTOSConfig.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/FreeRTOSConfig.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/FreeRTOSConfig.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/FreeRTOSIPConfig.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/FreeRTOSIPConfig.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/FreeRTOSIPConfig.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_bufferpool_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/aws_bufferpool_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/aws_bufferpool_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_demo_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/aws_demo_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/aws_demo_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_ggd_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/aws_ggd_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/aws_ggd_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_iot_network_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/aws_iot_network_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/aws_iot_network_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_mqtt_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/aws_mqtt_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/aws_mqtt_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_ota_agent_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/aws_ota_agent_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/aws_ota_agent_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_secure_sockets_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/aws_secure_sockets_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/aws_secure_sockets_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_shadow_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/aws_shadow_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/aws_shadow_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_wifi_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/aws_wifi_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/aws_wifi_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/iot_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/iot_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/iot_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/iot_mqtt_agent_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/iot_mqtt_agent_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/iot_mqtt_agent_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/iot_pkcs11_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/iot_pkcs11_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/iot_pkcs11_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/mbedtls_user_config.h</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/config_files/mbedtls_user_config.h</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/config_files/mbedtls_user_config.h</locationURI>
 		</link>
 		<link>
 			<name>freertos_kernel/event_groups.c</name>
@@ -1700,19 +1700,19 @@
 			<locationURI>AFR_HOME/vendors/renesas/rx/FIT/v122/r_sci_rx/src/r_sci_rx_private.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/pkcs11/iot_pkcs11_pal.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/ports/pkcs11/iot_pkcs11_pal.c</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/pkcs11/iot_pkcs11_pal.c</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/ports/pkcs11/iot_pkcs11_pal.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/secure_sockets/iot_secure_sockets.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/ports/secure_sockets/iot_secure_sockets.c</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/secure_sockets/iot_secure_sockets.c</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/ports/secure_sockets/iot_secure_sockets.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/wifi/iot_wifi.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/ports/wifi/iot_wifi.c</name>
 			<type>1</type>
-			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/wifi/iot_wifi.c</locationURI>
+			<locationURI>AFR_HOME/vendors/renesas/boards/rx65n-cloud-kit/ports/wifi/iot_wifi.c</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/rx/FIT/v122/r_bsp/board/generic_rx65n/hwsetup.c</name>
@@ -2040,107 +2040,107 @@
 			<locationURI>AFR_HOME/vendors/renesas/rx/FIT/v122/r_bsp/mcu/rx65n/register_access/ccrx/iodefine.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/general/r_cg_hardware_setup.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/general/r_cg_hardware_setup.c</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/general/r_cg_hardware_setup.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/general/r_cg_macrodriver.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/general/r_cg_macrodriver.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/general/r_cg_macrodriver.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/general/r_cg_userdefine.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/general/r_cg_userdefine.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/general/r_cg_userdefine.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/general/r_smc_cgc.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/general/r_smc_cgc.c</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/general/r_smc_cgc.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/general/r_smc_cgc.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/general/r_smc_cgc.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/general/r_smc_cgc.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/general/r_smc_cgc_user.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/general/r_smc_cgc_user.c</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/general/r_smc_cgc_user.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/general/r_smc_entry.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/general/r_smc_entry.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/general/r_smc_entry.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/general/r_smc_interrupt.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/general/r_smc_interrupt.c</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/general/r_smc_interrupt.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/general/r_smc_interrupt.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/general/r_smc_interrupt.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/general/r_smc_interrupt.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_config/r_bsp_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_config/r_bsp_config.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_config/r_bsp_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_config/r_bsp_config_readme.txt</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_config/r_bsp_config_readme.txt</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_config/r_bsp_config_readme.txt</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_config/r_bsp_interrupt_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_config/r_bsp_interrupt_config.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_config/r_bsp_interrupt_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_config/r_byteq_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_config/r_byteq_config.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_config/r_byteq_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_config/r_flash_rx_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_config/r_flash_rx_config.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_config/r_flash_rx_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_config/r_s12ad_rx_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_config/r_s12ad_rx_config.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_config/r_s12ad_rx_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_config/r_sci_rx_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_config/r_sci_rx_config.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_config/r_sci_rx_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_pincfg/Pin.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_pincfg/Pin.c</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_pincfg/Pin.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_pincfg/Pin.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_pincfg/Pin.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_pincfg/Pin.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_pincfg/r_pinset.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_pincfg/r_pinset.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_pincfg/r_pinset.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_pincfg/r_sci_rx_pinset.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</name>
 			<type>1</type>
 			<locationURI>SMC_GENERATED_LOC/r_pincfg/r_sci_rx_pinset.h</locationURI>
 		</link>
@@ -2175,7 +2175,7 @@
 		</filter>
 		<filter>
 			<id>1570603357150</id>
-			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen</name>
 			<type>10</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
@@ -2190,11 +2190,11 @@
 		</variable>
 		<variable>
 			<name>SMC_GENERATED_LOC</name>
-			<value>$%7BAFR_HOME%7D/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen</value>
+			<value>$%7BAFR_HOME%7D/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen</value>
 		</variable>
 		<variable>
 			<name>SMC_LINKED_LOC</name>
-			<value>$%7BPROJECT_LOC%7D/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/ccrx/src/smc_gen</value>
+			<value>$%7BPROJECT_LOC%7D/vendors/renesas/boards/rx65n-cloud-kit/aws_demos/ccrx/src/smc_gen</value>
 		</variable>
 	</variableList>
 </projectDescription>
