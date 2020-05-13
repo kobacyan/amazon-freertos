@@ -81,6 +81,15 @@ I hope this solution will be helpful for embedded system developer in W/W.
 --------------------------------------------------------------------------
 Change Logs
 --------------------------------------------------------------------------
+v201908.00-rx-0.1.17
+ [UPDATED] Updated RX65N Cloud Kit project.
+ [TESTED] demos MQTT echo behavior for
+          RX65N RSK CC-RX e2 studio with E2 Emulator Lite.
+          RX65N Cloud kit CC-RX e2 studio with E2 Emulator Lite (on board).
+          RX64M RSK CC-RX e2 studio with E2 Emulator Lite.
+          RX71M RSK CC-RX e2 studio with E2 Emulator Lite.
+          RX72M RSK CC-RX e2 studio with E2 Emulator Lite.
+
 v201908.00-rx-0.1.16
  [UPDATED] Added supporting RX MCUs(RX64M, RX71M, RX72M).
  [TESTED] demos MQTT echo behavior for 
